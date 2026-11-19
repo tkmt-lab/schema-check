@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,os
+p=Path(__file__).resolve().parent/'components/schema-check/next7/schema-check'
+os.execv(sys.executable,[sys.executable,'-I','-S','-B',str(p),*sys.argv[1:]])

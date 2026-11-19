@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Release 0.1.0 (2026-11-20). Please also credit the primary sources in THIRD-PARTY-NOTICES.md."
+title: "schema-check: certificates for canonical JSON completion"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Takimoto
+    given-names: Tatsuhiko
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+abstract: "Inspect JSON Schema constraints using a supported canonical UTF-8 reference language. The tools compute emptiness and shortest byte completions with separate checking entries, provide fixed-vocabulary token certificates, and retain finite probes of pinned external backends. They do not cover all JSON Schema or arbitrary sampling termination. No DOI is specified."
+keywords:
+  - JSON Schema
+  - canonical UTF-8
+  - finite automata
+  - certificate verification
+  - constrained decoding
+date-released: 2026-11-20
+repository-code: https://github.com/tkmt-lab/schema-check

@@ -1,0 +1,32 @@
+[
+  {
+    "engine": "xgrammar",
+    "version": "0.2.8",
+    "issue": 1029,
+    "url": "https://github.com/mlc-ai/xgrammar/issues/1029",
+    "state_at_retrieval": "open",
+    "reported_at": "2026-11-02T06:41:15Z",
+    "checked_at": "2026-11-02",
+    "reported_by_project": true,
+    "maintainer_confirmation": false,
+    "reproducer": "comparison/reports/xgrammar_repro.py",
+    "scope": "A newly filed report of a fixed-version observation, not proof of novelty or maintainer confirmation.",
+    "schema_present_in_original_123_matrix": true,
+    "witness_in_original_invalid_acceptance_rows": false
+  },
+  {
+    "engine": "outlines",
+    "version": "0.2.14",
+    "issue": 277,
+    "url": "https://github.com/dottxt-ai/outlines-core/issues/277",
+    "state_at_retrieval": "open",
+    "reported_at": "2026-11-02T06:41:27Z",
+    "checked_at": "2026-11-02",
+    "reported_by_project": true,
+    "maintainer_confirmation": false,
+    "reproducer": "comparison/reports/outlines_repro.py",
+    "scope": "A newly filed report of a fixed-version observation, not proof of novelty or maintainer confirmation.",
+    "schema_present_in_original_123_matrix": true,
+    "witness_in_original_invalid_acceptance_rows": true
+  }
+]

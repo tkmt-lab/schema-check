@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "returncode": 0,
+  "stop": null,
+  "wall_seconds": 1.5177770409500226,
+  "cpu_seconds_with_monitor": 1.389905,
+  "peak_monitored_rss_bytes": 393854976
+}

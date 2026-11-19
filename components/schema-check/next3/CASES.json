@@ -1,0 +1,5174 @@
+[
+  {
+    "id": "pattern-length",
+    "kind": "development",
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "minLength": 1,
+      "maxLength": 2
+    },
+    "tests": [
+      {
+        "data": "",
+        "valid": false
+      },
+      {
+        "data": "a",
+        "valid": true
+      },
+      {
+        "data": "ab",
+        "valid": true
+      },
+      {
+        "data": "aaa",
+        "valid": false
+      },
+      {
+        "data": "c",
+        "valid": false
+      },
+      {
+        "data": "a\n",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "pattern-empty",
+    "kind": "development",
+    "schema": {
+      "type": "string",
+      "pattern": "^a*$",
+      "minLength": 2,
+      "maxLength": 1
+    },
+    "tests": [
+      {
+        "data": "",
+        "valid": false
+      },
+      {
+        "data": "a",
+        "valid": false
+      },
+      {
+        "data": "aa",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "unicode-length",
+    "kind": "development",
+    "schema": {
+      "type": "string",
+      "pattern": "^[é😀]+$",
+      "maxLength": 2
+    },
+    "tests": [
+      {
+        "data": "é",
+        "valid": true
+      },
+      {
+        "data": "😀",
+        "valid": true
+      },
+      {
+        "data": "é😀",
+        "valid": true
+      },
+      {
+        "data": "😀😀😀",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "oneof-overlap",
+    "kind": "development",
+    "schema": {
+      "type": "boolean",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": true
+        }
+      ]
+    },
+    "tests": [
+      {
+        "data": false,
+        "valid": true
+      },
+      {
+        "data": true,
+        "valid": false
+      },
+      {
+        "data": null,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "oneof-identical",
+    "kind": "development",
+    "schema": {
+      "oneOf": [
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    },
+    "tests": [
+      {
+        "data": "a",
+        "valid": false
+      },
+      {
+        "data": "b",
+        "valid": false
+      },
+      {
+        "data": null,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "oneof-not",
+    "kind": "development",
+    "schema": {
+      "type": "boolean",
+      "oneOf": [
+        {},
+        {
+          "not": {
+            "const": true
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "data": true,
+        "valid": true
+      },
+      {
+        "data": false,
+        "valid": false
+      },
+      {
+        "data": 0,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "not-global",
+    "kind": "development",
+    "schema": {
+      "not": true
+    },
+    "tests": [
+      {
+        "data": true,
+        "valid": false
+      },
+      {
+        "data": null,
+        "valid": false
+      },
+      {
+        "data": "a",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "not-unbounded-control",
+    "kind": "development",
+    "schema": {
+      "not": {
+        "type": "boolean"
+      }
+    },
+    "tests": [
+      {
+        "data": true,
+        "valid": false
+      },
+      {
+        "data": null,
+        "valid": true
+      },
+      {
+        "data": "a",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite-pattern-0",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "pattern": "^a*$"
+    },
+    "tests": [
+      {
+        "description": "a matching pattern is valid",
+        "data": "aaa",
+        "valid": true
+      },
+      {
+        "description": "a non-matching pattern is invalid",
+        "data": "abc",
+        "valid": false
+      },
+      {
+        "description": "ignores booleans",
+        "data": true,
+        "valid": true
+      },
+      {
+        "description": "ignores integers",
+        "data": 123,
+        "valid": true
+      },
+      {
+        "description": "ignores floats",
+        "data": 1.0,
+        "valid": true
+      },
+      {
+        "description": "ignores objects",
+        "data": {},
+        "valid": true
+      },
+      {
+        "description": "ignores arrays",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "ignores null",
+        "data": null,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift-pattern-0",
+    "kind": "suite-finite-domain-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "aaa",
+            "abc",
+            true,
+            123,
+            null
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "pattern": "^a*$"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "a matching pattern is valid",
+        "data": "aaa",
+        "valid": true
+      },
+      {
+        "description": "a non-matching pattern is invalid",
+        "data": "abc",
+        "valid": false
+      },
+      {
+        "description": "ignores booleans",
+        "data": true,
+        "valid": true
+      },
+      {
+        "description": "ignores integers",
+        "data": 123,
+        "valid": true
+      },
+      {
+        "description": "ignores null",
+        "data": null,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite-pattern-1",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "pattern": "a+"
+    },
+    "tests": [
+      {
+        "description": "matches a substring",
+        "data": "xxaayy",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift-pattern-1",
+    "kind": "suite-finite-domain-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "xxaayy"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "pattern": "a+"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "matches a substring",
+        "data": "xxaayy",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite-pattern-2",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "string",
+      "pattern": "^\\p{Letter}+$"
+    },
+    "tests": [
+      {
+        "description": "ASCII letters match",
+        "data": "Hello",
+        "valid": true
+      },
+      {
+        "description": "Non-ASCII letters match",
+        "data": "π",
+        "valid": true
+      },
+      {
+        "description": "Digits do not match",
+        "data": "123",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift-pattern-2",
+    "kind": "suite-finite-domain-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "Hello",
+            "π",
+            "123"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "string",
+          "pattern": "^\\p{Letter}+$"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "ASCII letters match",
+        "data": "Hello",
+        "valid": true
+      },
+      {
+        "description": "Non-ASCII letters match",
+        "data": "π",
+        "valid": true
+      },
+      {
+        "description": "Digits do not match",
+        "data": "123",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-minLength-0",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "minLength": 2
+    },
+    "tests": [
+      {
+        "description": "longer is valid",
+        "data": "foo",
+        "valid": true
+      },
+      {
+        "description": "exact length is valid",
+        "data": "fo",
+        "valid": true
+      },
+      {
+        "description": "too short is invalid",
+        "data": "f",
+        "valid": false
+      },
+      {
+        "description": "ignores non-strings",
+        "data": 1,
+        "valid": true
+      },
+      {
+        "description": "one grapheme is not long enough",
+        "data": "💩",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift-minLength-0",
+    "kind": "suite-finite-domain-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "foo",
+            "fo",
+            "f",
+            1,
+            "💩"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minLength": 2
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "longer is valid",
+        "data": "foo",
+        "valid": true
+      },
+      {
+        "description": "exact length is valid",
+        "data": "fo",
+        "valid": true
+      },
+      {
+        "description": "too short is invalid",
+        "data": "f",
+        "valid": false
+      },
+      {
+        "description": "ignores non-strings",
+        "data": 1,
+        "valid": true
+      },
+      {
+        "description": "one grapheme is not long enough",
+        "data": "💩",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-minLength-1",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "minLength": 2.0
+    },
+    "tests": [
+      {
+        "description": "longer is valid",
+        "data": "foo",
+        "valid": true
+      },
+      {
+        "description": "too short is invalid",
+        "data": "f",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift-minLength-1",
+    "kind": "suite-finite-domain-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "foo",
+            "f"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minLength": 2.0
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "longer is valid",
+        "data": "foo",
+        "valid": true
+      },
+      {
+        "description": "too short is invalid",
+        "data": "f",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-maxLength-0",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "maxLength": 2
+    },
+    "tests": [
+      {
+        "description": "shorter is valid",
+        "data": "f",
+        "valid": true
+      },
+      {
+        "description": "exact length is valid",
+        "data": "fo",
+        "valid": true
+      },
+      {
+        "description": "too long is invalid",
+        "data": "foo",
+        "valid": false
+      },
+      {
+        "description": "ignores non-strings",
+        "data": 100,
+        "valid": true
+      },
+      {
+        "description": "two graphemes is long enough",
+        "data": "💩💩",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift-maxLength-0",
+    "kind": "suite-finite-domain-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "f",
+            "fo",
+            "foo",
+            100,
+            "💩💩"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maxLength": 2
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "shorter is valid",
+        "data": "f",
+        "valid": true
+      },
+      {
+        "description": "exact length is valid",
+        "data": "fo",
+        "valid": true
+      },
+      {
+        "description": "too long is invalid",
+        "data": "foo",
+        "valid": false
+      },
+      {
+        "description": "ignores non-strings",
+        "data": 100,
+        "valid": true
+      },
+      {
+        "description": "two graphemes is long enough",
+        "data": "💩💩",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite-maxLength-1",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "maxLength": 2.0
+    },
+    "tests": [
+      {
+        "description": "shorter is valid",
+        "data": "f",
+        "valid": true
+      },
+      {
+        "description": "too long is invalid",
+        "data": "foo",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift-maxLength-1",
+    "kind": "suite-finite-domain-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "f",
+            "foo"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maxLength": 2.0
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "shorter is valid",
+        "data": "f",
+        "valid": true
+      },
+      {
+        "description": "too long is invalid",
+        "data": "foo",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-0",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "minimum": 2
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "first oneOf valid",
+        "data": 1,
+        "valid": true
+      },
+      {
+        "description": "second oneOf valid",
+        "data": 2.5,
+        "valid": true
+      },
+      {
+        "description": "both oneOf valid",
+        "data": 3,
+        "valid": false
+      },
+      {
+        "description": "neither oneOf valid",
+        "data": 1.5,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-1",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "string",
+      "oneOf": [
+        {
+          "minLength": 2
+        },
+        {
+          "maxLength": 4
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "mismatch base schema",
+        "data": 3,
+        "valid": false
+      },
+      {
+        "description": "one oneOf valid",
+        "data": "foobar",
+        "valid": true
+      },
+      {
+        "description": "both oneOf valid",
+        "data": "foo",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-2",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        true,
+        true,
+        true
+      ]
+    },
+    "tests": [
+      {
+        "description": "any value is invalid",
+        "data": "foo",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-3",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        true,
+        false,
+        false
+      ]
+    },
+    "tests": [
+      {
+        "description": "any value is valid",
+        "data": "foo",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-4",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        true,
+        true,
+        false
+      ]
+    },
+    "tests": [
+      {
+        "description": "any value is invalid",
+        "data": "foo",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-5",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        false,
+        false,
+        false
+      ]
+    },
+    "tests": [
+      {
+        "description": "any value is invalid",
+        "data": "foo",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-6",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "properties": {
+            "bar": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "bar"
+          ]
+        },
+        {
+          "properties": {
+            "foo": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "foo"
+          ]
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "first oneOf valid (complex)",
+        "data": {
+          "bar": 2
+        },
+        "valid": true
+      },
+      {
+        "description": "second oneOf valid (complex)",
+        "data": {
+          "foo": "baz"
+        },
+        "valid": true
+      },
+      {
+        "description": "both oneOf valid (complex)",
+        "data": {
+          "foo": "baz",
+          "bar": 2
+        },
+        "valid": false
+      },
+      {
+        "description": "neither oneOf valid (complex)",
+        "data": {
+          "foo": 2,
+          "bar": "quux"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-7",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {}
+      ]
+    },
+    "tests": [
+      {
+        "description": "one valid - valid",
+        "data": "foo",
+        "valid": true
+      },
+      {
+        "description": "both valid - invalid",
+        "data": 123,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-8",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "oneOf": [
+        {
+          "required": [
+            "foo",
+            "bar"
+          ]
+        },
+        {
+          "required": [
+            "foo",
+            "baz"
+          ]
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "both invalid - invalid",
+        "data": {
+          "bar": 2
+        },
+        "valid": false
+      },
+      {
+        "description": "first valid - valid",
+        "data": {
+          "foo": 1,
+          "bar": 2
+        },
+        "valid": true
+      },
+      {
+        "description": "second valid - valid",
+        "data": {
+          "foo": 1,
+          "baz": 3
+        },
+        "valid": true
+      },
+      {
+        "description": "both valid - invalid",
+        "data": {
+          "foo": 1,
+          "bar": 2,
+          "baz": 3
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-9",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "properties": {
+            "bar": true,
+            "baz": true
+          },
+          "required": [
+            "bar"
+          ]
+        },
+        {
+          "properties": {
+            "foo": true
+          },
+          "required": [
+            "foo"
+          ]
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "first oneOf valid",
+        "data": {
+          "bar": 8
+        },
+        "valid": true
+      },
+      {
+        "description": "second oneOf valid",
+        "data": {
+          "foo": "foo"
+        },
+        "valid": true
+      },
+      {
+        "description": "both oneOf valid",
+        "data": {
+          "foo": "foo",
+          "bar": 8
+        },
+        "valid": false
+      },
+      {
+        "description": "neither oneOf valid",
+        "data": {
+          "baz": "quux"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-oneOf-10",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "oneOf": [
+            {
+              "type": "null"
+            }
+          ]
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "null is valid",
+        "data": null,
+        "valid": true
+      },
+      {
+        "description": "anything non-null is invalid",
+        "data": 123,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-not-0",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": {
+        "type": "integer"
+      }
+    },
+    "tests": [
+      {
+        "description": "allowed",
+        "data": "foo",
+        "valid": true
+      },
+      {
+        "description": "disallowed",
+        "data": 1,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-not-1",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": {
+        "type": [
+          "integer",
+          "boolean"
+        ]
+      }
+    },
+    "tests": [
+      {
+        "description": "valid",
+        "data": "foo",
+        "valid": true
+      },
+      {
+        "description": "mismatch",
+        "data": 1,
+        "valid": false
+      },
+      {
+        "description": "other mismatch",
+        "data": true,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-not-2",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": {
+        "type": "object",
+        "properties": {
+          "foo": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tests": [
+      {
+        "description": "match",
+        "data": 1,
+        "valid": true
+      },
+      {
+        "description": "other match",
+        "data": {
+          "foo": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "mismatch",
+        "data": {
+          "foo": "bar"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-not-3",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {
+          "not": {}
+        }
+      }
+    },
+    "tests": [
+      {
+        "description": "property present",
+        "data": {
+          "foo": 1,
+          "bar": 2
+        },
+        "valid": false
+      },
+      {
+        "description": "property absent",
+        "data": {
+          "bar": 1,
+          "baz": 2
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite-not-4",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": {}
+    },
+    "tests": [
+      {
+        "description": "number is invalid",
+        "data": 1,
+        "valid": false
+      },
+      {
+        "description": "string is invalid",
+        "data": "foo",
+        "valid": false
+      },
+      {
+        "description": "boolean true is invalid",
+        "data": true,
+        "valid": false
+      },
+      {
+        "description": "boolean false is invalid",
+        "data": false,
+        "valid": false
+      },
+      {
+        "description": "null is invalid",
+        "data": null,
+        "valid": false
+      },
+      {
+        "description": "object is invalid",
+        "data": {
+          "foo": "bar"
+        },
+        "valid": false
+      },
+      {
+        "description": "empty object is invalid",
+        "data": {},
+        "valid": false
+      },
+      {
+        "description": "array is invalid",
+        "data": [
+          "foo"
+        ],
+        "valid": false
+      },
+      {
+        "description": "empty array is invalid",
+        "data": [],
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-not-5",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": true
+    },
+    "tests": [
+      {
+        "description": "number is invalid",
+        "data": 1,
+        "valid": false
+      },
+      {
+        "description": "string is invalid",
+        "data": "foo",
+        "valid": false
+      },
+      {
+        "description": "boolean true is invalid",
+        "data": true,
+        "valid": false
+      },
+      {
+        "description": "boolean false is invalid",
+        "data": false,
+        "valid": false
+      },
+      {
+        "description": "null is invalid",
+        "data": null,
+        "valid": false
+      },
+      {
+        "description": "object is invalid",
+        "data": {
+          "foo": "bar"
+        },
+        "valid": false
+      },
+      {
+        "description": "empty object is invalid",
+        "data": {},
+        "valid": false
+      },
+      {
+        "description": "array is invalid",
+        "data": [
+          "foo"
+        ],
+        "valid": false
+      },
+      {
+        "description": "empty array is invalid",
+        "data": [],
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite-not-6",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": false
+    },
+    "tests": [
+      {
+        "description": "number is valid",
+        "data": 1,
+        "valid": true
+      },
+      {
+        "description": "string is valid",
+        "data": "foo",
+        "valid": true
+      },
+      {
+        "description": "boolean true is valid",
+        "data": true,
+        "valid": true
+      },
+      {
+        "description": "boolean false is valid",
+        "data": false,
+        "valid": true
+      },
+      {
+        "description": "null is valid",
+        "data": null,
+        "valid": true
+      },
+      {
+        "description": "object is valid",
+        "data": {
+          "foo": "bar"
+        },
+        "valid": true
+      },
+      {
+        "description": "empty object is valid",
+        "data": {},
+        "valid": true
+      },
+      {
+        "description": "array is valid",
+        "data": [
+          "foo"
+        ],
+        "valid": true
+      },
+      {
+        "description": "empty array is valid",
+        "data": [],
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite-not-7",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": {
+        "not": {}
+      }
+    },
+    "tests": [
+      {
+        "description": "any value is valid",
+        "data": "foo",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite-not-8",
+    "kind": "suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": {
+        "$comment": "this subschema must still produce annotations internally, even though the 'not' will ultimately discard them",
+        "anyOf": [
+          true,
+          {
+            "properties": {
+              "foo": true
+            }
+          }
+        ],
+        "unevaluatedProperties": false
+      }
+    },
+    "tests": [
+      {
+        "description": "unevaluated property",
+        "data": {
+          "bar": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "annotations are still collected inside a 'not'",
+        "data": {
+          "foo": 1
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "infinite-star",
+    "kind": "next2-development",
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "minLength": 2
+    },
+    "tests": [
+      {
+        "data": "",
+        "valid": false
+      },
+      {
+        "data": "a",
+        "valid": false
+      },
+      {
+        "data": "ab",
+        "valid": true
+      },
+      {
+        "data": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "infinite-plus",
+    "kind": "next2-development",
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]+$"
+    },
+    "tests": [
+      {
+        "data": "",
+        "valid": false
+      },
+      {
+        "data": "a",
+        "valid": true
+      },
+      {
+        "data": "abababababababababababababababababababab",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "infinite-open-repeat",
+    "kind": "next2-development",
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]{3,}$"
+    },
+    "tests": [
+      {
+        "data": "ab",
+        "valid": false
+      },
+      {
+        "data": "aba",
+        "valid": true
+      },
+      {
+        "data": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "unicode-unbounded",
+    "kind": "next2-development",
+    "schema": {
+      "type": "string",
+      "pattern": "^[é😀]+$",
+      "minLength": 2
+    },
+    "tests": [
+      {
+        "data": "é",
+        "valid": false
+      },
+      {
+        "data": "é😀",
+        "valid": true
+      },
+      {
+        "data": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "generic-unicode-length",
+    "kind": "next2-development",
+    "schema": {
+      "type": "string",
+      "minLength": 2
+    },
+    "tests": [
+      {
+        "data": "",
+        "valid": false
+      },
+      {
+        "data": "😀",
+        "valid": false
+      },
+      {
+        "data": "😀é",
+        "valid": true
+      },
+      {
+        "data": "\n\t",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "length-pattern-cap",
+    "kind": "next2-development",
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "maxLength": 2
+    },
+    "tests": [
+      {
+        "data": "",
+        "valid": true
+      },
+      {
+        "data": "aa",
+        "valid": true
+      },
+      {
+        "data": "aaa",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "length-repeat-empty",
+    "kind": "next2-development",
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]{3,}$",
+      "maxLength": 2
+    },
+    "tests": [
+      {
+        "data": "",
+        "valid": false
+      },
+      {
+        "data": "aa",
+        "valid": false
+      },
+      {
+        "data": "aaa",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "infinite-overlapping-oneof",
+    "kind": "next2-development",
+    "schema": {
+      "type": "string",
+      "oneOf": [
+        {
+          "minLength": 2
+        },
+        {
+          "maxLength": 4
+        }
+      ]
+    },
+    "tests": [
+      {
+        "data": "",
+        "valid": true
+      },
+      {
+        "data": "a",
+        "valid": true
+      },
+      {
+        "data": "aa",
+        "valid": false
+      },
+      {
+        "data": "aaaa",
+        "valid": false
+      },
+      {
+        "data": "aaaaa",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "infinite-not",
+    "kind": "next2-development",
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "not": {
+        "maxLength": 2
+      }
+    },
+    "tests": [
+      {
+        "data": "",
+        "valid": false
+      },
+      {
+        "data": "aa",
+        "valid": false
+      },
+      {
+        "data": "aaa",
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-properties-0",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {
+          "type": "integer"
+        },
+        "bar": {
+          "type": "string"
+        }
+      }
+    },
+    "tests": [
+      {
+        "description": "both properties present and valid is valid",
+        "data": {
+          "foo": 1,
+          "bar": "baz"
+        },
+        "valid": true
+      },
+      {
+        "description": "one property invalid is invalid",
+        "data": {
+          "foo": 1,
+          "bar": {}
+        },
+        "valid": false
+      },
+      {
+        "description": "both properties invalid is invalid",
+        "data": {
+          "foo": [],
+          "bar": {}
+        },
+        "valid": false
+      },
+      {
+        "description": "doesn't invalidate other properties",
+        "data": {
+          "quux": []
+        },
+        "valid": true
+      },
+      {
+        "description": "ignores arrays",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-properties-0",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1,
+              "bar": "baz"
+            },
+            {
+              "foo": 1,
+              "bar": {}
+            },
+            {
+              "foo": [],
+              "bar": {}
+            },
+            {
+              "quux": []
+            },
+            [],
+            12
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {
+              "type": "integer"
+            },
+            "bar": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "both properties present and valid is valid",
+        "data": {
+          "foo": 1,
+          "bar": "baz"
+        },
+        "valid": true
+      },
+      {
+        "description": "one property invalid is invalid",
+        "data": {
+          "foo": 1,
+          "bar": {}
+        },
+        "valid": false
+      },
+      {
+        "description": "both properties invalid is invalid",
+        "data": {
+          "foo": [],
+          "bar": {}
+        },
+        "valid": false
+      },
+      {
+        "description": "doesn't invalidate other properties",
+        "data": {
+          "quux": []
+        },
+        "valid": true
+      },
+      {
+        "description": "ignores arrays",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-properties-1",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {
+          "type": "array",
+          "maxItems": 3
+        },
+        "bar": {
+          "type": "array"
+        }
+      },
+      "patternProperties": {
+        "f.o": {
+          "minItems": 2
+        }
+      },
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "tests": [
+      {
+        "description": "property validates property",
+        "data": {
+          "foo": [
+            1,
+            2
+          ]
+        },
+        "valid": true
+      },
+      {
+        "description": "property invalidates property",
+        "data": {
+          "foo": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "valid": false
+      },
+      {
+        "description": "patternProperty invalidates property",
+        "data": {
+          "foo": []
+        },
+        "valid": false
+      },
+      {
+        "description": "patternProperty validates nonproperty",
+        "data": {
+          "fxo": [
+            1,
+            2
+          ]
+        },
+        "valid": true
+      },
+      {
+        "description": "patternProperty invalidates nonproperty",
+        "data": {
+          "fxo": []
+        },
+        "valid": false
+      },
+      {
+        "description": "additionalProperty ignores property",
+        "data": {
+          "bar": []
+        },
+        "valid": true
+      },
+      {
+        "description": "additionalProperty validates others",
+        "data": {
+          "quux": 3
+        },
+        "valid": true
+      },
+      {
+        "description": "additionalProperty invalidates others",
+        "data": {
+          "quux": "foo"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-properties-1",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": [
+                1,
+                2
+              ]
+            },
+            {
+              "foo": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "foo": []
+            },
+            {
+              "fxo": [
+                1,
+                2
+              ]
+            },
+            {
+              "fxo": []
+            },
+            {
+              "bar": []
+            },
+            {
+              "quux": 3
+            },
+            {
+              "quux": "foo"
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {
+              "type": "array",
+              "maxItems": 3
+            },
+            "bar": {
+              "type": "array"
+            }
+          },
+          "patternProperties": {
+            "f.o": {
+              "minItems": 2
+            }
+          },
+          "additionalProperties": {
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "property validates property",
+        "data": {
+          "foo": [
+            1,
+            2
+          ]
+        },
+        "valid": true
+      },
+      {
+        "description": "property invalidates property",
+        "data": {
+          "foo": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "valid": false
+      },
+      {
+        "description": "patternProperty invalidates property",
+        "data": {
+          "foo": []
+        },
+        "valid": false
+      },
+      {
+        "description": "patternProperty validates nonproperty",
+        "data": {
+          "fxo": [
+            1,
+            2
+          ]
+        },
+        "valid": true
+      },
+      {
+        "description": "patternProperty invalidates nonproperty",
+        "data": {
+          "fxo": []
+        },
+        "valid": false
+      },
+      {
+        "description": "additionalProperty ignores property",
+        "data": {
+          "bar": []
+        },
+        "valid": true
+      },
+      {
+        "description": "additionalProperty validates others",
+        "data": {
+          "quux": 3
+        },
+        "valid": true
+      },
+      {
+        "description": "additionalProperty invalidates others",
+        "data": {
+          "quux": "foo"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-properties-2",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": true,
+        "bar": false
+      }
+    },
+    "tests": [
+      {
+        "description": "no property present is valid",
+        "data": {},
+        "valid": true
+      },
+      {
+        "description": "only 'true' property present is valid",
+        "data": {
+          "foo": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "only 'false' property present is invalid",
+        "data": {
+          "bar": 2
+        },
+        "valid": false
+      },
+      {
+        "description": "both properties present is invalid",
+        "data": {
+          "foo": 1,
+          "bar": 2
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-properties-2",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {},
+            {
+              "foo": 1
+            },
+            {
+              "bar": 2
+            },
+            {
+              "foo": 1,
+              "bar": 2
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": true,
+            "bar": false
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "no property present is valid",
+        "data": {},
+        "valid": true
+      },
+      {
+        "description": "only 'true' property present is valid",
+        "data": {
+          "foo": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "only 'false' property present is invalid",
+        "data": {
+          "bar": 2
+        },
+        "valid": false
+      },
+      {
+        "description": "both properties present is invalid",
+        "data": {
+          "foo": 1,
+          "bar": 2
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-properties-3",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo\nbar": {
+          "type": "number"
+        },
+        "foo\"bar": {
+          "type": "number"
+        },
+        "foo\\bar": {
+          "type": "number"
+        },
+        "foo\rbar": {
+          "type": "number"
+        },
+        "foo\tbar": {
+          "type": "number"
+        },
+        "foo\fbar": {
+          "type": "number"
+        }
+      }
+    },
+    "tests": [
+      {
+        "description": "object with all numbers is valid",
+        "data": {
+          "foo\nbar": 1,
+          "foo\"bar": 1,
+          "foo\\bar": 1,
+          "foo\rbar": 1,
+          "foo\tbar": 1,
+          "foo\fbar": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "object with strings is invalid",
+        "data": {
+          "foo\nbar": "1",
+          "foo\"bar": "1",
+          "foo\\bar": "1",
+          "foo\rbar": "1",
+          "foo\tbar": "1",
+          "foo\fbar": "1"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-properties-3",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo\nbar": 1,
+              "foo\"bar": 1,
+              "foo\\bar": 1,
+              "foo\rbar": 1,
+              "foo\tbar": 1,
+              "foo\fbar": 1
+            },
+            {
+              "foo\nbar": "1",
+              "foo\"bar": "1",
+              "foo\\bar": "1",
+              "foo\rbar": "1",
+              "foo\tbar": "1",
+              "foo\fbar": "1"
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo\nbar": {
+              "type": "number"
+            },
+            "foo\"bar": {
+              "type": "number"
+            },
+            "foo\\bar": {
+              "type": "number"
+            },
+            "foo\rbar": {
+              "type": "number"
+            },
+            "foo\tbar": {
+              "type": "number"
+            },
+            "foo\fbar": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "object with all numbers is valid",
+        "data": {
+          "foo\nbar": 1,
+          "foo\"bar": 1,
+          "foo\\bar": 1,
+          "foo\rbar": 1,
+          "foo\tbar": 1,
+          "foo\fbar": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "object with strings is invalid",
+        "data": {
+          "foo\nbar": "1",
+          "foo\"bar": "1",
+          "foo\\bar": "1",
+          "foo\rbar": "1",
+          "foo\tbar": "1",
+          "foo\fbar": "1"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-properties-4",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {
+          "type": "null"
+        }
+      }
+    },
+    "tests": [
+      {
+        "description": "allows null values",
+        "data": {
+          "foo": null
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-properties-4",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": null
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "allows null values",
+        "data": {
+          "foo": null
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-properties-5",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "__proto__": {
+          "type": "number"
+        },
+        "toString": {
+          "properties": {
+            "length": {
+              "type": "string"
+            }
+          }
+        },
+        "constructor": {
+          "type": "number"
+        }
+      }
+    },
+    "tests": [
+      {
+        "description": "ignores arrays",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      },
+      {
+        "description": "none of the properties mentioned",
+        "data": {},
+        "valid": true
+      },
+      {
+        "description": "__proto__ not valid",
+        "data": {
+          "__proto__": "foo"
+        },
+        "valid": false
+      },
+      {
+        "description": "toString not valid",
+        "data": {
+          "toString": {
+            "length": 37
+          }
+        },
+        "valid": false
+      },
+      {
+        "description": "constructor not valid",
+        "data": {
+          "constructor": {
+            "length": 37
+          }
+        },
+        "valid": false
+      },
+      {
+        "description": "all present and valid",
+        "data": {
+          "__proto__": 12,
+          "toString": {
+            "length": "foo"
+          },
+          "constructor": 37
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-properties-5",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            [],
+            12,
+            {},
+            {
+              "__proto__": "foo"
+            },
+            {
+              "toString": {
+                "length": 37
+              }
+            },
+            {
+              "constructor": {
+                "length": 37
+              }
+            },
+            {
+              "__proto__": 12,
+              "toString": {
+                "length": "foo"
+              },
+              "constructor": 37
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "__proto__": {
+              "type": "number"
+            },
+            "toString": {
+              "properties": {
+                "length": {
+                  "type": "string"
+                }
+              }
+            },
+            "constructor": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "ignores arrays",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      },
+      {
+        "description": "none of the properties mentioned",
+        "data": {},
+        "valid": true
+      },
+      {
+        "description": "__proto__ not valid",
+        "data": {
+          "__proto__": "foo"
+        },
+        "valid": false
+      },
+      {
+        "description": "toString not valid",
+        "data": {
+          "toString": {
+            "length": 37
+          }
+        },
+        "valid": false
+      },
+      {
+        "description": "constructor not valid",
+        "data": {
+          "constructor": {
+            "length": 37
+          }
+        },
+        "valid": false
+      },
+      {
+        "description": "all present and valid",
+        "data": {
+          "__proto__": 12,
+          "toString": {
+            "length": "foo"
+          },
+          "constructor": 37
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-required-0",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {},
+        "bar": {}
+      },
+      "required": [
+        "foo"
+      ]
+    },
+    "tests": [
+      {
+        "description": "present required property is valid",
+        "data": {
+          "foo": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "non-present required property is invalid",
+        "data": {
+          "bar": 1
+        },
+        "valid": false
+      },
+      {
+        "description": "ignores arrays",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "ignores strings",
+        "data": "",
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      },
+      {
+        "description": "ignores null",
+        "data": null,
+        "valid": true
+      },
+      {
+        "description": "ignores boolean",
+        "data": true,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-required-0",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1
+            },
+            {
+              "bar": 1
+            },
+            [],
+            "",
+            12,
+            null,
+            true
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          },
+          "required": [
+            "foo"
+          ]
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "present required property is valid",
+        "data": {
+          "foo": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "non-present required property is invalid",
+        "data": {
+          "bar": 1
+        },
+        "valid": false
+      },
+      {
+        "description": "ignores arrays",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "ignores strings",
+        "data": "",
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      },
+      {
+        "description": "ignores null",
+        "data": null,
+        "valid": true
+      },
+      {
+        "description": "ignores boolean",
+        "data": true,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-required-1",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {}
+      }
+    },
+    "tests": [
+      {
+        "description": "not required by default",
+        "data": {},
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-required-1",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {}
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {}
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "not required by default",
+        "data": {},
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-required-2",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {}
+      },
+      "required": []
+    },
+    "tests": [
+      {
+        "description": "property not required",
+        "data": {},
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-required-2",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {}
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {}
+          },
+          "required": []
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "property not required",
+        "data": {},
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-required-3",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "required": [
+        "foo\nbar",
+        "foo\"bar",
+        "foo\\bar",
+        "foo\rbar",
+        "foo\tbar",
+        "foo\fbar"
+      ]
+    },
+    "tests": [
+      {
+        "description": "object with all properties present is valid",
+        "data": {
+          "foo\nbar": 1,
+          "foo\"bar": 1,
+          "foo\\bar": 1,
+          "foo\rbar": 1,
+          "foo\tbar": 1,
+          "foo\fbar": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "object with some properties missing is invalid",
+        "data": {
+          "foo\nbar": "1",
+          "foo\"bar": "1"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-required-3",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo\nbar": 1,
+              "foo\"bar": 1,
+              "foo\\bar": 1,
+              "foo\rbar": 1,
+              "foo\tbar": 1,
+              "foo\fbar": 1
+            },
+            {
+              "foo\nbar": "1",
+              "foo\"bar": "1"
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "required": [
+            "foo\nbar",
+            "foo\"bar",
+            "foo\\bar",
+            "foo\rbar",
+            "foo\tbar",
+            "foo\fbar"
+          ]
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "object with all properties present is valid",
+        "data": {
+          "foo\nbar": 1,
+          "foo\"bar": 1,
+          "foo\\bar": 1,
+          "foo\rbar": 1,
+          "foo\tbar": 1,
+          "foo\fbar": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "object with some properties missing is invalid",
+        "data": {
+          "foo\nbar": "1",
+          "foo\"bar": "1"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-required-4",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "required": [
+        "__proto__",
+        "toString",
+        "constructor"
+      ]
+    },
+    "tests": [
+      {
+        "description": "ignores arrays",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      },
+      {
+        "description": "none of the properties mentioned",
+        "data": {},
+        "valid": false
+      },
+      {
+        "description": "__proto__ present",
+        "data": {
+          "__proto__": "foo"
+        },
+        "valid": false
+      },
+      {
+        "description": "toString present",
+        "data": {
+          "toString": {
+            "length": 37
+          }
+        },
+        "valid": false
+      },
+      {
+        "description": "constructor present",
+        "data": {
+          "constructor": {
+            "length": 37
+          }
+        },
+        "valid": false
+      },
+      {
+        "description": "all present",
+        "data": {
+          "__proto__": 12,
+          "toString": {
+            "length": "foo"
+          },
+          "constructor": 37
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-required-4",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            [],
+            12,
+            {},
+            {
+              "__proto__": "foo"
+            },
+            {
+              "toString": {
+                "length": 37
+              }
+            },
+            {
+              "constructor": {
+                "length": 37
+              }
+            },
+            {
+              "__proto__": 12,
+              "toString": {
+                "length": "foo"
+              },
+              "constructor": 37
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "required": [
+            "__proto__",
+            "toString",
+            "constructor"
+          ]
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "ignores arrays",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      },
+      {
+        "description": "none of the properties mentioned",
+        "data": {},
+        "valid": false
+      },
+      {
+        "description": "__proto__ present",
+        "data": {
+          "__proto__": "foo"
+        },
+        "valid": false
+      },
+      {
+        "description": "toString present",
+        "data": {
+          "toString": {
+            "length": 37
+          }
+        },
+        "valid": false
+      },
+      {
+        "description": "constructor present",
+        "data": {
+          "constructor": {
+            "length": 37
+          }
+        },
+        "valid": false
+      },
+      {
+        "description": "all present",
+        "data": {
+          "__proto__": 12,
+          "toString": {
+            "length": "foo"
+          },
+          "constructor": 37
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-additionalProperties-0",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {},
+        "bar": {}
+      },
+      "patternProperties": {
+        "^v": {}
+      },
+      "additionalProperties": false
+    },
+    "tests": [
+      {
+        "description": "no additional properties is valid",
+        "data": {
+          "foo": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "an additional property is invalid",
+        "data": {
+          "foo": 1,
+          "bar": 2,
+          "quux": "boom"
+        },
+        "valid": false
+      },
+      {
+        "description": "ignores arrays",
+        "data": [
+          1,
+          2,
+          3
+        ],
+        "valid": true
+      },
+      {
+        "description": "ignores strings",
+        "data": "foobarbaz",
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      },
+      {
+        "description": "patternProperties are not additional properties",
+        "data": {
+          "foo": 1,
+          "vroom": 2
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-additionalProperties-0",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1
+            },
+            {
+              "foo": 1,
+              "bar": 2,
+              "quux": "boom"
+            },
+            [
+              1,
+              2,
+              3
+            ],
+            "foobarbaz",
+            12,
+            {
+              "foo": 1,
+              "vroom": 2
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          },
+          "patternProperties": {
+            "^v": {}
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "no additional properties is valid",
+        "data": {
+          "foo": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "an additional property is invalid",
+        "data": {
+          "foo": 1,
+          "bar": 2,
+          "quux": "boom"
+        },
+        "valid": false
+      },
+      {
+        "description": "ignores arrays",
+        "data": [
+          1,
+          2,
+          3
+        ],
+        "valid": true
+      },
+      {
+        "description": "ignores strings",
+        "data": "foobarbaz",
+        "valid": true
+      },
+      {
+        "description": "ignores other non-objects",
+        "data": 12,
+        "valid": true
+      },
+      {
+        "description": "patternProperties are not additional properties",
+        "data": {
+          "foo": 1,
+          "vroom": 2
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-additionalProperties-1",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "patternProperties": {
+        "^á": {}
+      },
+      "additionalProperties": false
+    },
+    "tests": [
+      {
+        "description": "matching the pattern is valid",
+        "data": {
+          "ármányos": 2
+        },
+        "valid": true
+      },
+      {
+        "description": "not matching the pattern is invalid",
+        "data": {
+          "élmény": 2
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-additionalProperties-1",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "ármányos": 2
+            },
+            {
+              "élmény": 2
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "patternProperties": {
+            "^á": {}
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "matching the pattern is valid",
+        "data": {
+          "ármányos": 2
+        },
+        "valid": true
+      },
+      {
+        "description": "not matching the pattern is invalid",
+        "data": {
+          "élmény": 2
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-additionalProperties-2",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {},
+        "bar": {}
+      },
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "tests": [
+      {
+        "description": "no additional properties is valid",
+        "data": {
+          "foo": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "an additional valid property is valid",
+        "data": {
+          "foo": 1,
+          "bar": 2,
+          "quux": true
+        },
+        "valid": true
+      },
+      {
+        "description": "an additional invalid property is invalid",
+        "data": {
+          "foo": 1,
+          "bar": 2,
+          "quux": 12
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-additionalProperties-2",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1
+            },
+            {
+              "foo": 1,
+              "bar": 2,
+              "quux": true
+            },
+            {
+              "foo": 1,
+              "bar": 2,
+              "quux": 12
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          },
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "no additional properties is valid",
+        "data": {
+          "foo": 1
+        },
+        "valid": true
+      },
+      {
+        "description": "an additional valid property is valid",
+        "data": {
+          "foo": 1,
+          "bar": 2,
+          "quux": true
+        },
+        "valid": true
+      },
+      {
+        "description": "an additional invalid property is invalid",
+        "data": {
+          "foo": 1,
+          "bar": 2,
+          "quux": 12
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-additionalProperties-3",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "tests": [
+      {
+        "description": "an additional valid property is valid",
+        "data": {
+          "foo": true
+        },
+        "valid": true
+      },
+      {
+        "description": "an additional invalid property is invalid",
+        "data": {
+          "foo": 1
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-additionalProperties-3",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": true
+            },
+            {
+              "foo": 1
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "an additional valid property is valid",
+        "data": {
+          "foo": true
+        },
+        "valid": true
+      },
+      {
+        "description": "an additional invalid property is invalid",
+        "data": {
+          "foo": 1
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-additionalProperties-4",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo": {},
+        "bar": {}
+      }
+    },
+    "tests": [
+      {
+        "description": "additional properties are allowed",
+        "data": {
+          "foo": 1,
+          "bar": 2,
+          "quux": true
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-additionalProperties-4",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1,
+              "bar": 2,
+              "quux": true
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "additional properties are allowed",
+        "data": {
+          "foo": 1,
+          "bar": 2,
+          "quux": true
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-additionalProperties-5",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "allOf": [
+        {
+          "properties": {
+            "foo": {}
+          }
+        }
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "tests": [
+      {
+        "description": "properties defined in allOf are not examined",
+        "data": {
+          "foo": 1,
+          "bar": true
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-additionalProperties-5",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1,
+              "bar": true
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "allOf": [
+            {
+              "properties": {
+                "foo": {}
+              }
+            }
+          ],
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "properties defined in allOf are not examined",
+        "data": {
+          "foo": 1,
+          "bar": true
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-additionalProperties-6",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": {
+        "type": "null"
+      }
+    },
+    "tests": [
+      {
+        "description": "allows null values",
+        "data": {
+          "foo": null
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "lift3-additionalProperties-6",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": null
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": {
+            "type": "null"
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "allows null values",
+        "data": {
+          "foo": null
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-additionalProperties-7",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "propertyNames": {
+        "maxLength": 5
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "tests": [
+      {
+        "description": "Valid against both keywords",
+        "data": {
+          "apple": 4
+        },
+        "valid": true
+      },
+      {
+        "description": "Valid against propertyNames, but not additionalProperties",
+        "data": {
+          "fig": 2,
+          "pear": "available"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-additionalProperties-7",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "apple": 4
+            },
+            {
+              "fig": 2,
+              "pear": "available"
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "propertyNames": {
+            "maxLength": 5
+          },
+          "additionalProperties": {
+            "type": "number"
+          }
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "Valid against both keywords",
+        "data": {
+          "apple": 4
+        },
+        "valid": true
+      },
+      {
+        "description": "Valid against propertyNames, but not additionalProperties",
+        "data": {
+          "fig": 2,
+          "pear": "available"
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-additionalProperties-8",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "foo2": {}
+      },
+      "dependentSchemas": {
+        "foo": {},
+        "foo2": {
+          "properties": {
+            "bar": {}
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "tests": [
+      {
+        "description": "additionalProperties doesn't consider dependentSchemas",
+        "data": {
+          "foo": ""
+        },
+        "valid": false
+      },
+      {
+        "description": "additionalProperties can't see bar",
+        "data": {
+          "bar": ""
+        },
+        "valid": false
+      },
+      {
+        "description": "additionalProperties can't see bar even when foo2 is present",
+        "data": {
+          "foo2": "",
+          "bar": ""
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "lift3-additionalProperties-8",
+    "kind": "next3-suite-finite-lift",
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": ""
+            },
+            {
+              "bar": ""
+            },
+            {
+              "foo2": "",
+              "bar": ""
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo2": {}
+          },
+          "dependentSchemas": {
+            "foo": {},
+            "foo2": {
+              "properties": {
+                "bar": {}
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "additionalProperties doesn't consider dependentSchemas",
+        "data": {
+          "foo": ""
+        },
+        "valid": false
+      },
+      {
+        "description": "additionalProperties can't see bar",
+        "data": {
+          "bar": ""
+        },
+        "valid": false
+      },
+      {
+        "description": "additionalProperties can't see bar even when foo2 is present",
+        "data": {
+          "foo2": "",
+          "bar": ""
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-0",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "tests": [
+      {
+        "description": "one of the enum is valid",
+        "data": 1,
+        "valid": true
+      },
+      {
+        "description": "something else is invalid",
+        "data": 4,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-1",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        6,
+        "foo",
+        [],
+        true,
+        {
+          "foo": 12
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "one of the enum is valid",
+        "data": [],
+        "valid": true
+      },
+      {
+        "description": "something else is invalid",
+        "data": null,
+        "valid": false
+      },
+      {
+        "description": "objects are deep compared",
+        "data": {
+          "foo": false
+        },
+        "valid": false
+      },
+      {
+        "description": "valid object matches",
+        "data": {
+          "foo": 12
+        },
+        "valid": true
+      },
+      {
+        "description": "extra properties in object is invalid",
+        "data": {
+          "foo": 12,
+          "boo": 42
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-2",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        6,
+        null
+      ]
+    },
+    "tests": [
+      {
+        "description": "null is valid",
+        "data": null,
+        "valid": true
+      },
+      {
+        "description": "number is valid",
+        "data": 6,
+        "valid": true
+      },
+      {
+        "description": "something else is invalid",
+        "data": "test",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-3",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "foo": {
+          "enum": [
+            "foo"
+          ]
+        },
+        "bar": {
+          "enum": [
+            "bar"
+          ]
+        }
+      },
+      "required": [
+        "bar"
+      ]
+    },
+    "tests": [
+      {
+        "description": "both properties are valid",
+        "data": {
+          "foo": "foo",
+          "bar": "bar"
+        },
+        "valid": true
+      },
+      {
+        "description": "wrong foo value",
+        "data": {
+          "foo": "foot",
+          "bar": "bar"
+        },
+        "valid": false
+      },
+      {
+        "description": "wrong bar value",
+        "data": {
+          "foo": "foo",
+          "bar": "bart"
+        },
+        "valid": false
+      },
+      {
+        "description": "missing optional property is valid",
+        "data": {
+          "bar": "bar"
+        },
+        "valid": true
+      },
+      {
+        "description": "missing required property is invalid",
+        "data": {
+          "foo": "foo"
+        },
+        "valid": false
+      },
+      {
+        "description": "missing all properties is invalid",
+        "data": {},
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-4",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        "foo\nbar",
+        "foo\rbar"
+      ]
+    },
+    "tests": [
+      {
+        "description": "member 1 is valid",
+        "data": "foo\nbar",
+        "valid": true
+      },
+      {
+        "description": "member 2 is valid",
+        "data": "foo\rbar",
+        "valid": true
+      },
+      {
+        "description": "another string is invalid",
+        "data": "abc",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-5",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        false
+      ]
+    },
+    "tests": [
+      {
+        "description": "false is valid",
+        "data": false,
+        "valid": true
+      },
+      {
+        "description": "integer zero is invalid",
+        "data": 0,
+        "valid": false
+      },
+      {
+        "description": "float zero is invalid",
+        "data": 0.0,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-6",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        [
+          false
+        ]
+      ]
+    },
+    "tests": [
+      {
+        "description": "[false] is valid",
+        "data": [
+          false
+        ],
+        "valid": true
+      },
+      {
+        "description": "[0] is invalid",
+        "data": [
+          0
+        ],
+        "valid": false
+      },
+      {
+        "description": "[0.0] is invalid",
+        "data": [
+          0.0
+        ],
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-7",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        true
+      ]
+    },
+    "tests": [
+      {
+        "description": "true is valid",
+        "data": true,
+        "valid": true
+      },
+      {
+        "description": "integer one is invalid",
+        "data": 1,
+        "valid": false
+      },
+      {
+        "description": "float one is invalid",
+        "data": 1.0,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-8",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        [
+          true
+        ]
+      ]
+    },
+    "tests": [
+      {
+        "description": "[true] is valid",
+        "data": [
+          true
+        ],
+        "valid": true
+      },
+      {
+        "description": "[1] is invalid",
+        "data": [
+          1
+        ],
+        "valid": false
+      },
+      {
+        "description": "[1.0] is invalid",
+        "data": [
+          1.0
+        ],
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-9",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        0
+      ]
+    },
+    "tests": [
+      {
+        "description": "false is invalid",
+        "data": false,
+        "valid": false
+      },
+      {
+        "description": "integer zero is valid",
+        "data": 0,
+        "valid": true
+      },
+      {
+        "description": "float zero is valid",
+        "data": 0.0,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-10",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        [
+          0
+        ]
+      ]
+    },
+    "tests": [
+      {
+        "description": "[false] is invalid",
+        "data": [
+          false
+        ],
+        "valid": false
+      },
+      {
+        "description": "[0] is valid",
+        "data": [
+          0
+        ],
+        "valid": true
+      },
+      {
+        "description": "[0.0] is valid",
+        "data": [
+          0.0
+        ],
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-11",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        1
+      ]
+    },
+    "tests": [
+      {
+        "description": "true is invalid",
+        "data": true,
+        "valid": false
+      },
+      {
+        "description": "integer one is valid",
+        "data": 1,
+        "valid": true
+      },
+      {
+        "description": "float one is valid",
+        "data": 1.0,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-12",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        [
+          1
+        ]
+      ]
+    },
+    "tests": [
+      {
+        "description": "[true] is invalid",
+        "data": [
+          true
+        ],
+        "valid": false
+      },
+      {
+        "description": "[1] is valid",
+        "data": [
+          1
+        ],
+        "valid": true
+      },
+      {
+        "description": "[1.0] is valid",
+        "data": [
+          1.0
+        ],
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-13",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        "hello\u0000there"
+      ]
+    },
+    "tests": [
+      {
+        "description": "match string with nul",
+        "data": "hello\u0000there",
+        "valid": true
+      },
+      {
+        "description": "do not match string lacking nul",
+        "data": "hellothere",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-14",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": []
+    },
+    "tests": [
+      {
+        "description": "string is invalid",
+        "data": "foo",
+        "valid": false
+      },
+      {
+        "description": "number is invalid",
+        "data": 42,
+        "valid": false
+      },
+      {
+        "description": "null is invalid",
+        "data": null,
+        "valid": false
+      },
+      {
+        "description": "object is invalid",
+        "data": {},
+        "valid": false
+      },
+      {
+        "description": "array is invalid",
+        "data": [],
+        "valid": false
+      },
+      {
+        "description": "boolean is invalid",
+        "data": false,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-enum-15",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": [
+        "ä"
+      ],
+      "$comment": "U+00E4"
+    },
+    "tests": [
+      {
+        "description": "character uses the same codepoint",
+        "data": "ä",
+        "comment": "U+00E4",
+        "valid": true
+      },
+      {
+        "description": "character looks the same but uses combining marks",
+        "data": "ä",
+        "comment": "a, U+0308",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-0",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": 2
+    },
+    "tests": [
+      {
+        "description": "same value is valid",
+        "data": 2,
+        "valid": true
+      },
+      {
+        "description": "another value is invalid",
+        "data": 5,
+        "valid": false
+      },
+      {
+        "description": "another type is invalid",
+        "data": "a",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-1",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": {
+        "foo": "bar",
+        "baz": "bax"
+      }
+    },
+    "tests": [
+      {
+        "description": "same object is valid",
+        "data": {
+          "foo": "bar",
+          "baz": "bax"
+        },
+        "valid": true
+      },
+      {
+        "description": "same object with different property order is valid",
+        "data": {
+          "baz": "bax",
+          "foo": "bar"
+        },
+        "valid": true
+      },
+      {
+        "description": "another object is invalid",
+        "data": {
+          "foo": "bar"
+        },
+        "valid": false
+      },
+      {
+        "description": "another type is invalid",
+        "data": [
+          1,
+          2
+        ],
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-2",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": [
+        {
+          "foo": "bar"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "description": "same array is valid",
+        "data": [
+          {
+            "foo": "bar"
+          }
+        ],
+        "valid": true
+      },
+      {
+        "description": "another array item is invalid",
+        "data": [
+          2
+        ],
+        "valid": false
+      },
+      {
+        "description": "array with additional items is invalid",
+        "data": [
+          1,
+          2,
+          3
+        ],
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-3",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": null
+    },
+    "tests": [
+      {
+        "description": "null is valid",
+        "data": null,
+        "valid": true
+      },
+      {
+        "description": "not null is invalid",
+        "data": 0,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-4",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": false
+    },
+    "tests": [
+      {
+        "description": "false is valid",
+        "data": false,
+        "valid": true
+      },
+      {
+        "description": "integer zero is invalid",
+        "data": 0,
+        "valid": false
+      },
+      {
+        "description": "float zero is invalid",
+        "data": 0.0,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-5",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": true
+    },
+    "tests": [
+      {
+        "description": "true is valid",
+        "data": true,
+        "valid": true
+      },
+      {
+        "description": "integer one is invalid",
+        "data": 1,
+        "valid": false
+      },
+      {
+        "description": "float one is invalid",
+        "data": 1.0,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-6",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": [
+        false
+      ]
+    },
+    "tests": [
+      {
+        "description": "[false] is valid",
+        "data": [
+          false
+        ],
+        "valid": true
+      },
+      {
+        "description": "[0] is invalid",
+        "data": [
+          0
+        ],
+        "valid": false
+      },
+      {
+        "description": "[0.0] is invalid",
+        "data": [
+          0.0
+        ],
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-7",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": [
+        true
+      ]
+    },
+    "tests": [
+      {
+        "description": "[true] is valid",
+        "data": [
+          true
+        ],
+        "valid": true
+      },
+      {
+        "description": "[1] is invalid",
+        "data": [
+          1
+        ],
+        "valid": false
+      },
+      {
+        "description": "[1.0] is invalid",
+        "data": [
+          1.0
+        ],
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-8",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": {
+        "a": false
+      }
+    },
+    "tests": [
+      {
+        "description": "{\"a\": false} is valid",
+        "data": {
+          "a": false
+        },
+        "valid": true
+      },
+      {
+        "description": "{\"a\": 0} is invalid",
+        "data": {
+          "a": 0
+        },
+        "valid": false
+      },
+      {
+        "description": "{\"a\": 0.0} is invalid",
+        "data": {
+          "a": 0.0
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-9",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": {
+        "a": true
+      }
+    },
+    "tests": [
+      {
+        "description": "{\"a\": true} is valid",
+        "data": {
+          "a": true
+        },
+        "valid": true
+      },
+      {
+        "description": "{\"a\": 1} is invalid",
+        "data": {
+          "a": 1
+        },
+        "valid": false
+      },
+      {
+        "description": "{\"a\": 1.0} is invalid",
+        "data": {
+          "a": 1.0
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-10",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": 0
+    },
+    "tests": [
+      {
+        "description": "false is invalid",
+        "data": false,
+        "valid": false
+      },
+      {
+        "description": "integer zero is valid",
+        "data": 0,
+        "valid": true
+      },
+      {
+        "description": "float zero is valid",
+        "data": 0.0,
+        "valid": true
+      },
+      {
+        "description": "empty object is invalid",
+        "data": {},
+        "valid": false
+      },
+      {
+        "description": "empty array is invalid",
+        "data": [],
+        "valid": false
+      },
+      {
+        "description": "empty string is invalid",
+        "data": "",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-11",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": 1
+    },
+    "tests": [
+      {
+        "description": "true is invalid",
+        "data": true,
+        "valid": false
+      },
+      {
+        "description": "integer one is valid",
+        "data": 1,
+        "valid": true
+      },
+      {
+        "description": "float one is valid",
+        "data": 1.0,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-12",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": -2.0
+    },
+    "tests": [
+      {
+        "description": "integer -2 is valid",
+        "data": -2,
+        "valid": true
+      },
+      {
+        "description": "integer 2 is invalid",
+        "data": 2,
+        "valid": false
+      },
+      {
+        "description": "float -2.0 is valid",
+        "data": -2.0,
+        "valid": true
+      },
+      {
+        "description": "float 2.0 is invalid",
+        "data": 2.0,
+        "valid": false
+      },
+      {
+        "description": "float -2.00001 is invalid",
+        "data": -2.00001,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-13",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": 9007199254740992
+    },
+    "tests": [
+      {
+        "description": "integer is valid",
+        "data": 9007199254740992,
+        "valid": true
+      },
+      {
+        "description": "integer minus one is invalid",
+        "data": 9007199254740991,
+        "valid": false
+      },
+      {
+        "description": "float is valid",
+        "data": 9007199254740992.0,
+        "valid": true
+      },
+      {
+        "description": "float minus one is invalid",
+        "data": 9007199254740991.0,
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-14",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": "hello\u0000there"
+    },
+    "tests": [
+      {
+        "description": "match string with nul",
+        "data": "hello\u0000there",
+        "valid": true
+      },
+      {
+        "description": "do not match string lacking nul",
+        "data": "hellothere",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-15",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": "μ",
+      "$comment": "U+03BC"
+    },
+    "tests": [
+      {
+        "description": "character uses the same codepoint",
+        "data": "μ",
+        "comment": "U+03BC",
+        "valid": true
+      },
+      {
+        "description": "character looks the same but uses a different codepoint",
+        "data": "µ",
+        "comment": "U+00B5",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "suite3-const-16",
+    "kind": "next3-suite-original",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "const": "ä",
+      "$comment": "U+00E4"
+    },
+    "tests": [
+      {
+        "description": "character uses the same codepoint",
+        "data": "ä",
+        "comment": "U+00E4",
+        "valid": true
+      },
+      {
+        "description": "character looks the same but uses combining marks",
+        "data": "ä",
+        "comment": "a, U+0308",
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "object-required-optional",
+    "kind": "next3-development",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "enum": [
+            "x",
+            "y"
+          ]
+        },
+        "b": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "a"
+      ],
+      "additionalProperties": false
+    },
+    "tests": [
+      {
+        "data": {
+          "a": "x"
+        },
+        "valid": true
+      },
+      {
+        "data": {
+          "a": "y",
+          "b": false
+        },
+        "valid": true
+      },
+      {
+        "data": {},
+        "valid": false
+      },
+      {
+        "data": {
+          "a": "x",
+          "extra": 1
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "object-required-impossible",
+    "kind": "next3-development",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "missing"
+      ],
+      "additionalProperties": false
+    },
+    "tests": [
+      {
+        "data": {},
+        "valid": false
+      },
+      {
+        "data": {
+          "missing": true
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "object-nested-const",
+    "kind": "next3-development",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "node": {
+          "const": {
+            "active": true,
+            "flags": [
+              false,
+              1
+            ]
+          }
+        }
+      },
+      "required": [
+        "node"
+      ],
+      "additionalProperties": false
+    },
+    "tests": [
+      {
+        "data": {
+          "node": {
+            "active": true,
+            "flags": [
+              false,
+              1
+            ]
+          }
+        },
+        "valid": true
+      },
+      {
+        "data": {
+          "node": {
+            "active": 1,
+            "flags": [
+              false,
+              1
+            ]
+          }
+        },
+        "valid": false
+      }
+    ]
+  },
+  {
+    "id": "object-open-control",
+    "kind": "next3-development",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "enum": [
+            "x"
+          ]
+        }
+      },
+      "required": [
+        "a"
+      ]
+    },
+    "tests": [
+      {
+        "data": {
+          "a": "x",
+          "other": 1
+        },
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "enum-type-equality",
+    "kind": "next3-development",
+    "schema": {
+      "enum": [
+        true,
+        {
+          "a": false
+        },
+        [
+          true
+        ],
+        1
+      ]
+    },
+    "tests": [
+      {
+        "data": true,
+        "valid": true
+      },
+      {
+        "data": false,
+        "valid": false
+      },
+      {
+        "data": {
+          "a": 0
+        },
+        "valid": false
+      },
+      {
+        "data": [
+          1
+        ],
+        "valid": false
+      },
+      {
+        "data": 1.0,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "id": "issue-xg858-original",
+    "kind": "issue-original-schema",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "modifier": {
+          "enum": [
+            "",
+            "dark"
+          ]
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "modifier"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "tests": [
+      {
+        "data": {
+          "modifier": ""
+        },
+        "valid": true
+      },
+      {
+        "data": {
+          "modifier": "dark"
+        },
+        "valid": true
+      },
+      {
+        "data": {},
+        "valid": false
+      },
+      {
+        "data": {
+          "zzz": [
+            1,
+            2,
+            3
+          ]
+        },
+        "valid": false
+      },
+      {
+        "data": [
+          1
+        ],
+        "valid": false
+      },
+      {
+        "data": {
+          "modifier": "dark",
+          "extra": 1
+        },
+        "valid": false
+      }
+    ],
+    "source": "https://github.com/mlc-ai/xgrammar/issues/858"
+  },
+  {
+    "id": "issue-xg895-original",
+    "kind": "issue-original-schema",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "k": {
+          "type": "string",
+          "pattern": "^[a-z]+$",
+          "maxLength": 3
+        }
+      },
+      "required": [
+        "k"
+      ],
+      "additionalProperties": false
+    },
+    "tests": [
+      {
+        "data": {
+          "k": "abc"
+        },
+        "valid": true
+      },
+      {
+        "data": {
+          "k": "abcd"
+        },
+        "valid": false
+      },
+      {
+        "data": {
+          "k": ""
+        },
+        "valid": false
+      },
+      {
+        "data": {
+          "k": "ABC"
+        },
+        "valid": false
+      }
+    ],
+    "source": "https://github.com/mlc-ai/xgrammar/issues/895"
+  },
+  {
+    "id": "issue-vllm56556-finite-derived",
+    "kind": "issue-derived-schema",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "enum": [
+            10,
+            15
+          ]
+        },
+        "y": {
+          "enum": [
+            "ok"
+          ]
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "required": [
+            "x"
+          ]
+        },
+        {
+          "required": [
+            "y"
+          ]
+        }
+      ]
+    },
+    "tests": [
+      {
+        "data": {
+          "x": 10,
+          "y": "ok"
+        },
+        "valid": true
+      },
+      {
+        "data": {
+          "x": 5,
+          "y": "ok"
+        },
+        "valid": false
+      },
+      {
+        "data": {
+          "x": 15
+        },
+        "valid": false
+      },
+      {
+        "data": "hello",
+        "valid": false
+      }
+    ],
+    "source": "https://github.com/vllm-project/vllm/issues/56556"
+  },
+  {
+    "id": "issue-outlines612-finite-derived",
+    "kind": "issue-derived-schema",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "reasoning": {
+          "enum": [
+            "",
+            "brief"
+          ]
+        },
+        "answer": {
+          "enum": [
+            0,
+            1
+          ]
+        }
+      },
+      "required": [
+        "reasoning",
+        "answer"
+      ],
+      "additionalProperties": false
+    },
+    "tests": [
+      {
+        "data": {
+          "answer": 0,
+          "reasoning": ""
+        },
+        "valid": true
+      },
+      {
+        "data": {
+          "answer": 1,
+          "reasoning": "brief"
+        },
+        "valid": true
+      },
+      {
+        "data": {},
+        "valid": false
+      }
+    ],
+    "source": "https://github.com/dottxt-ai/outlines/issues/612"
+  },
+  {
+    "id": "issue-llguidance265-original",
+    "kind": "issue-original-schema",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "multipleOf": 5
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 20
+          }
+        }
+      },
+      "required": [
+        "score",
+        "tags"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^score$": {
+          "type": "integer"
+        }
+      }
+    },
+    "tests": [
+      {
+        "data": {
+          "score": 0,
+          "tags": [
+            "good_employee"
+          ]
+        },
+        "valid": true
+      }
+    ],
+    "source": "https://github.com/guidance-ai/llguidance/issues/265"
+  }
+]

@@ -1,0 +1,4641 @@
+[
+  {
+    "key": "outlines-21feb1f1d7f1a77c",
+    "engine": "outlines",
+    "ids": [
+      "pattern-length"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "minLength": 1,
+      "maxLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "pattern-length",
+        "saved_witness_texts": [
+          "\"c\"",
+          "\"é\"",
+          "\"😀\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "pattern-length",
+        "saved_witness_texts": [
+          "\"c\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "pattern-length",
+        "saved_witness_texts": [
+          "\"c\"",
+          "\"a\\n\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/274",
+      "https://github.com/dottxt-ai/outlines-core/pull/276"
+    ],
+    "rationale": "pattern と長さを同時に指定した際の pattern 喪失は既報。#276 は open/unmerged で、提案も長さとの完全交差ではない。"
+  },
+  {
+    "key": "xgrammar-21feb1f1d7f1a77c",
+    "engine": "xgrammar",
+    "ids": [
+      "pattern-length"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "minLength": 1,
+      "maxLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "pattern-length",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"aaa\"",
+          "\"aaaa\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "pattern-length",
+        "saved_witness_texts": [
+          "\"\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "pattern-length",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"aaa\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/895",
+      "https://github.com/mlc-ai/xgrammar/issues/966",
+      "https://github.com/mlc-ai/xgrammar/pull/896"
+    ],
+    "rationale": "#895 は #749 の duplicate として closed。#966 は open。#896 は警告だけの merged stopgap。制約実装済みとはしない。"
+  },
+  {
+    "key": "outlines-0de7e1a385eabf08",
+    "engine": "outlines",
+    "ids": [
+      "unicode-length"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[é😀]+$",
+      "maxLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "unicode-length",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"a\"",
+          "\"b\""
+        ],
+        "empty_language_record": null
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/274",
+      "https://github.com/dottxt-ai/outlines-core/pull/276"
+    ],
+    "rationale": "pattern と長さを同時に指定した際の pattern 喪失は既報。#276 は open/unmerged で、提案も長さとの完全交差ではない。"
+  },
+  {
+    "key": "outlines-608bda86b8598786",
+    "engine": "outlines",
+    "ids": [
+      "oneof-overlap"
+    ],
+    "schema": {
+      "type": "boolean",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": true
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "oneof-overlap",
+        "saved_witness_texts": [
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 1,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "oneof-overlap",
+        "saved_witness_texts": [
+          "true"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "oneof-overlap",
+        "saved_witness_texts": [
+          "true"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "oneOf-exactly-one",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/156"
+    ],
+    "rationale": "oneOf の正しい実装がないとの既報。全ての個別 Schema が原 issue に掲載済みという意味ではない。"
+  },
+  {
+    "key": "xgrammar-608bda86b8598786",
+    "engine": "xgrammar",
+    "ids": [
+      "oneof-overlap"
+    ],
+    "schema": {
+      "type": "boolean",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": true
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "oneof-overlap",
+        "saved_witness_texts": [
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 1,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "oneof-overlap",
+        "saved_witness_texts": [
+          "true"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "oneof-overlap",
+        "saved_witness_texts": [
+          "true"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "oneOf-permissive-fallback",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/672",
+      "https://github.com/mlc-ai/xgrammar/pull/672/files"
+    ],
+    "rationale": "公式 merged PR の最終差分・テスト・議論に、証明できない disjointness は warning 後 anyOf へ戻すと明記。PR冒頭の拒否という説明は最終仕様と違う。"
+  },
+  {
+    "key": "outlines-45247a7b7be6b9db",
+    "engine": "outlines",
+    "ids": [
+      "oneof-identical"
+    ],
+    "schema": {
+      "oneOf": [
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "oneof-identical",
+        "saved_witness_texts": [
+          "\"a\"",
+          "\"b\""
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "oneof-identical",
+        "saved_witness_texts": [
+          "\"a\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "oneof-identical",
+        "saved_witness_texts": [
+          "\"a\"",
+          "\"b\""
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "oneOf-exactly-one",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/156"
+    ],
+    "rationale": "oneOf の正しい実装がないとの既報。全ての個別 Schema が原 issue に掲載済みという意味ではない。"
+  },
+  {
+    "key": "xgrammar-45247a7b7be6b9db",
+    "engine": "xgrammar",
+    "ids": [
+      "oneof-identical"
+    ],
+    "schema": {
+      "oneOf": [
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "oneof-identical",
+        "saved_witness_texts": [
+          "\"a\"",
+          "\"b\""
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "oneof-identical",
+        "saved_witness_texts": [
+          "\"a\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "oneof-identical",
+        "saved_witness_texts": [
+          "\"a\"",
+          "\"b\""
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "oneOf-permissive-fallback",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/672",
+      "https://github.com/mlc-ai/xgrammar/pull/672/files"
+    ],
+    "rationale": "公式 merged PR の最終差分・テスト・議論に、証明できない disjointness は warning 後 anyOf へ戻すと明記。PR冒頭の拒否という説明は最終仕様と違う。"
+  },
+  {
+    "key": "xgrammar-40f3b687ce46a6e9",
+    "engine": "xgrammar",
+    "ids": [
+      "oneof-not"
+    ],
+    "schema": {
+      "type": "boolean",
+      "oneOf": [
+        {},
+        {
+          "not": {
+            "const": true
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "oneof-not",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "-2"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 1,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "oneof-not",
+        "saved_witness_texts": [
+          "false"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "oneof-not",
+        "saved_witness_texts": [
+          "false",
+          "0"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "oneOf-permissive-fallback",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/672",
+      "https://github.com/mlc-ai/xgrammar/pull/672/files"
+    ],
+    "rationale": "公式 merged PR の最終差分・テスト・議論に、証明できない disjointness は warning 後 anyOf へ戻すと明記。PR冒頭の拒否という説明は最終仕様と違う。"
+  },
+  {
+    "key": "xgrammar-a2c76c5398fe4029",
+    "engine": "xgrammar",
+    "ids": [
+      "not-global",
+      "suite-not-5",
+      "audit-minimal:not-global"
+    ],
+    "schema": {
+      "not": true
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "not-global",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 0,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "suite-not-5",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 0,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "not-global",
+        "saved_witness_texts": [
+          "true"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "suite-not-5",
+        "saved_witness_texts": [
+          "1"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "not-global",
+        "saved_witness_texts": [
+          "true",
+          "null",
+          "\"a\""
+        ],
+        "empty_language_record": true
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite-not-5",
+        "saved_witness_texts": [
+          "1",
+          "\"foo\"",
+          "true"
+        ],
+        "empty_language_record": true
+      },
+      {
+        "source": "check-2b/AUDIT.json",
+        "id": "audit-minimal:not-global",
+        "saved_witness_texts": [
+          "0"
+        ],
+        "empty_language_record": null
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "unsupported-not",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/134/files",
+      "https://github.com/mlc-ai/xgrammar/issues/858"
+    ],
+    "rationale": "公式 merged PR に not を WarnUnsupportedKeywords の対象とする記録。#858 も対象一覧に記載。警告の記録であり、全呼出しが同じ警告を出すとの主張ではない。"
+  },
+  {
+    "key": "xgrammar-e92da0f2ee7d22b5",
+    "engine": "xgrammar",
+    "ids": [
+      "lift-pattern-0"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "aaa",
+            "abc",
+            true,
+            123,
+            null
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "pattern": "^a*$"
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift-pattern-0",
+        "saved_witness_texts": [
+          "false",
+          "-2",
+          "-1"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 5,
+          "valid_size": 4,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift-pattern-0",
+        "saved_witness_texts": [
+          "\"abc\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift-pattern-0",
+        "saved_witness_texts": [
+          "\"abc\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-815714c636f6c856",
+    "engine": "xgrammar",
+    "ids": [
+      "lift-minLength-0"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "foo",
+            "fo",
+            "f",
+            1,
+            "💩"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minLength": 2
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift-minLength-0",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 5,
+          "valid_size": 3,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift-minLength-0",
+        "saved_witness_texts": [
+          "\"f\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift-minLength-0",
+        "saved_witness_texts": [
+          "\"f\"",
+          "\"💩\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-67339fdc6a9b1f0e",
+    "engine": "xgrammar",
+    "ids": [
+      "lift-minLength-1"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "foo",
+            "f"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minLength": 2.0
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift-minLength-1",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 1,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift-minLength-1",
+        "saved_witness_texts": [
+          "\"f\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift-minLength-1",
+        "saved_witness_texts": [
+          "\"f\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-cdb54086a0aff530",
+    "engine": "xgrammar",
+    "ids": [
+      "lift-maxLength-0"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "f",
+            "fo",
+            "foo",
+            100,
+            "💩💩"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maxLength": 2
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift-maxLength-0",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 5,
+          "valid_size": 4,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift-maxLength-0",
+        "saved_witness_texts": [
+          "\"foo\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift-maxLength-0",
+        "saved_witness_texts": [
+          "\"foo\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-1f8b23eac1bf858a",
+    "engine": "xgrammar",
+    "ids": [
+      "lift-maxLength-1"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "f",
+            "foo"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maxLength": 2.0
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift-maxLength-1",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 1,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift-maxLength-1",
+        "saved_witness_texts": [
+          "\"foo\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift-maxLength-1",
+        "saved_witness_texts": [
+          "\"foo\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-e496b61a37e8a99f",
+    "engine": "xgrammar",
+    "ids": [
+      "suite-oneOf-1",
+      "infinite-overlapping-oneof"
+    ],
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "string",
+      "oneOf": [
+        {
+          "minLength": 2
+        },
+        {
+          "maxLength": 4
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "suite-oneOf-1",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "infinite-overlapping-oneof",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "suite-oneOf-1",
+        "saved_witness_texts": [
+          "3"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "infinite-overlapping-oneof",
+        "saved_witness_texts": [
+          "\"aa\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite-oneOf-1",
+        "saved_witness_texts": [
+          "3",
+          "\"foo\""
+        ],
+        "empty_language_record": false
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "infinite-overlapping-oneof",
+        "saved_witness_texts": [
+          "\"aa\"",
+          "\"aaaa\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "oneOf-permissive-fallback",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/672",
+      "https://github.com/mlc-ai/xgrammar/pull/672/files"
+    ],
+    "rationale": "公式 merged PR の最終差分・テスト・議論に、証明できない disjointness は warning 後 anyOf へ戻すと明記。PR冒頭の拒否という説明は最終仕様と違う。"
+  },
+  {
+    "key": "xgrammar-7dc9a45885ddffcb",
+    "engine": "xgrammar",
+    "ids": [
+      "suite-oneOf-2"
+    ],
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        true,
+        true,
+        true
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "suite-oneOf-2",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 0,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "suite-oneOf-2",
+        "saved_witness_texts": [
+          "\"foo\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite-oneOf-2",
+        "saved_witness_texts": [
+          "\"foo\""
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "oneOf-permissive-fallback",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/672",
+      "https://github.com/mlc-ai/xgrammar/pull/672/files"
+    ],
+    "rationale": "公式 merged PR の最終差分・テスト・議論に、証明できない disjointness は warning 後 anyOf へ戻すと明記。PR冒頭の拒否という説明は最終仕様と違う。"
+  },
+  {
+    "key": "xgrammar-47abca31292f03e9",
+    "engine": "xgrammar",
+    "ids": [
+      "suite-not-4"
+    ],
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": {}
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "suite-not-4",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 0,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "suite-not-4",
+        "saved_witness_texts": [
+          "1"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite-not-4",
+        "saved_witness_texts": [
+          "1",
+          "\"foo\"",
+          "true"
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "unsupported-not",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/134/files",
+      "https://github.com/mlc-ai/xgrammar/issues/858"
+    ],
+    "rationale": "公式 merged PR に not を WarnUnsupportedKeywords の対象とする記録。#858 も対象一覧に記載。警告の記録であり、全呼出しが同じ警告を出すとの主張ではない。"
+  },
+  {
+    "key": "outlines-a00e51d5d19a5ea0",
+    "engine": "outlines",
+    "ids": [
+      "infinite-star"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "minLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "infinite-star",
+        "saved_witness_texts": [
+          "\"abcdef\"",
+          "\"ABC\"",
+          "\"foo\""
+        ],
+        "empty_language_record": null
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/274",
+      "https://github.com/dottxt-ai/outlines-core/pull/276"
+    ],
+    "rationale": "pattern と長さを同時に指定した際の pattern 喪失は既報。#276 は open/unmerged で、提案も長さとの完全交差ではない。"
+  },
+  {
+    "key": "xgrammar-a00e51d5d19a5ea0",
+    "engine": "xgrammar",
+    "ids": [
+      "infinite-star"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "minLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "infinite-star",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"a\"",
+          "\"b\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "infinite-star",
+        "saved_witness_texts": [
+          "\"\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "infinite-star",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"a\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/895",
+      "https://github.com/mlc-ai/xgrammar/issues/966",
+      "https://github.com/mlc-ai/xgrammar/pull/896"
+    ],
+    "rationale": "#895 は #749 の duplicate として closed。#966 は open。#896 は警告だけの merged stopgap。制約実装済みとはしない。"
+  },
+  {
+    "key": "outlines-46a1972ece9ef95a",
+    "engine": "outlines",
+    "ids": [
+      "unicode-unbounded"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[é😀]+$",
+      "minLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "unicode-unbounded",
+        "saved_witness_texts": [
+          "\"aa\"",
+          "\"ab\"",
+          "\"aaa\""
+        ],
+        "empty_language_record": null
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/274",
+      "https://github.com/dottxt-ai/outlines-core/pull/276"
+    ],
+    "rationale": "pattern と長さを同時に指定した際の pattern 喪失は既報。#276 は open/unmerged で、提案も長さとの完全交差ではない。"
+  },
+  {
+    "key": "xgrammar-46a1972ece9ef95a",
+    "engine": "xgrammar",
+    "ids": [
+      "unicode-unbounded"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[é😀]+$",
+      "minLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "unicode-unbounded",
+        "saved_witness_texts": [
+          "\"é\"",
+          "\"😀\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "unicode-unbounded",
+        "saved_witness_texts": [
+          "\"é\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "unicode-unbounded",
+        "saved_witness_texts": [
+          "\"é\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/895",
+      "https://github.com/mlc-ai/xgrammar/issues/966",
+      "https://github.com/mlc-ai/xgrammar/pull/896"
+    ],
+    "rationale": "#895 は #749 の duplicate として closed。#966 は open。#896 は警告だけの merged stopgap。制約実装済みとはしない。"
+  },
+  {
+    "key": "outlines-8353783be9ebe94b",
+    "engine": "outlines",
+    "ids": [
+      "length-pattern-cap",
+      "audit-minimal:pattern-length"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "maxLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "length-pattern-cap",
+        "saved_witness_texts": [
+          "\"c\"",
+          "\"é\"",
+          "\"😀\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "check-2b/AUDIT.json",
+        "id": "audit-minimal:pattern-length",
+        "saved_witness_texts": [
+          "\"c\""
+        ],
+        "empty_language_record": null
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/274",
+      "https://github.com/dottxt-ai/outlines-core/pull/276"
+    ],
+    "rationale": "pattern と長さを同時に指定した際の pattern 喪失は既報。#276 は open/unmerged で、提案も長さとの完全交差ではない。"
+  },
+  {
+    "key": "xgrammar-8353783be9ebe94b",
+    "engine": "xgrammar",
+    "ids": [
+      "length-pattern-cap"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "maxLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "length-pattern-cap",
+        "saved_witness_texts": [
+          "\"aaa\"",
+          "\"aaaa\"",
+          "\"aaaaa\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "length-pattern-cap",
+        "saved_witness_texts": [
+          "\"aaa\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "length-pattern-cap",
+        "saved_witness_texts": [
+          "\"aaa\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/895",
+      "https://github.com/mlc-ai/xgrammar/issues/966",
+      "https://github.com/mlc-ai/xgrammar/pull/896"
+    ],
+    "rationale": "#895 は #749 の duplicate として closed。#966 は open。#896 は警告だけの merged stopgap。制約実装済みとはしない。"
+  },
+  {
+    "key": "outlines-3d10a44425a9fa82",
+    "engine": "outlines",
+    "ids": [
+      "length-repeat-empty"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]{3,}$",
+      "maxLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "length-repeat-empty",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"a\"",
+          "\"b\""
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 0,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "length-repeat-empty",
+        "saved_witness_texts": [
+          "\"\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "length-repeat-empty",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"aa\""
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/274",
+      "https://github.com/dottxt-ai/outlines-core/pull/276"
+    ],
+    "rationale": "pattern と長さを同時に指定した際の pattern 喪失は既報。#276 は open/unmerged で、提案も長さとの完全交差ではない。"
+  },
+  {
+    "key": "xgrammar-3d10a44425a9fa82",
+    "engine": "xgrammar",
+    "ids": [
+      "length-repeat-empty"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]{3,}$",
+      "maxLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "length-repeat-empty",
+        "saved_witness_texts": [
+          "\"aaa\"",
+          "\"aaaa\"",
+          "\"aaaaa\""
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 0,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "length-repeat-empty",
+        "saved_witness_texts": [
+          "\"aaa\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "length-repeat-empty",
+        "saved_witness_texts": [
+          "\"aaa\""
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/895",
+      "https://github.com/mlc-ai/xgrammar/issues/966",
+      "https://github.com/mlc-ai/xgrammar/pull/896"
+    ],
+    "rationale": "#895 は #749 の duplicate として closed。#966 は open。#896 は警告だけの merged stopgap。制約実装済みとはしない。"
+  },
+  {
+    "key": "outlines-393298791df7cd55",
+    "engine": "outlines",
+    "ids": [
+      "infinite-not"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "not": {
+        "maxLength": 2
+      }
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "infinite-not",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"a\"",
+          "\"b\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "infinite-not",
+        "saved_witness_texts": [
+          "\"\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "infinite-not",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"aa\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "unsupported-not",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/261"
+    ],
+    "rationale": "型など兄弟キーがあると not が無視される既報。公開例の object と今回の string は異なるため、同じ個別反例が掲載済みとはしない。"
+  },
+  {
+    "key": "xgrammar-393298791df7cd55",
+    "engine": "xgrammar",
+    "ids": [
+      "infinite-not"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "not": {
+        "maxLength": 2
+      }
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "infinite-not",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"a\"",
+          "\"b\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "infinite-not",
+        "saved_witness_texts": [
+          "\"\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "infinite-not",
+        "saved_witness_texts": [
+          "\"\"",
+          "\"aa\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "unsupported-not",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/134/files",
+      "https://github.com/mlc-ai/xgrammar/issues/858"
+    ],
+    "rationale": "公式 merged PR に not を WarnUnsupportedKeywords の対象とする記録。#858 も対象一覧に記載。警告の記録であり、全呼出しが同じ警告を出すとの主張ではない。"
+  },
+  {
+    "key": "xgrammar-86772962e8d53cfe",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-properties-0"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1,
+              "bar": "baz"
+            },
+            {
+              "foo": 1,
+              "bar": {}
+            },
+            {
+              "foo": [],
+              "bar": {}
+            },
+            {
+              "quux": []
+            },
+            [],
+            12
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {
+              "type": "integer"
+            },
+            "bar": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-properties-0",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 6,
+          "valid_size": 4,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift3-properties-0",
+        "saved_witness_texts": [
+          "{\"bar\":{},\"foo\":1}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift3-properties-0",
+        "saved_witness_texts": [
+          "{\"bar\":{},\"foo\":1}",
+          "{\"bar\":{},\"foo\":[]}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-1a3bd7d98e6bad53",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-properties-3"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo\nbar": 1,
+              "foo\"bar": 1,
+              "foo\\bar": 1,
+              "foo\rbar": 1,
+              "foo\tbar": 1,
+              "foo\fbar": 1
+            },
+            {
+              "foo\nbar": "1",
+              "foo\"bar": "1",
+              "foo\\bar": "1",
+              "foo\rbar": "1",
+              "foo\tbar": "1",
+              "foo\fbar": "1"
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo\nbar": {
+              "type": "number"
+            },
+            "foo\"bar": {
+              "type": "number"
+            },
+            "foo\\bar": {
+              "type": "number"
+            },
+            "foo\rbar": {
+              "type": "number"
+            },
+            "foo\tbar": {
+              "type": "number"
+            },
+            "foo\fbar": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-properties-3",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 1,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift3-properties-3",
+        "saved_witness_texts": [
+          "{\"foo\\tbar\":\"1\",\"foo\\nbar\":\"1\",\"foo\\fbar\":\"1\",\"foo\\rbar\":\"1\",\"foo\\\"bar\":\"1\",\"foo\\\\bar\":\"1\"}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift3-properties-3",
+        "saved_witness_texts": [
+          "{\"foo\\tbar\":\"1\",\"foo\\nbar\":\"1\",\"foo\\fbar\":\"1\",\"foo\\rbar\":\"1\",\"foo\\\"bar\":\"1\",\"foo\\\\bar\":\"1\"}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-835413d1f4ed385e",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-properties-4",
+      "audit-minimal:lift3-properties-4"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": null
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-properties-4",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 1,
+          "valid_size": 1,
+          "empty": false
+        }
+      },
+      {
+        "source": "check-2b/AUDIT.json",
+        "id": "audit-minimal:lift3-properties-4",
+        "saved_witness_texts": [
+          "0"
+        ],
+        "empty_language_record": null
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-cb3e412a04cdfb69",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-properties-5"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            [],
+            12,
+            {},
+            {
+              "__proto__": "foo"
+            },
+            {
+              "toString": {
+                "length": 37
+              }
+            },
+            {
+              "constructor": {
+                "length": 37
+              }
+            },
+            {
+              "__proto__": 12,
+              "toString": {
+                "length": "foo"
+              },
+              "constructor": 37
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "__proto__": {
+              "type": "number"
+            },
+            "toString": {
+              "properties": {
+                "length": {
+                  "type": "string"
+                }
+              }
+            },
+            "constructor": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-properties-5",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 7,
+          "valid_size": 4,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift3-properties-5",
+        "saved_witness_texts": [
+          "{\"__proto__\":\"foo\"}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift3-properties-5",
+        "saved_witness_texts": [
+          "{\"__proto__\":\"foo\"}",
+          "{\"toString\":{\"length\":37}}",
+          "{\"constructor\":{\"length\":37}}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "outlines-881586c4ab45123f",
+    "engine": "outlines",
+    "ids": [
+      "lift3-required-0"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1
+            },
+            {
+              "bar": 1
+            },
+            [],
+            "",
+            12,
+            null,
+            true
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          },
+          "required": [
+            "foo"
+          ]
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-required-0",
+        "saved_witness_texts": [
+          "-2",
+          "-1",
+          "0"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 7,
+          "valid_size": 6,
+          "empty": false
+        }
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "allOf-intersection",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/259"
+    ],
+    "rationale": "allOf を交差でなく regex の連結にする既報。各反例と公開例の文字列が同じとは主張しない。"
+  },
+  {
+    "key": "xgrammar-881586c4ab45123f",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-required-0"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1
+            },
+            {
+              "bar": 1
+            },
+            [],
+            "",
+            12,
+            null,
+            true
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          },
+          "required": [
+            "foo"
+          ]
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-required-0",
+        "saved_witness_texts": [
+          "false",
+          "-2",
+          "-1"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 7,
+          "valid_size": 6,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift3-required-0",
+        "saved_witness_texts": [
+          "{\"bar\":1}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift3-required-0",
+        "saved_witness_texts": [
+          "{\"bar\":1}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-e3cc0fdea72b53fd",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-required-1"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {}
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {}
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-required-1",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 1,
+          "valid_size": 1,
+          "empty": false
+        }
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-e58757d1103f35ca",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-required-2"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {}
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {}
+          },
+          "required": []
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-required-2",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 1,
+          "valid_size": 1,
+          "empty": false
+        }
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-680ac3bd8fe7e1de",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-required-3"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo\nbar": 1,
+              "foo\"bar": 1,
+              "foo\\bar": 1,
+              "foo\rbar": 1,
+              "foo\tbar": 1,
+              "foo\fbar": 1
+            },
+            {
+              "foo\nbar": "1",
+              "foo\"bar": "1"
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "required": [
+            "foo\nbar",
+            "foo\"bar",
+            "foo\\bar",
+            "foo\rbar",
+            "foo\tbar",
+            "foo\fbar"
+          ]
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-required-3",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 1,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift3-required-3",
+        "saved_witness_texts": [
+          "{\"foo\\nbar\":\"1\",\"foo\\\"bar\":\"1\"}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift3-required-3",
+        "saved_witness_texts": [
+          "{\"foo\\nbar\":\"1\",\"foo\\\"bar\":\"1\"}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-4e690902ef076268",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-required-4"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            [],
+            12,
+            {},
+            {
+              "__proto__": "foo"
+            },
+            {
+              "toString": {
+                "length": 37
+              }
+            },
+            {
+              "constructor": {
+                "length": 37
+              }
+            },
+            {
+              "__proto__": 12,
+              "toString": {
+                "length": "foo"
+              },
+              "constructor": 37
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "required": [
+            "__proto__",
+            "toString",
+            "constructor"
+          ]
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-required-4",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 7,
+          "valid_size": 3,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift3-required-4",
+        "saved_witness_texts": [
+          "{}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift3-required-4",
+        "saved_witness_texts": [
+          "{}",
+          "{\"__proto__\":\"foo\"}",
+          "{\"toString\":{\"length\":37}}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-af4dca82abb19a20",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-additionalProperties-2"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1
+            },
+            {
+              "foo": 1,
+              "bar": 2,
+              "quux": true
+            },
+            {
+              "foo": 1,
+              "bar": 2,
+              "quux": 12
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          },
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-additionalProperties-2",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 3,
+          "valid_size": 2,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift3-additionalProperties-2",
+        "saved_witness_texts": [
+          "{\"bar\":2,\"foo\":1,\"quux\":12}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift3-additionalProperties-2",
+        "saved_witness_texts": [
+          "{\"bar\":2,\"foo\":1,\"quux\":12}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-ca4451b6094d90bc",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-additionalProperties-3"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": true
+            },
+            {
+              "foo": 1
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-additionalProperties-3",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 1,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift3-additionalProperties-3",
+        "saved_witness_texts": [
+          "{\"foo\":1}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift3-additionalProperties-3",
+        "saved_witness_texts": [
+          "{\"foo\":1}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-66978b7ba1f96bd6",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-additionalProperties-4"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1,
+              "bar": 2,
+              "quux": true
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-additionalProperties-4",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 1,
+          "valid_size": 1,
+          "empty": false
+        }
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-de8218f5438d747b",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-additionalProperties-5"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1,
+              "bar": true
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "allOf": [
+            {
+              "properties": {
+                "foo": {}
+              }
+            }
+          ],
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-additionalProperties-5",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 1,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "lift3-additionalProperties-5",
+        "saved_witness_texts": [
+          "{\"bar\":true,\"foo\":1}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "lift3-additionalProperties-5",
+        "saved_witness_texts": [
+          "{\"bar\":true,\"foo\":1}"
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-1d8041345ac67549",
+    "engine": "xgrammar",
+    "ids": [
+      "lift3-additionalProperties-6"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": null
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": {
+            "type": "null"
+          }
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "lift3-additionalProperties-6",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 1,
+          "valid_size": 1,
+          "empty": false
+        }
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "outlines-af9599f05a2f285b",
+    "engine": "outlines",
+    "ids": [
+      "suite3-enum-14",
+      "audit-minimal:suite3-enum-14"
+    ],
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": []
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "suite3-enum-14",
+        "saved_witness_texts": [
+          ""
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 0,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "suite3-enum-14",
+        "saved_witness_texts": [
+          ""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite3-enum-14",
+        "saved_witness_texts": [
+          ""
+        ],
+        "empty_language_record": true
+      },
+      {
+        "source": "check-2b/AUDIT.json",
+        "id": "audit-minimal:suite3-enum-14",
+        "saved_witness_texts": [
+          ""
+        ],
+        "empty_language_record": null
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "empty-enum",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/pull/269",
+      "https://github.com/dottxt-ai/outlines-core/issues/261"
+    ],
+    "rationale": "A-PR：enum:[] の空列への collapse は公開 PR #269 に明記。#261 本文の empty combinator と完全同一とせず、PRだけの既報として区別する。"
+  },
+  {
+    "key": "outlines-f8ede95d480e2103",
+    "engine": "outlines",
+    "ids": [
+      "object-required-impossible"
+    ],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "missing"
+      ],
+      "additionalProperties": false
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "object-required-impossible",
+        "saved_witness_texts": [
+          "{}",
+          "{\"a\":false}",
+          "{\"a\":true}"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 0,
+          "valid_size": 0,
+          "empty": true
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "object-required-impossible",
+        "saved_witness_texts": [
+          "{}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "object-required-impossible",
+        "saved_witness_texts": [
+          "{}"
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "required-outside-properties",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/152"
+    ],
+    "rationale": "properties にない required を落とす機構は既報。追加キー禁止で空言語にした例。"
+  },
+  {
+    "key": "xgrammar-f8ede95d480e2103",
+    "engine": "xgrammar",
+    "ids": [
+      "object-required-impossible"
+    ],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "missing"
+      ],
+      "additionalProperties": false
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "object-required-impossible",
+        "saved_witness_texts": [
+          "{\"a\":false}",
+          "{\"a\":true}"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 0,
+          "valid_size": 0,
+          "empty": true
+        }
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "D",
+    "family": "required-outside-closed-properties",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/104"
+    ],
+    "rationale": "関連する #104 コメントは bare object の required。properties があり追加キー禁止のこの空言語の同等報告は特定できず。最新版未再現の候補。"
+  },
+  {
+    "key": "outlines-4baf078644203c14",
+    "engine": "outlines",
+    "ids": [
+      "issue-xg858-original"
+    ],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "modifier": {
+          "enum": [
+            "",
+            "dark"
+          ]
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "modifier"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "issue-xg858-original",
+        "saved_witness_texts": [
+          "{}"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 3,
+          "valid_size": 2,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "issue-xg858-original",
+        "saved_witness_texts": [
+          "{}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "issue-xg858-original",
+        "saved_witness_texts": [
+          "{}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "D",
+    "family": "anyOf-required-with-sibling-properties",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/156",
+      "https://github.com/dottxt-ai/outlines-core/issues/152",
+      "https://github.com/mlc-ai/xgrammar/issues/858"
+    ],
+    "rationale": "Outlines の #156 は oneOf、#152 は properties 外 required。XGrammar #858 は別実装。この anyOf の required 喪失に同等の Outlines 報告は特定できず。"
+  },
+  {
+    "key": "xgrammar-4baf078644203c14",
+    "engine": "xgrammar",
+    "ids": [
+      "issue-xg858-original"
+    ],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "modifier": {
+          "enum": [
+            "",
+            "dark"
+          ]
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "modifier"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "issue-xg858-original",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 3,
+          "valid_size": 2,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "issue-xg858-original",
+        "saved_witness_texts": [
+          "{}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "issue-xg858-original",
+        "saved_witness_texts": [
+          "{}",
+          "{\"zzz\":[1,2,3]}",
+          "[1]"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "combinator-sibling-loss",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "同じ Schema の既報。修正案 #859 は open/unmerged。"
+  },
+  {
+    "key": "outlines-d569749f30c12974",
+    "engine": "outlines",
+    "ids": [
+      "issue-xg895-original"
+    ],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "k": {
+          "type": "string",
+          "pattern": "^[a-z]+$",
+          "maxLength": 3
+        }
+      },
+      "required": [
+        "k"
+      ],
+      "additionalProperties": false
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "issue-xg895-original",
+        "saved_witness_texts": [
+          "{\"k\":\"\"}",
+          "{\"k\":\"ABC\"}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "issue-xg895-original",
+        "saved_witness_texts": [
+          "{\"k\":\"\"}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "issue-xg895-original",
+        "saved_witness_texts": [
+          "{\"k\":\"\"}",
+          "{\"k\":\"ABC\"}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/274",
+      "https://github.com/dottxt-ai/outlines-core/pull/276"
+    ],
+    "rationale": "pattern と長さを同時に指定した際の pattern 喪失は既報。#276 は open/unmerged で、提案も長さとの完全交差ではない。"
+  },
+  {
+    "key": "xgrammar-d569749f30c12974",
+    "engine": "xgrammar",
+    "ids": [
+      "issue-xg895-original"
+    ],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "k": {
+          "type": "string",
+          "pattern": "^[a-z]+$",
+          "maxLength": 3
+        }
+      },
+      "required": [
+        "k"
+      ],
+      "additionalProperties": false
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "issue-xg895-original",
+        "saved_witness_texts": [
+          "{\"k\":\"abcd\"}",
+          "{\"k\":\"dark\"}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "issue-xg895-original",
+        "saved_witness_texts": [
+          "{\"k\":\"abcd\"}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "issue-xg895-original",
+        "saved_witness_texts": [
+          "{\"k\":\"abcd\"}"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/895",
+      "https://github.com/mlc-ai/xgrammar/issues/966",
+      "https://github.com/mlc-ai/xgrammar/pull/896"
+    ],
+    "rationale": "#895 は #749 の duplicate として closed。#966 は open。#896 は警告だけの merged stopgap。制約実装済みとはしない。"
+  },
+  {
+    "key": "xgrammar-494bd4e6a31e0507",
+    "engine": "xgrammar",
+    "ids": [
+      "issue-vllm56556-finite-derived"
+    ],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "enum": [
+            10,
+            15
+          ]
+        },
+        "y": {
+          "enum": [
+            "ok"
+          ]
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "required": [
+            "x"
+          ]
+        },
+        {
+          "required": [
+            "y"
+          ]
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/RESULTS.json",
+        "id": "issue-vllm56556-finite-derived",
+        "saved_witness_texts": [
+          "null",
+          "false",
+          "true"
+        ],
+        "empty_language_record": {
+          "method": "finite superset or explicit contradiction",
+          "domain_size": 2,
+          "valid_size": 2,
+          "empty": false
+        }
+      },
+      {
+        "source": "next3/FAILURES.json",
+        "id": "issue-vllm56556-finite-derived",
+        "saved_witness_texts": [
+          "{\"x\":5,\"y\":\"ok\"}"
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "issue-vllm56556-finite-derived",
+        "saved_witness_texts": [
+          "{\"x\":5,\"y\":\"ok\"}",
+          "{\"x\":15}",
+          "\"hello\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-0de7e1a385eabf08",
+    "engine": "xgrammar",
+    "ids": [
+      "unicode-length"
+    ],
+    "schema": {
+      "type": "string",
+      "pattern": "^[é😀]+$",
+      "maxLength": 2
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next3/FAILURES.json",
+        "id": "unicode-length",
+        "saved_witness_texts": [
+          "\"😀😀😀\""
+        ],
+        "empty_language_record": null
+      },
+      {
+        "source": "next7/FAILURES.json",
+        "id": "unicode-length",
+        "saved_witness_texts": [
+          "\"😀😀😀\""
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/895",
+      "https://github.com/mlc-ai/xgrammar/issues/966",
+      "https://github.com/mlc-ai/xgrammar/pull/896"
+    ],
+    "rationale": "#895 は #749 の duplicate として closed。#966 は open。#896 は警告だけの merged stopgap。制約実装済みとはしない。"
+  },
+  {
+    "key": "xgrammar-7cdd5ce4aa8ff24f",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-exclusiveMaximum-0-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "exclusiveMaximum": 3.0
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-exclusiveMaximum-0-typed-number",
+        "saved_witness_texts": [
+          "true",
+          "false",
+          "null"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-7571539aa077bc3c",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-exclusiveMaximum-0-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "exclusiveMaximum": 3.0
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-exclusiveMaximum-0-typed-integer",
+        "saved_witness_texts": [
+          "0.1",
+          "0.3",
+          "0.30000000000000004"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-843f8ca2fbe9535a",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-exclusiveMinimum-0-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "exclusiveMinimum": 1.1
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-exclusiveMinimum-0-typed-number",
+        "saved_witness_texts": [
+          "0",
+          "-0",
+          "0.0"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-25ef7e85db1827cf",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-exclusiveMinimum-0-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "exclusiveMinimum": 1.1
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-exclusiveMinimum-0-typed-integer",
+        "saved_witness_texts": [
+          "0",
+          "-0",
+          "0.0"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-fa251f05c31712a1",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-maximum-0-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maximum": 3.0
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-maximum-0-typed-number",
+        "saved_witness_texts": [
+          "true",
+          "false",
+          "null"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-47c1a5d524419243",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-maximum-0-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maximum": 3.0
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-maximum-0-typed-integer",
+        "saved_witness_texts": [
+          "0.1",
+          "0.3",
+          "0.30000000000000004"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-527406b597561145",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-maximum-1-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maximum": 300
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-maximum-1-typed-number",
+        "saved_witness_texts": [
+          "true",
+          "false",
+          "null"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-0435285778b64d67",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-maximum-1-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maximum": 300
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-maximum-1-typed-integer",
+        "saved_witness_texts": [
+          "0.1",
+          "0.3",
+          "0.30000000000000004"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-c7a5fbd8c2ef5af0",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-minimum-0-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minimum": 1.1
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-minimum-0-typed-number",
+        "saved_witness_texts": [
+          "0",
+          "-0",
+          "0.0"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-abcbce8b45f48794",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-minimum-0-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minimum": 1.1
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-minimum-0-typed-integer",
+        "saved_witness_texts": [
+          "0",
+          "-0",
+          "0.0"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-21f029d64d68a199",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-minimum-1-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minimum": -2
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-minimum-1-typed-number",
+        "saved_witness_texts": [
+          "true",
+          "false",
+          "null"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-1888eb98ef6c7614",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-minimum-1-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minimum": -2
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-minimum-1-typed-integer",
+        "saved_witness_texts": [
+          "0.1",
+          "0.3",
+          "0.30000000000000004"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-566d80a982704f4c",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-multipleOf-0-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 2
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-multipleOf-0-typed-number",
+        "saved_witness_texts": [
+          "1",
+          "-1",
+          "0.1"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-eda77bb182422efb",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-multipleOf-0-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 2
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-multipleOf-0-typed-integer",
+        "saved_witness_texts": [
+          "1",
+          "-1",
+          "0.1"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-3ffe37e154a8315d",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-multipleOf-1-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 1.5
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-multipleOf-1-typed-number",
+        "saved_witness_texts": [
+          "1",
+          "-1",
+          "0.1"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-ac6ff1b0fad5ee6e",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-multipleOf-1-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 1.5
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-multipleOf-1-typed-integer",
+        "saved_witness_texts": [
+          "1",
+          "-1",
+          "0.1"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-a9b873b646f55e3c",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-multipleOf-2-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 0.0001
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-multipleOf-2-typed-number",
+        "saved_witness_texts": [
+          "0.30000000000000004",
+          "true",
+          "false"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-73169a0cc32ea084",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-multipleOf-2-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 0.0001
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-multipleOf-2-typed-integer",
+        "saved_witness_texts": [
+          "0.1",
+          "0.3",
+          "0.30000000000000004"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "xgrammar-9080d513fc56771b",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-multipleOf-4-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "integer",
+          "multipleOf": 1e-08
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-multipleOf-4-typed-number",
+        "saved_witness_texts": [
+          "0.1",
+          "0.3",
+          "0.30000000000000004"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "outlines-9080d513fc56771b",
+    "engine": "outlines",
+    "ids": [
+      "suite7-multipleOf-4-typed-number"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "integer",
+          "multipleOf": 1e-08
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-multipleOf-4-typed-number",
+        "saved_witness_texts": [
+          "0.30000000000000004"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "allOf-intersection",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/259"
+    ],
+    "rationale": "allOf を交差でなく regex の連結にする既報。各反例と公開例の文字列が同じとは主張しない。"
+  },
+  {
+    "key": "xgrammar-c5e4be995b1ec6a8",
+    "engine": "xgrammar",
+    "ids": [
+      "suite7-multipleOf-4-typed-integer"
+    ],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "integer",
+          "multipleOf": 1e-08
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "suite7-multipleOf-4-typed-integer",
+        "saved_witness_texts": [
+          "0.1",
+          "0.3",
+          "0.30000000000000004"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multi-branch-allOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/937",
+      "https://github.com/mlc-ai/xgrammar/issues/858",
+      "https://github.com/mlc-ai/xgrammar/pull/859"
+    ],
+    "rationale": "multi-branch allOf の permissive fallback は既報。型付き数値 lift の20例もこの群。兄弟制約の問題は #858、修正案 #859 は未統合。"
+  },
+  {
+    "key": "outlines-3d90f0a3d1727d6a",
+    "engine": "outlines",
+    "ids": [
+      "number-finite-tenths"
+    ],
+    "schema": {
+      "type": "number",
+      "minimum": -0.3,
+      "maximum": 0.3,
+      "multipleOf": 0.1
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "number-finite-tenths",
+        "saved_witness_texts": [
+          "1",
+          "-1"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": true,
+    "category": "A",
+    "family": "numeric-bounds",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/147",
+      "https://github.com/dottxt-ai/outlines-core/pull/260",
+      "https://github.com/dottxt-ai/outlines-core/pull/260/files"
+    ],
+    "rationale": "#147 は closed、#260 は merged。main では UnsupportedNumericBound で拒否する修正記録。0.2.14より新しい公開releaseは特定できず、C-sourceのみ、実行未確認。"
+  },
+  {
+    "key": "outlines-6e353f796f54d88b",
+    "engine": "outlines",
+    "ids": [
+      "number-exclusive-empty"
+    ],
+    "schema": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMaximum": 0
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "number-exclusive-empty",
+        "saved_witness_texts": [
+          "0",
+          "-0",
+          "1"
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": true,
+    "category": "A",
+    "family": "numeric-bounds",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/147",
+      "https://github.com/dottxt-ai/outlines-core/pull/260",
+      "https://github.com/dottxt-ai/outlines-core/pull/260/files"
+    ],
+    "rationale": "#147 は closed、#260 は merged。main では UnsupportedNumericBound で拒否する修正記録。0.2.14より新しい公開releaseは特定できず、C-sourceのみ、実行未確認。"
+  },
+  {
+    "key": "outlines-31727a69a80aa6a0",
+    "engine": "outlines",
+    "ids": [
+      "integer-fractional-window-empty"
+    ],
+    "schema": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 0.5
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "integer-fractional-window-empty",
+        "saved_witness_texts": [
+          "0",
+          "-0",
+          "1"
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": true,
+    "category": "A",
+    "family": "numeric-bounds",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/147",
+      "https://github.com/dottxt-ai/outlines-core/pull/260",
+      "https://github.com/dottxt-ai/outlines-core/pull/260/files"
+    ],
+    "rationale": "#147 は closed、#260 は merged。main では UnsupportedNumericBound で拒否する修正記録。0.2.14より新しい公開releaseは特定できず、C-sourceのみ、実行未確認。"
+  },
+  {
+    "key": "xgrammar-06eb9722022d6c90",
+    "engine": "xgrammar",
+    "ids": [
+      "integer-multiple-rational"
+    ],
+    "schema": {
+      "type": "integer",
+      "multipleOf": 1.5
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "integer-multiple-rational",
+        "saved_witness_texts": [
+          "1",
+          "-1"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "fractional-integer-multipleOf",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/670",
+      "https://github.com/mlc-ai/xgrammar/pull/670/files"
+    ],
+    "rationale": "公式 merged PR の最終差分・テストは非整数の integer multipleOf を warning 後無視する。#779 は closed/unmerged。"
+  },
+  {
+    "key": "outlines-06eb9722022d6c90",
+    "engine": "outlines",
+    "ids": [
+      "integer-multiple-rational"
+    ],
+    "schema": {
+      "type": "integer",
+      "multipleOf": 1.5
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "integer-multiple-rational",
+        "saved_witness_texts": [
+          "1",
+          "-1"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "multipleOf",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/261"
+    ],
+    "rationale": "multipleOf を無視する機構は既報。integer の非整数 divisor にも関わる。"
+  },
+  {
+    "key": "xgrammar-90313a9103e6ea22",
+    "engine": "xgrammar",
+    "ids": [
+      "number-oneof-divisibility"
+    ],
+    "schema": {
+      "type": "number",
+      "oneOf": [
+        {
+          "multipleOf": 0.2
+        },
+        {
+          "multipleOf": 0.3
+        }
+      ]
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "number-oneof-divisibility",
+        "saved_witness_texts": [
+          "0",
+          "-0",
+          "0.0"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "B",
+    "family": "oneOf-permissive-fallback",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/pull/672",
+      "https://github.com/mlc-ai/xgrammar/pull/672/files"
+    ],
+    "rationale": "公式 merged PR の最終差分・テスト・議論に、証明できない disjointness は warning 後 anyOf へ戻すと明記。PR冒頭の拒否という説明は最終仕様と違う。"
+  },
+  {
+    "key": "xgrammar-6e12d5b4085a62f1",
+    "engine": "xgrammar",
+    "ids": [
+      "array-unique-finite"
+    ],
+    "schema": {
+      "type": "array",
+      "items": {
+        "enum": [
+          true,
+          1,
+          1.0,
+          false
+        ]
+      },
+      "uniqueItems": true
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "array-unique-finite",
+        "saved_witness_texts": [
+          "[true,true]",
+          "[1,1]"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "uniqueItems",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/932"
+    ],
+    "rationale": "重複値を拒否しない機構は既報。空言語の例も、この制約欠落を用いた派生。"
+  },
+  {
+    "key": "outlines-6e12d5b4085a62f1",
+    "engine": "outlines",
+    "ids": [
+      "array-unique-finite"
+    ],
+    "schema": {
+      "type": "array",
+      "items": {
+        "enum": [
+          true,
+          1,
+          1.0,
+          false
+        ]
+      },
+      "uniqueItems": true
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "array-unique-finite",
+        "saved_witness_texts": [
+          "[true,true]",
+          "[1,1.0]",
+          "[1,1]"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "uniqueItems",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/261",
+      "https://github.com/dottxt-ai/outlines-core/issues/196"
+    ],
+    "rationale": "uniqueItems 無視は既報。#196 の closed は実装完了を意味せず、未対応とのコメント。数値子の例は bounds/multipleOf も欠落し得る。"
+  },
+  {
+    "key": "xgrammar-3388eca61c93e7d4",
+    "engine": "xgrammar",
+    "ids": [
+      "array-unique-impossible"
+    ],
+    "schema": {
+      "type": "array",
+      "items": {
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "minItems": 3,
+      "uniqueItems": true
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "array-unique-impossible",
+        "saved_witness_texts": [
+          "[0,1,0]"
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "uniqueItems",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/932"
+    ],
+    "rationale": "重複値を拒否しない機構は既報。空言語の例も、この制約欠落を用いた派生。"
+  },
+  {
+    "key": "outlines-3388eca61c93e7d4",
+    "engine": "outlines",
+    "ids": [
+      "array-unique-impossible"
+    ],
+    "schema": {
+      "type": "array",
+      "items": {
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "minItems": 3,
+      "uniqueItems": true
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "array-unique-impossible",
+        "saved_witness_texts": [
+          "[0,1,0]"
+        ],
+        "empty_language_record": true
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "uniqueItems",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/261",
+      "https://github.com/dottxt-ai/outlines-core/issues/196"
+    ],
+    "rationale": "uniqueItems 無視は既報。#196 の closed は実装完了を意味せず、未対応とのコメント。数値子の例は bounds/multipleOf も欠落し得る。"
+  },
+  {
+    "key": "xgrammar-bb843f6a82237799",
+    "engine": "xgrammar",
+    "ids": [
+      "array-rational-items"
+    ],
+    "schema": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.3,
+        "multipleOf": 0.1
+      },
+      "maxItems": 2,
+      "uniqueItems": true
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "array-rational-items",
+        "saved_witness_texts": [
+          "[0.3,0.3]"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "uniqueItems",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/932"
+    ],
+    "rationale": "重複値を拒否しない機構は既報。空言語の例も、この制約欠落を用いた派生。"
+  },
+  {
+    "key": "outlines-bb843f6a82237799",
+    "engine": "outlines",
+    "ids": [
+      "array-rational-items"
+    ],
+    "schema": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.3,
+        "multipleOf": 0.1
+      },
+      "maxItems": 2,
+      "uniqueItems": true
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "next7/FAILURES.json",
+        "id": "array-rational-items",
+        "saved_witness_texts": [
+          "[1,1.0]",
+          "[0.3,0.3]",
+          "[0.31]"
+        ],
+        "empty_language_record": false
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "uniqueItems",
+    "references": [
+      "https://github.com/dottxt-ai/outlines-core/issues/261",
+      "https://github.com/dottxt-ai/outlines-core/issues/196"
+    ],
+    "rationale": "uniqueItems 無視は既報。#196 の closed は実装完了を意味せず、未対応とのコメント。数値子の例は bounds/multipleOf も欠落し得る。"
+  },
+  {
+    "key": "xgrammar-421641f180e77231",
+    "engine": "xgrammar",
+    "ids": [
+      "audit-minimal:issue-xg895-original"
+    ],
+    "schema": {
+      "properties": {
+        "k": {
+          "type": "string",
+          "pattern": "^[a-z]+$",
+          "maxLength": 3
+        }
+      }
+    },
+    "schema_identity": "sorted keys; root annotations removed; JSON numeric spellings preserved",
+    "evidence": [
+      {
+        "source": "check-2b/AUDIT.json",
+        "id": "audit-minimal:issue-xg895-original",
+        "saved_witness_texts": [
+          "{\"k\":\"abcd\"}"
+        ],
+        "empty_language_record": null
+      }
+    ],
+    "latest_runtime_checked": false,
+    "C_released_version": false,
+    "C_source_only": false,
+    "category": "A",
+    "family": "pattern-plus-length",
+    "references": [
+      "https://github.com/mlc-ai/xgrammar/issues/895",
+      "https://github.com/mlc-ai/xgrammar/issues/966",
+      "https://github.com/mlc-ai/xgrammar/pull/896"
+    ],
+    "rationale": "#895 は #749 の duplicate として closed。#966 は open。#896 は警告だけの merged stopgap。制約実装済みとはしない。"
+  }
+]

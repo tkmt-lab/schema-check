@@ -1,0 +1,35 @@
+[
+  {
+    "source": "schema-check-source/next4/comparison/SOURCES.json",
+    "input_commit": "96fe31252",
+    "sha256": "14babba2bf9a54001d8c1728fcd9f65ccbe05cc553a5c4eedf55166f2000b1fd",
+    "packaged_path": "components/schema-check/next4/comparison/SOURCES.json",
+    "packaged_sha256": "14babba2bf9a54001d8c1728fcd9f65ccbe05cc553a5c4eedf55166f2000b1fd"
+  },
+  {
+    "source": "schema-check-source/next4/comparison/LLGUIDANCE-SOURCE.json",
+    "input_commit": "96fe31252",
+    "sha256": "6bf1160f20fa170d4b1be6090cac059009c53857390a7176b7448763e9df2ab2",
+    "packaged_path": "components/schema-check/next4/comparison/LLGUIDANCE-SOURCE.json",
+    "packaged_sha256": "6bf1160f20fa170d4b1be6090cac059009c53857390a7176b7448763e9df2ab2"
+  },
+  {
+    "source": "schema-check-source/next4/comparison/OUTLINES-WHEEL.json",
+    "input_commit": "96fe31252",
+    "sha256": "19d64f165db4fcf4f8c958587f559d7b1ef141ee3c1bdbd0abb5a758923662af",
+    "packaged_path": "components/schema-check/next4/comparison/OUTLINES-WHEEL.json",
+    "packaged_sha256": "3172d28a949f2678bfdd05172808ac8c81d4bad21ca42b524b26ca89d881aac5"
+  },
+  {
+    "source": "schema-check-source/next4/comparison/XGRAMMAR-WHEEL.json",
+    "input_commit": "96fe31252",
+    "sha256": "f1d8f3db51759a8b128d57438437266d908d1b0c43b30a9b5e52b064b2a4469a",
+    "packaged_path": "components/schema-check/next4/comparison/XGRAMMAR-WHEEL.json",
+    "packaged_sha256": "990e8a83fb9ed84e2560f36750ddecf8fbe9ee6ca927be8e7c206ba6a95acecf"
+  },
+  {
+    "source": "schema-check-source/next3/DEPENDENCIES-VERIFIED.json",
+    "input_commit": "96fe31252",
+    "sha256": "a29db039ff2f372f83591241b297a1f37e3bf5fbc8ccc58e1f0d4374170a54fe"
+  }
+]

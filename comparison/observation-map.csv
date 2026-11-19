@@ -1,0 +1,370 @@
+project_report,report_witness_in_original_invalid_rows,tool,engine,version,case_id,result,classification,family,classification_key,references
+,,llguidance,llguidance,1.9.1,pattern-length,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,pattern-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,unicode-length,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,oneof-overlap,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,oneof-identical,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,oneof-not,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,not-global,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift-pattern-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift-minLength-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift-minLength-1,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift-maxLength-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift-maxLength-1,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite-oneOf-1,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite-oneOf-2,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite-oneOf-4,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite-oneOf-5,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite-oneOf-10,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite-not-4,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite-not-5,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,infinite-star,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,infinite-plus,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,infinite-open-repeat,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,unicode-unbounded,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,generic-unicode-length,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,length-pattern-cap,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,length-repeat-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,infinite-overlapping-oneof,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,infinite-not,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-properties-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-properties-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-properties-3,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-properties-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-properties-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-required-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-required-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-required-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-required-3,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-required-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-additionalProperties-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-additionalProperties-3,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-additionalProperties-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-additionalProperties-5,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,lift3-additionalProperties-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-7,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-8,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-9,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-10,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-11,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-12,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-13,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-14,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-enum-15,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-3,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-7,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-8,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-9,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-10,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-11,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-12,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-13,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-14,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-15,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite3-const-16,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,object-required-optional,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,object-required-impossible,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,object-nested-const,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,enum-type-equality,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,issue-xg858-original,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,issue-xg895-original,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,issue-vllm56556-finite-derived,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,issue-outlines612-finite-derived,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-exclusiveMaximum-0-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-exclusiveMaximum-0-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-exclusiveMinimum-0-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-exclusiveMinimum-0-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-maximum-0-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-maximum-0-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-maximum-1-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-maximum-1-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-minimum-0-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-minimum-0-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-minimum-1-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-minimum-1-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-multipleOf-0-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-multipleOf-0-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-multipleOf-1-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-multipleOf-1-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-multipleOf-2-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-multipleOf-2-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-multipleOf-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-multipleOf-4-typed-number,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-multipleOf-4-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-type-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-type-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-type-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-type-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,suite7-type-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,number-finite-tenths,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,number-exclusive-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,integer-fractional-window-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,integer-multiple-rational,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,number-unbounded-decimal,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,number-oneof-divisibility,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,array-boolean-bounded,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,array-unique-finite,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,array-unique-impossible,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,array-items-false,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,array-length-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,array-rational-items,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,array-nested-finite,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,llguidance,llguidance,1.9.1,object-rational-array,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,pattern-length,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,xgrammar-21feb1f1d7f1a77c,https://github.com/mlc-ai/xgrammar/issues/895 https://github.com/mlc-ai/xgrammar/issues/966 https://github.com/mlc-ai/xgrammar/pull/896
+,,XGrammar,xgrammar,0.2.8,pattern-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,unicode-length,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,xgrammar-0de7e1a385eabf08,https://github.com/mlc-ai/xgrammar/issues/895 https://github.com/mlc-ai/xgrammar/issues/966 https://github.com/mlc-ai/xgrammar/pull/896
+,,XGrammar,xgrammar,0.2.8,oneof-overlap,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,oneOf-permissive-fallback,xgrammar-608bda86b8598786,https://github.com/mlc-ai/xgrammar/pull/672 https://github.com/mlc-ai/xgrammar/pull/672/files
+,,XGrammar,xgrammar,0.2.8,oneof-identical,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,oneOf-permissive-fallback,xgrammar-45247a7b7be6b9db,https://github.com/mlc-ai/xgrammar/pull/672 https://github.com/mlc-ai/xgrammar/pull/672/files
+,,XGrammar,xgrammar,0.2.8,oneof-not,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,oneOf-permissive-fallback,xgrammar-40f3b687ce46a6e9,https://github.com/mlc-ai/xgrammar/pull/672 https://github.com/mlc-ai/xgrammar/pull/672/files
+,,XGrammar,xgrammar,0.2.8,not-global,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,unsupported-not,xgrammar-a2c76c5398fe4029,https://github.com/mlc-ai/xgrammar/pull/134/files https://github.com/mlc-ai/xgrammar/issues/858
+,,XGrammar,xgrammar,0.2.8,lift-pattern-0,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-e92da0f2ee7d22b5,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift-minLength-0,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-815714c636f6c856,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift-minLength-1,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-67339fdc6a9b1f0e,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift-maxLength-0,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-cdb54086a0aff530,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift-maxLength-1,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-1f8b23eac1bf858a,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite-oneOf-1,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,oneOf-permissive-fallback,xgrammar-e496b61a37e8a99f,https://github.com/mlc-ai/xgrammar/pull/672 https://github.com/mlc-ai/xgrammar/pull/672/files
+,,XGrammar,xgrammar,0.2.8,suite-oneOf-2,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,oneOf-permissive-fallback,xgrammar-7dc9a45885ddffcb,https://github.com/mlc-ai/xgrammar/pull/672 https://github.com/mlc-ai/xgrammar/pull/672/files
+,,XGrammar,xgrammar,0.2.8,suite-oneOf-4,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite-oneOf-5,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite-oneOf-10,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite-not-4,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,unsupported-not,xgrammar-47abca31292f03e9,https://github.com/mlc-ai/xgrammar/pull/134/files https://github.com/mlc-ai/xgrammar/issues/858
+,,XGrammar,xgrammar,0.2.8,suite-not-5,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,unsupported-not,xgrammar-a2c76c5398fe4029,https://github.com/mlc-ai/xgrammar/pull/134/files https://github.com/mlc-ai/xgrammar/issues/858
+,,XGrammar,xgrammar,0.2.8,infinite-star,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,xgrammar-a00e51d5d19a5ea0,https://github.com/mlc-ai/xgrammar/issues/895 https://github.com/mlc-ai/xgrammar/issues/966 https://github.com/mlc-ai/xgrammar/pull/896
+,,XGrammar,xgrammar,0.2.8,infinite-plus,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,infinite-open-repeat,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,unicode-unbounded,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,xgrammar-46a1972ece9ef95a,https://github.com/mlc-ai/xgrammar/issues/895 https://github.com/mlc-ai/xgrammar/issues/966 https://github.com/mlc-ai/xgrammar/pull/896
+,,XGrammar,xgrammar,0.2.8,generic-unicode-length,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,length-pattern-cap,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,xgrammar-8353783be9ebe94b,https://github.com/mlc-ai/xgrammar/issues/895 https://github.com/mlc-ai/xgrammar/issues/966 https://github.com/mlc-ai/xgrammar/pull/896
+,,XGrammar,xgrammar,0.2.8,length-repeat-empty,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,xgrammar-3d10a44425a9fa82,https://github.com/mlc-ai/xgrammar/issues/895 https://github.com/mlc-ai/xgrammar/issues/966 https://github.com/mlc-ai/xgrammar/pull/896
+,,XGrammar,xgrammar,0.2.8,infinite-overlapping-oneof,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,oneOf-permissive-fallback,xgrammar-e496b61a37e8a99f,https://github.com/mlc-ai/xgrammar/pull/672 https://github.com/mlc-ai/xgrammar/pull/672/files
+,,XGrammar,xgrammar,0.2.8,infinite-not,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,unsupported-not,xgrammar-393298791df7cd55,https://github.com/mlc-ai/xgrammar/pull/134/files https://github.com/mlc-ai/xgrammar/issues/858
+,,XGrammar,xgrammar,0.2.8,lift3-properties-0,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-86772962e8d53cfe,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift3-properties-2,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,lift3-properties-3,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-1a3bd7d98e6bad53,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift3-properties-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,lift3-properties-5,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-cb3e412a04cdfb69,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift3-required-0,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-881586c4ab45123f,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift3-required-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,lift3-required-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,lift3-required-3,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-680ac3bd8fe7e1de,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift3-required-4,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-4e690902ef076268,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift3-additionalProperties-2,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-af4dca82abb19a20,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift3-additionalProperties-3,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-ca4451b6094d90bc,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift3-additionalProperties-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,lift3-additionalProperties-5,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-de8218f5438d747b,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,lift3-additionalProperties-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-7,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-8,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-9,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-10,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-11,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-12,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-13,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-14,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-enum-15,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-3,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-7,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-8,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-9,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-10,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-11,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-12,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-13,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-14,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-15,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite3-const-16,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,object-required-optional,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+https://github.com/mlc-ai/xgrammar/issues/1029,False,XGrammar,xgrammar,0.2.8,object-required-impossible,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,object-nested-const,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,enum-type-equality,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,issue-xg858-original,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,combinator-sibling-loss,xgrammar-4baf078644203c14,https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,issue-xg895-original,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,xgrammar-d569749f30c12974,https://github.com/mlc-ai/xgrammar/issues/895 https://github.com/mlc-ai/xgrammar/issues/966 https://github.com/mlc-ai/xgrammar/pull/896
+,,XGrammar,xgrammar,0.2.8,issue-vllm56556-finite-derived,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-494bd4e6a31e0507,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,issue-outlines612-finite-derived,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite7-exclusiveMaximum-0-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-7cdd5ce4aa8ff24f,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-exclusiveMaximum-0-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-7571539aa077bc3c,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-exclusiveMinimum-0-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-843f8ca2fbe9535a,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-exclusiveMinimum-0-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-25ef7e85db1827cf,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-maximum-0-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-fa251f05c31712a1,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-maximum-0-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-47c1a5d524419243,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-maximum-1-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-527406b597561145,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-maximum-1-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-0435285778b64d67,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-minimum-0-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-c7a5fbd8c2ef5af0,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-minimum-0-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-abcbce8b45f48794,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-minimum-1-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-21f029d64d68a199,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-minimum-1-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-1888eb98ef6c7614,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-multipleOf-0-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-566d80a982704f4c,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-multipleOf-0-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-eda77bb182422efb,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-multipleOf-1-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-3ffe37e154a8315d,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-multipleOf-1-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-ac6ff1b0fad5ee6e,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-multipleOf-2-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-a9b873b646f55e3c,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-multipleOf-2-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-73169a0cc32ea084,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-multipleOf-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite7-multipleOf-4-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-9080d513fc56771b,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-multipleOf-4-typed-integer,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multi-branch-allOf,xgrammar-c5e4be995b1ec6a8,https://github.com/mlc-ai/xgrammar/issues/937 https://github.com/mlc-ai/xgrammar/issues/858 https://github.com/mlc-ai/xgrammar/pull/859
+,,XGrammar,xgrammar,0.2.8,suite7-type-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite7-type-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite7-type-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite7-type-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,suite7-type-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,number-finite-tenths,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,number-exclusive-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,integer-fractional-window-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,integer-multiple-rational,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,fractional-integer-multipleOf,xgrammar-06eb9722022d6c90,https://github.com/mlc-ai/xgrammar/pull/670 https://github.com/mlc-ai/xgrammar/pull/670/files
+,,XGrammar,xgrammar,0.2.8,number-unbounded-decimal,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,number-oneof-divisibility,INVALID_ACCEPTANCE_OBSERVED,OFFICIAL_REPOSITORY_RECORD,oneOf-permissive-fallback,xgrammar-90313a9103e6ea22,https://github.com/mlc-ai/xgrammar/pull/672 https://github.com/mlc-ai/xgrammar/pull/672/files
+,,XGrammar,xgrammar,0.2.8,array-boolean-bounded,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,array-unique-finite,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,uniqueItems,xgrammar-6e12d5b4085a62f1,https://github.com/mlc-ai/xgrammar/issues/932
+,,XGrammar,xgrammar,0.2.8,array-unique-impossible,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,uniqueItems,xgrammar-3388eca61c93e7d4,https://github.com/mlc-ai/xgrammar/issues/932
+,,XGrammar,xgrammar,0.2.8,array-items-false,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,array-length-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,array-rational-items,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,uniqueItems,xgrammar-bb843f6a82237799,https://github.com/mlc-ai/xgrammar/issues/932
+,,XGrammar,xgrammar,0.2.8,array-nested-finite,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,XGrammar,xgrammar,0.2.8,object-rational-array,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,pattern-length,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,outlines-21feb1f1d7f1a77c,https://github.com/dottxt-ai/outlines-core/issues/274 https://github.com/dottxt-ai/outlines-core/pull/276
+,,outlines-core,outlines,0.2.14,pattern-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,unicode-length,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,oneof-overlap,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,oneOf-exactly-one,outlines-608bda86b8598786,https://github.com/dottxt-ai/outlines-core/issues/156
+,,outlines-core,outlines,0.2.14,oneof-identical,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,oneOf-exactly-one,outlines-45247a7b7be6b9db,https://github.com/dottxt-ai/outlines-core/issues/156
+,,outlines-core,outlines,0.2.14,oneof-not,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,not-global,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift-pattern-0,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift-minLength-0,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift-minLength-1,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift-maxLength-0,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift-maxLength-1,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite-oneOf-1,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite-oneOf-2,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite-oneOf-4,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite-oneOf-5,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite-oneOf-10,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite-not-4,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite-not-5,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,infinite-star,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,infinite-plus,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,infinite-open-repeat,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,unicode-unbounded,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,generic-unicode-length,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,length-pattern-cap,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,length-repeat-empty,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,outlines-3d10a44425a9fa82,https://github.com/dottxt-ai/outlines-core/issues/274 https://github.com/dottxt-ai/outlines-core/pull/276
+,,outlines-core,outlines,0.2.14,infinite-overlapping-oneof,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,infinite-not,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,unsupported-not,outlines-393298791df7cd55,https://github.com/dottxt-ai/outlines-core/issues/261
+,,outlines-core,outlines,0.2.14,lift3-properties-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-properties-2,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-properties-3,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-properties-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-properties-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-required-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-required-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-required-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-required-3,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-required-4,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-additionalProperties-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-additionalProperties-3,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-additionalProperties-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-additionalProperties-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,lift3-additionalProperties-6,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-7,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-8,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-9,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-10,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-11,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-12,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-13,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-enum-14,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,empty-enum,outlines-af9599f05a2f285b,https://github.com/dottxt-ai/outlines-core/pull/269 https://github.com/dottxt-ai/outlines-core/issues/261
+,,outlines-core,outlines,0.2.14,suite3-enum-15,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-3,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-7,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-8,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-9,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-10,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-11,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-12,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-13,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-14,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-15,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite3-const-16,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,object-required-optional,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,object-required-impossible,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,required-outside-properties,outlines-f8ede95d480e2103,https://github.com/dottxt-ai/outlines-core/issues/152
+,,outlines-core,outlines,0.2.14,object-nested-const,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,enum-type-equality,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+https://github.com/dottxt-ai/outlines-core/issues/277,True,outlines-core,outlines,0.2.14,issue-xg858-original,INVALID_ACCEPTANCE_OBSERVED,NEWLY_REPORTED,anyOf-required-with-sibling-properties,outlines-4baf078644203c14,https://github.com/dottxt-ai/outlines-core/issues/277 https://github.com/dottxt-ai/outlines-core/issues/156 https://github.com/dottxt-ai/outlines-core/issues/152 https://github.com/mlc-ai/xgrammar/issues/858
+,,outlines-core,outlines,0.2.14,issue-xg895-original,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,pattern-plus-length,outlines-d569749f30c12974,https://github.com/dottxt-ai/outlines-core/issues/274 https://github.com/dottxt-ai/outlines-core/pull/276
+,,outlines-core,outlines,0.2.14,issue-vllm56556-finite-derived,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,issue-outlines612-finite-derived,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-exclusiveMaximum-0-typed-number,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-exclusiveMaximum-0-typed-integer,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-exclusiveMinimum-0-typed-number,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-exclusiveMinimum-0-typed-integer,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-maximum-0-typed-number,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-maximum-0-typed-integer,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-maximum-1-typed-number,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-maximum-1-typed-integer,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-minimum-0-typed-number,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-minimum-0-typed-integer,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-minimum-1-typed-number,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-minimum-1-typed-integer,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-multipleOf-0-typed-number,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-multipleOf-0-typed-integer,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-multipleOf-1-typed-number,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-multipleOf-1-typed-integer,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-multipleOf-2-typed-number,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-multipleOf-2-typed-integer,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-multipleOf-4,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-multipleOf-4-typed-number,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,allOf-intersection,outlines-9080d513fc56771b,https://github.com/dottxt-ai/outlines-core/issues/259
+,,outlines-core,outlines,0.2.14,suite7-multipleOf-4-typed-integer,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-type-0,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-type-1,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-type-2,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-type-5,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,suite7-type-6,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,number-finite-tenths,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,numeric-bounds,outlines-3d90f0a3d1727d6a,https://github.com/dottxt-ai/outlines-core/issues/147 https://github.com/dottxt-ai/outlines-core/pull/260 https://github.com/dottxt-ai/outlines-core/pull/260/files
+,,outlines-core,outlines,0.2.14,number-exclusive-empty,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,numeric-bounds,outlines-6e353f796f54d88b,https://github.com/dottxt-ai/outlines-core/issues/147 https://github.com/dottxt-ai/outlines-core/pull/260 https://github.com/dottxt-ai/outlines-core/pull/260/files
+,,outlines-core,outlines,0.2.14,integer-fractional-window-empty,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,numeric-bounds,outlines-31727a69a80aa6a0,https://github.com/dottxt-ai/outlines-core/issues/147 https://github.com/dottxt-ai/outlines-core/pull/260 https://github.com/dottxt-ai/outlines-core/pull/260/files
+,,outlines-core,outlines,0.2.14,integer-multiple-rational,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,multipleOf,outlines-06eb9722022d6c90,https://github.com/dottxt-ai/outlines-core/issues/261
+,,outlines-core,outlines,0.2.14,number-unbounded-decimal,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,number-oneof-divisibility,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,array-boolean-bounded,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,array-unique-finite,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,uniqueItems,outlines-6e12d5b4085a62f1,https://github.com/dottxt-ai/outlines-core/issues/261 https://github.com/dottxt-ai/outlines-core/issues/196
+,,outlines-core,outlines,0.2.14,array-unique-impossible,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,uniqueItems,outlines-3388eca61c93e7d4,https://github.com/dottxt-ai/outlines-core/issues/261 https://github.com/dottxt-ai/outlines-core/issues/196
+,,outlines-core,outlines,0.2.14,array-items-false,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,array-length-empty,COMPILE_REFUSAL,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,array-rational-items,INVALID_ACCEPTANCE_OBSERVED,EXISTING_ISSUE_OR_PR,uniqueItems,outlines-bb843f6a82237799,https://github.com/dottxt-ai/outlines-core/issues/261 https://github.com/dottxt-ai/outlines-core/issues/196
+,,outlines-core,outlines,0.2.14,array-nested-finite,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,
+,,outlines-core,outlines,0.2.14,object-rational-array,NO_INVALID_ACCEPTANCE_OBSERVED,NOT_APPLICABLE,,,

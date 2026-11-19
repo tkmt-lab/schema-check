@@ -1,0 +1,132 @@
+{
+  "key": "albert-base-v2",
+  "id": "pattern-length",
+  "schema": {
+    "type": "string",
+    "pattern": "^[ab]*$",
+    "minLength": 1,
+    "maxLength": 2
+  },
+  "errors": {
+    "llguidance": "can't determine decoder type: Some(Metaspace(Metaspace { replacement: '▁', prepend_scheme: Always, split: true, str_rep: \"▁\" }))"
+  },
+  "rows": [
+    {
+      "token_ids": [],
+      "prefix_hex": "",
+      "phase": 0,
+      "byte_live": true,
+      "token_live": true,
+      "tools": {
+        "xgrammar-auto": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "589ffd3acf522ae81192579f297589e93b0c41f748b224d1b4bb5c857a2f70cb",
+          "allowed_ids": [
+            7
+          ],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        },
+        "xgrammar-explicit-metaspace": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "589ffd3acf522ae81192579f297589e93b0c41f748b224d1b4bb5c857a2f70cb",
+          "allowed_ids": [
+            7
+          ],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        },
+        "outlines-first": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "e44301c240156258529555f3191ec578e502b768b502d192dc7d6c02d45c0206",
+          "allowed_ids": [
+            7,
+            13
+          ],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "adapter_replay_token_ids": []
+        }
+      }
+    },
+    {
+      "token_ids": [
+        7
+      ],
+      "prefix_hex": "22",
+      "phase": 1,
+      "byte_live": true,
+      "token_live": true,
+      "tools": {
+        "xgrammar-auto": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 12,
+          "allowed_ids_sha256": "2f0f262ee51f496864e0fc279cd5b294c2926cf9a42c2a18738ea71adeaf3820",
+          "allowed_ids": [
+            7,
+            58,
+            220,
+            969,
+            2297,
+            3490,
+            5753,
+            6887,
+            13100,
+            17537,
+            22149,
+            22160
+          ],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        },
+        "xgrammar-explicit-metaspace": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 12,
+          "allowed_ids_sha256": "2f0f262ee51f496864e0fc279cd5b294c2926cf9a42c2a18738ea71adeaf3820",
+          "allowed_ids": [
+            7,
+            58,
+            220,
+            969,
+            2297,
+            3490,
+            5753,
+            6887,
+            13100,
+            17537,
+            22149,
+            22160
+          ],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        },
+        "outlines-continuation": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 709,
+          "allowed_ids_sha256": "f0fc7e5be4c1b6cbb6f77f929b17895ab6856f02b918ce3f54d90421ab63824d",
+          "allowed_ids": null,
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "adapter_replay_token_ids": [
+            7
+          ]
+        }
+      }
+    }
+  ],
+  "cpu_seconds": 1.133074,
+  "rss_bytes": 377372672
+}

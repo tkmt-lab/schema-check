@@ -1,0 +1,94 @@
+{
+  "key": "albert-base-v2",
+  "id": "suite3-const-15",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "const": "μ",
+    "$comment": "U+03BC"
+  },
+  "errors": {
+    "llguidance": "can't determine decoder type: Some(Metaspace(Metaspace { replacement: '▁', prepend_scheme: Always, split: true, str_rep: \"▁\" }))",
+    "outlines-continuation": "The vocabulary provided is incompatible with the regex '\"μ\"'. Found no transitions from state 64, missing tokens corresponding to at least one of the following characters: [\"\\\\xce\"]. This may be due to an encoding issue in your vocabulary."
+  },
+  "rows": [
+    {
+      "token_ids": [],
+      "prefix_hex": "",
+      "phase": 0,
+      "byte_live": true,
+      "token_live": false,
+      "tools": {
+        "xgrammar-auto": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "589ffd3acf522ae81192579f297589e93b0c41f748b224d1b4bb5c857a2f70cb",
+          "allowed_ids": [
+            7
+          ],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        },
+        "xgrammar-explicit-metaspace": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "589ffd3acf522ae81192579f297589e93b0c41f748b224d1b4bb5c857a2f70cb",
+          "allowed_ids": [
+            7
+          ],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        },
+        "outlines-first": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "e44301c240156258529555f3191ec578e502b768b502d192dc7d6c02d45c0206",
+          "allowed_ids": [
+            7,
+            13
+          ],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "adapter_replay_token_ids": []
+        }
+      }
+    },
+    {
+      "token_ids": [
+        7
+      ],
+      "prefix_hex": "22",
+      "phase": 1,
+      "byte_live": true,
+      "token_live": false,
+      "tools": {
+        "xgrammar-auto": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "allowed_ids": [],
+          "empty_mask_nonterminal": true,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        },
+        "xgrammar-explicit-metaspace": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "allowed_ids": [],
+          "empty_mask_nonterminal": true,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        }
+      }
+    }
+  ],
+  "cpu_seconds": 1.088343,
+  "rss_bytes": 362889216
+}

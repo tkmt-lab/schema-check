@@ -1,0 +1,8 @@
+{
+  "status": "ERROR",
+  "returncode": 1,
+  "stop": null,
+  "wall_seconds": 0.31026850000489503,
+  "cpu_seconds_with_monitor": 0.245881,
+  "peak_monitored_rss_bytes": 99254272
+}

@@ -1,0 +1,172 @@
+{
+  "format": "schema-check-claims/v1",
+  "release_status": "RELEASE",
+  "title": "schema-check: certificates for canonical JSON completion",
+  "version": "0.1.0",
+  "input_commit": "5060bf412",
+  "claims": [
+    {
+      "id": "BYTE",
+      "statement": "Supported byte artifacts certify emptiness/nonemptiness and shortest exact-prefix completion in the documented canonical UTF-8 language, conditional on the shared kernels.",
+      "evidence": [
+        "components/schema-check/next7/schema_check/_verify.py",
+        "components/schema-check/next7/CORRECTNESS.md",
+        "docs/VERIFICATION.md"
+      ],
+      "units": "UTF-8 bytes; string lengths count Unicode code points",
+      "nonclaims": [
+        "all JSON Schema",
+        "all regular schema languages",
+        "all JSON serializations",
+        "formal proof",
+        "external independent review",
+        "whole-language equivalence of arbitrary external backends"
+      ]
+    },
+    {
+      "id": "BYTE-DATA",
+      "statement": "Frozen v2 dataset has 214 records: 123 supported, 88 UNSUPPORTED, 3 UNKNOWN.",
+      "evidence": [
+        "components/schema-check/next7/CASES.json",
+        "components/schema-check/next7/SUMMARY.json",
+        "components/schema-check/next7/TABLE.csv"
+      ],
+      "newly_eligible": 40,
+      "raw_suite_supported": 45,
+      "raw_suite_total": 122,
+      "nonclaims": [
+        "unsupported/unknown records are proofs",
+        "unseen benchmark"
+      ]
+    },
+    {
+      "id": "TOKEN-GPT2",
+      "statement": "All 83 saved fixed-GPT-2 token certificates have separate checking entries; byte-live/token-dead schema count is zero.",
+      "evidence": [
+        "components/schema-check/next5/SUMMARY.json",
+        "components/schema-check/next5/verify.py",
+        "components/schema-check/next5/TOKENIZER-SOURCE.json"
+      ],
+      "ordinary_vocabulary": 50256,
+      "eos_id": 50256,
+      "input_format": "schema-check/v1",
+      "nonclaims": [
+        "v2 numeric/array token support",
+        "arbitrary vocabularies",
+        "lossy decoder shortestness",
+        "arbitrary sampling termination"
+      ]
+    },
+    {
+      "id": "TOKEN-METASPACE",
+      "statement": "Saved first/continuation-phase vocabulary certificates: 83 per pinned vocabulary; root token infeasibility is separate from new dead ends.",
+      "evidence": [
+        "components/schema-check/next6/SUMMARY.json",
+        "components/schema-check/next6/verify.py",
+        "components/schema-check/next6/TOKENIZERS.json"
+      ],
+      "root_byte_live_token_dead": {
+        "t5-small": 24,
+        "albert-base-v2": 28
+      },
+      "root_feasible_with_reachable_dead": {
+        "t5-small": 0,
+        "albert-base-v2": 0
+      },
+      "nonclaims": [
+        "all decoder contexts",
+        "full serving integration",
+        "ALBERT generation recommendation"
+      ]
+    },
+    {
+      "id": "COMPARISON",
+      "statement": "Pinned-version observations, not distinct/new bug counts.",
+      "evidence": [
+        "components/schema-check/next3/RESULTS.json",
+        "components/schema-check/next7/SUMMARY.json",
+        "components/schema-check/next7/FAILURES.json",
+        "docs/COMPARISON.md",
+        "comparison/observation-map.json",
+        "comparison/reported-issues.json"
+      ],
+      "versions": {
+        "llguidance": "1.9.1",
+        "xgrammar": "0.2.8",
+        "outlines-core": "0.2.14"
+      },
+      "byte_v1_supported_records": 83,
+      "byte_v1_invalid_acceptance": {
+        "llguidance": 0,
+        "xgrammar": 33,
+        "outlines": 9
+      },
+      "v2_newly_eligible_records": 40,
+      "v2_new_invalid_acceptance": {
+        "llguidance": 0,
+        "xgrammar": 25,
+        "outlines": 8
+      },
+      "v2_all_invalid_acceptance": {
+        "llguidance": 0,
+        "xgrammar": 58,
+        "outlines": 17
+      },
+      "nonclaims": [
+        "current-main failure",
+        "bug priority",
+        "all errors silent",
+        "free-tool superiority",
+        "default verification reruns native backends",
+        "maintainer confirmation of the two reports"
+      ]
+    },
+    {
+      "id": "REPLAY",
+      "statement": "Default verify checks all frozen byte/token evidence and public controls; a PASS is local code checking.",
+      "evidence": [
+        "verify.py",
+        "docs/VERIFICATION.md"
+      ],
+      "expected_byte_certificates": 123,
+      "expected_status_only": 91,
+      "expected_token_certificates": 249,
+      "worker_concurrency": 1,
+      "rss_precaution_bytes": 1610612736,
+      "user_memory_ceiling_bytes": 2147483648,
+      "nonclaims": [
+        "hard macOS address-space cap",
+        "cross-platform result",
+        "formal certification"
+      ]
+    }
+  ],
+  "publication": {
+    "release_date": "2026-11-20",
+    "repository": "https://github.com/tkmt-lab/schema-check",
+    "doi": null,
+    "previous_project_reports": [
+      "https://github.com/mlc-ai/xgrammar/issues/1029",
+      "https://github.com/dottxt-ai/outlines-core/issues/277"
+    ]
+  },
+  "licensing": {
+    "code": "Apache-2.0",
+    "original_docs_and_generated_data": "CC-BY-4.0",
+    "third_party": "retained upstream terms; see THIRD-PARTY-NOTICES.md"
+  },
+  "preparation_input_commit": "fabbe0a73",
+  "purpose": "Inspect schema preservation with an exact supported canonical reference language and separate finite backend probes.",
+  "related_work": [
+    {
+      "title": "JSONSchemaBench",
+      "authors": "Geng et al.",
+      "year": 2025,
+      "arxiv": "2501.10868",
+      "reference": "docs/RELATED-WORK.md"
+    }
+  ],
+  "release_date": "2026-11-20",
+  "repository": "https://github.com/tkmt-lab/schema-check",
+  "author": "Tatsuhiko Takimoto"
+}

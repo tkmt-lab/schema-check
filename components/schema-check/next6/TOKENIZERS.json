@@ -1,0 +1,40 @@
+[
+  {
+    "key": "t5-small",
+    "model": "google-t5/t5-small",
+    "revision": "df1b051c49625cf57a3d0d8d3863ed4d13564fe4",
+    "url": "https://huggingface.co/google-t5/t5-small/resolve/df1b051c49625cf57a3d0d8d3863ed4d13564fe4/tokenizer.json",
+    "path": "data/tokenizers/t5-small.json",
+    "bytes": 1389353,
+    "sha256": "d2acde0d8d71dd30a711834b07781b9c89feaac33fd332f60507699282740066",
+    "license": "apache-2.0",
+    "decoder": {
+      "type": "Metaspace",
+      "replacement": "\u2581",
+      "str_rep": "\u2581",
+      "add_prefix_space": true
+    },
+    "model_type": null,
+    "byte_fallback": false,
+    "model_weights_downloaded": false
+  },
+  {
+    "key": "albert-base-v2",
+    "model": "albert/albert-base-v2",
+    "revision": "8e2f239c5f8a2c0f253781ca60135db913e5c80c",
+    "url": "https://huggingface.co/albert/albert-base-v2/resolve/8e2f239c5f8a2c0f253781ca60135db913e5c80c/tokenizer.json",
+    "path": "data/tokenizers/albert-base-v2.json",
+    "bytes": 1312669,
+    "sha256": "6e2aa3d5ca4c6841bc36a5028179cb4d63c129931fa18fce38fdb38cec4d2ac3",
+    "license": "apache-2.0",
+    "decoder": {
+      "type": "Metaspace",
+      "replacement": "\u2581",
+      "str_rep": "\u2581",
+      "add_prefix_space": true
+    },
+    "model_type": null,
+    "byte_fallback": false,
+    "model_weights_downloaded": false
+  }
+]

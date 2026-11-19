@@ -1,0 +1,27 @@
+{
+  "title": "schema-check: certificates for canonical JSON completion",
+  "upload_type": "software",
+  "version": "0.1.0",
+  "creators": [
+    {
+      "name": "Takimoto, Tatsuhiko"
+    }
+  ],
+  "description": "Inspect JSON Schema constraints using a supported canonical UTF-8 reference language. The tools compute emptiness and shortest byte completions with separate checking entries, provide fixed-vocabulary token certificates, and retain finite probes of pinned external backends. Project code is Apache-2.0; original documentation/generated data are CC-BY-4.0; third-party terms are retained separately. No formal certification, general JSON Schema coverage or arbitrary sampling termination is claimed. No DOI is specified.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "JSON Schema",
+    "canonical UTF-8",
+    "finite automata",
+    "certificate verification",
+    "constrained decoding"
+  ],
+  "publication_date": "2026-11-20",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/tkmt-lab/schema-check",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

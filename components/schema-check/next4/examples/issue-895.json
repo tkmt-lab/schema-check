@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "k": {
+      "type": "string",
+      "pattern": "^[a-z]+$",
+      "maxLength": 3
+    }
+  },
+  "required": [
+    "k"
+  ],
+  "additionalProperties": false
+}

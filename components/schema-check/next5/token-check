@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+"""Lift a verified schema-check/v1 byte artifact to the fixed GPT-2 vocabulary."""
+import sys,json,argparse,resource,signal
+from pathlib import Path
+P=Path(__file__).resolve().parent;sys.path.insert(0,str(P));sys.path.insert(0,str(P.parent/'next4'))
+from schema_check._shared import load_json
+from schema_check._verify import verify as verify_bytes
+from schema_check.cli import emit
+from vocabulary import load,Limit
+
+def main():
+    if not __debug__:
+        print(json.dumps({'verification':'FAIL','explanation':'Assertions must be enabled; rerun without -O.'}));return 1
+    mode='verify' if sys.argv[1:2]==['verify'] else 'produce';args=sys.argv[2:] if mode=='verify' else sys.argv[1:]
+    parser=argparse.ArgumentParser();parser.add_argument('artifact',type=Path);parser.add_argument('-o','--output');parser.add_argument('--schema',type=Path);parser.add_argument('--quiet',action='store_true')
+    if mode=='produce':
+        g=parser.add_mutually_exclusive_group();g.add_argument('--prefix');g.add_argument('--prefix-hex');g.add_argument('--prefix-token-ids',help='comma-separated ordinary token IDs; EOS is not a prefix token')
+    a=parser.parse_args(args);resource.setrlimit(resource.RLIMIT_CPU,(60,60));signal.alarm(60)
+    try:
+        if a.artifact.stat().st_size>32*1024**2:raise Limit('input artifact exceeds 32MiB')
+        data=load_json(a.artifact.read_text());pieces,eos,fallback,source=load();original=a.schema.read_text() if a.schema else None
+        if mode=='verify':
+            def deny(event,args):
+                if event=='open' and isinstance(args[0],str) and Path(args[0]).name.startswith('produce.'):raise RuntimeError('producer access blocked')
+            sys.addaudithook(deny)
+            assert data['format']=='schema-check-token-artifact/v1' and data['status']=='COMPLETE' and data['verification']=='NOT_RUN'
+            verify_bytes(data['byte_artifact'],original);assert data['tokenizer_sha256']==source['sha256']
+            from verify import check,check_queries
+            c=data['byte_artifact']['certificate'];checked=check(c,data['proof'],pieces,eos);check_queries(c,data['proof'],[data['query']],pieces,eos,fallback)
+            d=data['query']['token_distance'];expected='No token completion in the canonical language.' if d is None else f'Shortest completion: {d} ordinary GPT-2 tokens; explicit EOS adds one.'
+            assert data['explanation']==expected
+            supplied=data['supplied_prefix_token_ids']
+            if supplied is not None:
+                assert all(type(i) is int and i in pieces for i in supplied)
+                assert b''.join(pieces[i] for i in supplied)==bytes(data['query']['prefix']['bytes'])
+            result={'verification':'PASS','token_check':checked,'query_checked':True,'producer_access_blocked':True,'explanation':'PASS: token transitions, shortest completion, and supplied prefix verified.'};code=0
+        else:
+            verify_bytes(data,original);raw=bytes(data['input']['prefix_bytes']) if data['input']['prefix_provided'] else b'';supplied=None
+            if a.prefix is not None:raw=a.prefix.encode()
+            elif a.prefix_hex is not None:raw=bytes.fromhex(a.prefix_hex)
+            elif a.prefix_token_ids is not None:
+                supplied=[int(i.strip()) for i in a.prefix_token_ids.split(',') if i.strip()]
+                if any(i not in pieces for i in supplied):raise ValueError('only ordinary GPT-2 token IDs may appear in a prefix')
+                raw=b''.join(pieces[i] for i in supplied)
+            if len(raw)>1024**2:raise Limit('prefix exceeds 1MiB')
+            from produce import generate,make_trie,query
+            proof=generate(data['certificate'],pieces,eos,make_trie(pieces));r=query(data['certificate'],proof,raw,pieces,eos,fallback)
+            message='No token completion in the canonical language.' if r['token_distance'] is None else f"Shortest completion: {r['token_distance']} ordinary GPT-2 tokens; explicit EOS adds one."
+            result={'format':'schema-check-token-artifact/v1','status':'COMPLETE','tokenizer_sha256':source['sha256'],'byte_artifact':data,'proof':proof,'query':r,'supplied_prefix_token_ids':supplied,'verification':'NOT_RUN','explanation':message};code=0
+        emit(result,a.output,a.quiet,[str(a.artifact),str(a.schema) if a.schema else None])
+    except Limit as e:
+        result={'status':'UNKNOWN','explanation':str(e)};emit(result,None,a.quiet,[]);code=3
+    except Exception as e:
+        result={'verification':'FAIL' if mode=='verify' else 'ERROR','explanation':f'{type(e).__name__}: {e}'};emit(result,None,a.quiet,[]);code=1
+    return code
+
+if __name__=='__main__':raise SystemExit(main())

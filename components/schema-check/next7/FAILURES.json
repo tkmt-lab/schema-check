@@ -1,0 +1,4912 @@
+[
+  {
+    "id": "pattern-length",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        34
+      ],
+      [
+        34,
+        97,
+        97,
+        97,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "minLength": 1,
+      "maxLength": 2
+    }
+  },
+  {
+    "id": "pattern-length",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        99,
+        34
+      ],
+      [
+        34,
+        97,
+        92,
+        110,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "minLength": 1,
+      "maxLength": 2
+    }
+  },
+  {
+    "id": "unicode-length",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        240,
+        159,
+        152,
+        128,
+        240,
+        159,
+        152,
+        128,
+        240,
+        159,
+        152,
+        128,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[é😀]+$",
+      "maxLength": 2
+    }
+  },
+  {
+    "id": "oneof-overlap",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        116,
+        114,
+        117,
+        101
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "boolean",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "oneof-overlap",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        116,
+        114,
+        117,
+        101
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "boolean",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "oneof-identical",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        34,
+        97,
+        34
+      ],
+      [
+        34,
+        98,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "oneOf": [
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "oneof-identical",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "outlines",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        34,
+        97,
+        34
+      ],
+      [
+        34,
+        98,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "oneOf": [
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "enum": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "oneof-not",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        48
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "boolean",
+      "oneOf": [
+        {},
+        {
+          "not": {
+            "const": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "not-global",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        97,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "not": true
+    }
+  },
+  {
+    "id": "lift-pattern-0",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        97,
+        98,
+        99,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "aaa",
+            "abc",
+            true,
+            123,
+            null
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "pattern": "^a*$"
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift-minLength-0",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        102,
+        34
+      ],
+      [
+        34,
+        240,
+        159,
+        146,
+        169,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "foo",
+            "fo",
+            "f",
+            1,
+            "💩"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minLength": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift-minLength-1",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        102,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "foo",
+            "f"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minLength": 2.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift-maxLength-0",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        102,
+        111,
+        111,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "f",
+            "fo",
+            "foo",
+            100,
+            "💩💩"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maxLength": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift-maxLength-1",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        102,
+        111,
+        111,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            "f",
+            "foo"
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maxLength": 2.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite-oneOf-1",
+    "scope": "old-original-80",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        51
+      ],
+      [
+        34,
+        102,
+        111,
+        111,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "string",
+      "oneOf": [
+        {
+          "minLength": 2
+        },
+        {
+          "maxLength": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite-oneOf-2",
+    "scope": "old-original-80",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        34,
+        102,
+        111,
+        111,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  {
+    "id": "suite-not-4",
+    "scope": "old-original-80",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        49
+      ],
+      [
+        34,
+        102,
+        111,
+        111,
+        34
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        123,
+        34,
+        102,
+        111,
+        111,
+        34,
+        58,
+        34,
+        98,
+        97,
+        114,
+        34,
+        125
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        91,
+        34,
+        102,
+        111,
+        111,
+        34,
+        93
+      ],
+      [
+        91,
+        93
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": {}
+    }
+  },
+  {
+    "id": "suite-not-5",
+    "scope": "old-original-80",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        49
+      ],
+      [
+        34,
+        102,
+        111,
+        111,
+        34
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        123,
+        34,
+        102,
+        111,
+        111,
+        34,
+        58,
+        34,
+        98,
+        97,
+        114,
+        34,
+        125
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        91,
+        34,
+        102,
+        111,
+        111,
+        34,
+        93
+      ],
+      [
+        91,
+        93
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "not": true
+    }
+  },
+  {
+    "id": "infinite-star",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        34
+      ],
+      [
+        34,
+        97,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "minLength": 2
+    }
+  },
+  {
+    "id": "unicode-unbounded",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        195,
+        169,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[é😀]+$",
+      "minLength": 2
+    }
+  },
+  {
+    "id": "length-pattern-cap",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        97,
+        97,
+        97,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "maxLength": 2
+    }
+  },
+  {
+    "id": "length-repeat-empty",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        34,
+        97,
+        97,
+        97,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]{3,}$",
+      "maxLength": 2
+    }
+  },
+  {
+    "id": "length-repeat-empty",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "outlines",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        34,
+        34
+      ],
+      [
+        34,
+        97,
+        97,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]{3,}$",
+      "maxLength": 2
+    }
+  },
+  {
+    "id": "infinite-overlapping-oneof",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        97,
+        97,
+        34
+      ],
+      [
+        34,
+        97,
+        97,
+        97,
+        97,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "oneOf": [
+        {
+          "minLength": 2
+        },
+        {
+          "maxLength": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "infinite-not",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        34
+      ],
+      [
+        34,
+        97,
+        97,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "not": {
+        "maxLength": 2
+      }
+    }
+  },
+  {
+    "id": "infinite-not",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        34,
+        34
+      ],
+      [
+        34,
+        97,
+        97,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "string",
+      "pattern": "^[ab]*$",
+      "not": {
+        "maxLength": 2
+      }
+    }
+  },
+  {
+    "id": "lift3-properties-0",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        98,
+        97,
+        114,
+        34,
+        58,
+        123,
+        125,
+        44,
+        34,
+        102,
+        111,
+        111,
+        34,
+        58,
+        49,
+        125
+      ],
+      [
+        123,
+        34,
+        98,
+        97,
+        114,
+        34,
+        58,
+        123,
+        125,
+        44,
+        34,
+        102,
+        111,
+        111,
+        34,
+        58,
+        91,
+        93,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1,
+              "bar": "baz"
+            },
+            {
+              "foo": 1,
+              "bar": {}
+            },
+            {
+              "foo": [],
+              "bar": {}
+            },
+            {
+              "quux": []
+            },
+            [],
+            12
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {
+              "type": "integer"
+            },
+            "bar": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift3-properties-3",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        102,
+        111,
+        111,
+        92,
+        116,
+        98,
+        97,
+        114,
+        34,
+        58,
+        34,
+        49,
+        34,
+        44,
+        34,
+        102,
+        111,
+        111,
+        92,
+        110,
+        98,
+        97,
+        114,
+        34,
+        58,
+        34,
+        49,
+        34,
+        44,
+        34,
+        102,
+        111,
+        111,
+        92,
+        102,
+        98,
+        97,
+        114,
+        34,
+        58,
+        34,
+        49,
+        34,
+        44,
+        34,
+        102,
+        111,
+        111,
+        92,
+        114,
+        98,
+        97,
+        114,
+        34,
+        58,
+        34,
+        49,
+        34,
+        44,
+        34,
+        102,
+        111,
+        111,
+        92,
+        34,
+        98,
+        97,
+        114,
+        34,
+        58,
+        34,
+        49,
+        34,
+        44,
+        34,
+        102,
+        111,
+        111,
+        92,
+        92,
+        98,
+        97,
+        114,
+        34,
+        58,
+        34,
+        49,
+        34,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo\nbar": 1,
+              "foo\"bar": 1,
+              "foo\\bar": 1,
+              "foo\rbar": 1,
+              "foo\tbar": 1,
+              "foo\fbar": 1
+            },
+            {
+              "foo\nbar": "1",
+              "foo\"bar": "1",
+              "foo\\bar": "1",
+              "foo\rbar": "1",
+              "foo\tbar": "1",
+              "foo\fbar": "1"
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo\nbar": {
+              "type": "number"
+            },
+            "foo\"bar": {
+              "type": "number"
+            },
+            "foo\\bar": {
+              "type": "number"
+            },
+            "foo\rbar": {
+              "type": "number"
+            },
+            "foo\tbar": {
+              "type": "number"
+            },
+            "foo\fbar": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift3-properties-5",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        95,
+        95,
+        112,
+        114,
+        111,
+        116,
+        111,
+        95,
+        95,
+        34,
+        58,
+        34,
+        102,
+        111,
+        111,
+        34,
+        125
+      ],
+      [
+        123,
+        34,
+        116,
+        111,
+        83,
+        116,
+        114,
+        105,
+        110,
+        103,
+        34,
+        58,
+        123,
+        34,
+        108,
+        101,
+        110,
+        103,
+        116,
+        104,
+        34,
+        58,
+        51,
+        55,
+        125,
+        125
+      ],
+      [
+        123,
+        34,
+        99,
+        111,
+        110,
+        115,
+        116,
+        114,
+        117,
+        99,
+        116,
+        111,
+        114,
+        34,
+        58,
+        123,
+        34,
+        108,
+        101,
+        110,
+        103,
+        116,
+        104,
+        34,
+        58,
+        51,
+        55,
+        125,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            [],
+            12,
+            {},
+            {
+              "__proto__": "foo"
+            },
+            {
+              "toString": {
+                "length": 37
+              }
+            },
+            {
+              "constructor": {
+                "length": 37
+              }
+            },
+            {
+              "__proto__": 12,
+              "toString": {
+                "length": "foo"
+              },
+              "constructor": 37
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "__proto__": {
+              "type": "number"
+            },
+            "toString": {
+              "properties": {
+                "length": {
+                  "type": "string"
+                }
+              }
+            },
+            "constructor": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift3-required-0",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        98,
+        97,
+        114,
+        34,
+        58,
+        49,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1
+            },
+            {
+              "bar": 1
+            },
+            [],
+            "",
+            12,
+            null,
+            true
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          },
+          "required": [
+            "foo"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift3-required-3",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        102,
+        111,
+        111,
+        92,
+        110,
+        98,
+        97,
+        114,
+        34,
+        58,
+        34,
+        49,
+        34,
+        44,
+        34,
+        102,
+        111,
+        111,
+        92,
+        34,
+        98,
+        97,
+        114,
+        34,
+        58,
+        34,
+        49,
+        34,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo\nbar": 1,
+              "foo\"bar": 1,
+              "foo\\bar": 1,
+              "foo\rbar": 1,
+              "foo\tbar": 1,
+              "foo\fbar": 1
+            },
+            {
+              "foo\nbar": "1",
+              "foo\"bar": "1"
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "required": [
+            "foo\nbar",
+            "foo\"bar",
+            "foo\\bar",
+            "foo\rbar",
+            "foo\tbar",
+            "foo\fbar"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift3-required-4",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        125
+      ],
+      [
+        123,
+        34,
+        95,
+        95,
+        112,
+        114,
+        111,
+        116,
+        111,
+        95,
+        95,
+        34,
+        58,
+        34,
+        102,
+        111,
+        111,
+        34,
+        125
+      ],
+      [
+        123,
+        34,
+        116,
+        111,
+        83,
+        116,
+        114,
+        105,
+        110,
+        103,
+        34,
+        58,
+        123,
+        34,
+        108,
+        101,
+        110,
+        103,
+        116,
+        104,
+        34,
+        58,
+        51,
+        55,
+        125,
+        125
+      ],
+      [
+        123,
+        34,
+        99,
+        111,
+        110,
+        115,
+        116,
+        114,
+        117,
+        99,
+        116,
+        111,
+        114,
+        34,
+        58,
+        123,
+        34,
+        108,
+        101,
+        110,
+        103,
+        116,
+        104,
+        34,
+        58,
+        51,
+        55,
+        125,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            [],
+            12,
+            {},
+            {
+              "__proto__": "foo"
+            },
+            {
+              "toString": {
+                "length": 37
+              }
+            },
+            {
+              "constructor": {
+                "length": 37
+              }
+            },
+            {
+              "__proto__": 12,
+              "toString": {
+                "length": "foo"
+              },
+              "constructor": 37
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "required": [
+            "__proto__",
+            "toString",
+            "constructor"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift3-additionalProperties-2",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        98,
+        97,
+        114,
+        34,
+        58,
+        50,
+        44,
+        34,
+        102,
+        111,
+        111,
+        34,
+        58,
+        49,
+        44,
+        34,
+        113,
+        117,
+        117,
+        120,
+        34,
+        58,
+        49,
+        50,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1
+            },
+            {
+              "foo": 1,
+              "bar": 2,
+              "quux": true
+            },
+            {
+              "foo": 1,
+              "bar": 2,
+              "quux": 12
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "foo": {},
+            "bar": {}
+          },
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift3-additionalProperties-3",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        102,
+        111,
+        111,
+        34,
+        58,
+        49,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": true
+            },
+            {
+              "foo": 1
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "lift3-additionalProperties-5",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        98,
+        97,
+        114,
+        34,
+        58,
+        116,
+        114,
+        117,
+        101,
+        44,
+        34,
+        102,
+        111,
+        111,
+        34,
+        58,
+        49,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "enum": [
+            {
+              "foo": 1,
+              "bar": true
+            }
+          ]
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "allOf": [
+            {
+              "properties": {
+                "foo": {}
+              }
+            }
+          ],
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite3-enum-14",
+    "scope": "old-original-80",
+    "newly_eligible": false,
+    "engine": "outlines",
+    "empty_language": true,
+    "semantic_false_acceptances": [],
+    "malformed_acceptances": [
+      []
+    ],
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "enum": []
+    }
+  },
+  {
+    "id": "object-required-impossible",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "outlines",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        123,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "missing"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "id": "issue-xg858-original",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        125
+      ],
+      [
+        123,
+        34,
+        122,
+        122,
+        122,
+        34,
+        58,
+        91,
+        49,
+        44,
+        50,
+        44,
+        51,
+        93,
+        125
+      ],
+      [
+        91,
+        49,
+        93
+      ],
+      [
+        123,
+        34,
+        101,
+        120,
+        116,
+        114,
+        97,
+        34,
+        58,
+        49,
+        44,
+        34,
+        109,
+        111,
+        100,
+        105,
+        102,
+        105,
+        101,
+        114,
+        34,
+        58,
+        34,
+        100,
+        97,
+        114,
+        107,
+        34,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "modifier": {
+          "enum": [
+            "",
+            "dark"
+          ]
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "modifier"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "id": "issue-xg858-original",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "modifier": {
+          "enum": [
+            "",
+            "dark"
+          ]
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "modifier"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "id": "issue-xg895-original",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        107,
+        34,
+        58,
+        34,
+        97,
+        98,
+        99,
+        100,
+        34,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "k": {
+          "type": "string",
+          "pattern": "^[a-z]+$",
+          "maxLength": 3
+        }
+      },
+      "required": [
+        "k"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "id": "issue-xg895-original",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        107,
+        34,
+        58,
+        34,
+        34,
+        125
+      ],
+      [
+        123,
+        34,
+        107,
+        34,
+        58,
+        34,
+        65,
+        66,
+        67,
+        34,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "k": {
+          "type": "string",
+          "pattern": "^[a-z]+$",
+          "maxLength": 3
+        }
+      },
+      "required": [
+        "k"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "id": "issue-vllm56556-finite-derived",
+    "scope": "old-other",
+    "newly_eligible": false,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        123,
+        34,
+        120,
+        34,
+        58,
+        53,
+        44,
+        34,
+        121,
+        34,
+        58,
+        34,
+        111,
+        107,
+        34,
+        125
+      ],
+      [
+        123,
+        34,
+        120,
+        34,
+        58,
+        49,
+        53,
+        125
+      ],
+      [
+        34,
+        104,
+        101,
+        108,
+        108,
+        111,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "enum": [
+            10,
+            15
+          ]
+        },
+        "y": {
+          "enum": [
+            "ok"
+          ]
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "required": [
+            "x"
+          ]
+        },
+        {
+          "required": [
+            "y"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-exclusiveMaximum-0-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        51
+      ],
+      [
+        51,
+        46,
+        53
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "exclusiveMaximum": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-exclusiveMaximum-0-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        50,
+        46,
+        50
+      ],
+      [
+        51
+      ],
+      [
+        51,
+        46,
+        53
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "exclusiveMaximum": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-exclusiveMinimum-0-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48
+      ],
+      [
+        45,
+        48
+      ],
+      [
+        48,
+        46,
+        48
+      ],
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ],
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        101,
+        48
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        49,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        54
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "exclusiveMinimum": 1.1
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-exclusiveMinimum-0-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48
+      ],
+      [
+        45,
+        48
+      ],
+      [
+        48,
+        46,
+        48
+      ],
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ],
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        49,
+        101,
+        48
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        49,
+        46,
+        50
+      ],
+      [
+        49,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        54
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "exclusiveMinimum": 1.1
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-maximum-0-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        51,
+        46,
+        53
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maximum": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-maximum-0-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        50,
+        46,
+        54
+      ],
+      [
+        51,
+        46,
+        53
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maximum": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-maximum-1-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        51,
+        48,
+        48,
+        46,
+        53
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maximum": 300
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-maximum-1-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        50,
+        57,
+        57,
+        46,
+        57,
+        55
+      ],
+      [
+        51,
+        48,
+        48,
+        46,
+        53
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "maximum": 300
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-minimum-0-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48
+      ],
+      [
+        45,
+        48
+      ],
+      [
+        48,
+        46,
+        48
+      ],
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ],
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        101,
+        48
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        48,
+        46,
+        54
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minimum": 1.1
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-minimum-0-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48
+      ],
+      [
+        45,
+        48
+      ],
+      [
+        48,
+        46,
+        48
+      ],
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ],
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        49,
+        101,
+        48
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        50,
+        46,
+        54
+      ],
+      [
+        49,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        54
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minimum": 1.1
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-minimum-1-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        45,
+        50,
+        46,
+        48,
+        48,
+        48,
+        49
+      ],
+      [
+        45,
+        51
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minimum": -2
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-minimum-1-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        45,
+        50,
+        46,
+        48,
+        48,
+        48,
+        49
+      ],
+      [
+        45,
+        51
+      ],
+      [
+        34,
+        120,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "minimum": -2
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-multipleOf-0-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ],
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        49,
+        101,
+        48
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        55
+      ],
+      [
+        34,
+        102,
+        111,
+        111,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-multipleOf-0-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ],
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        49,
+        101,
+        48
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        55
+      ],
+      [
+        34,
+        102,
+        111,
+        111,
+        34
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-multipleOf-1-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ],
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        101,
+        48
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        51,
+        53
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-multipleOf-1-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ],
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        49,
+        101,
+        48
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        52,
+        46,
+        53
+      ],
+      [
+        45,
+        52,
+        46,
+        53
+      ],
+      [
+        51,
+        53
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-multipleOf-2-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        48,
+        46,
+        48,
+        48,
+        55,
+        53,
+        49
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 0.0001
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-multipleOf-2-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        48,
+        46,
+        48,
+        48,
+        55,
+        53
+      ],
+      [
+        48,
+        46,
+        48,
+        48,
+        55,
+        53,
+        49
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "multipleOf": 0.0001
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-multipleOf-4-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "integer",
+          "multipleOf": 1e-08
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-multipleOf-4-typed-number",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "integer",
+          "multipleOf": 1e-08
+        }
+      ]
+    }
+  },
+  {
+    "id": "suite7-multipleOf-4-typed-integer",
+    "scope": "new-typed-lifts",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        49,
+        46,
+        53
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "allOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "integer",
+          "multipleOf": 1e-08
+        }
+      ]
+    }
+  },
+  {
+    "id": "number-finite-tenths",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "number",
+      "minimum": -0.3,
+      "maximum": 0.3,
+      "multipleOf": 0.1
+    }
+  },
+  {
+    "id": "number-exclusive-empty",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "outlines",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        48
+      ],
+      [
+        45,
+        48
+      ],
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMaximum": 0
+    }
+  },
+  {
+    "id": "integer-fractional-window-empty",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "outlines",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        48
+      ],
+      [
+        45,
+        48
+      ],
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 0.5
+    }
+  },
+  {
+    "id": "integer-multiple-rational",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "integer",
+      "multipleOf": 1.5
+    }
+  },
+  {
+    "id": "integer-multiple-rational",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        49
+      ],
+      [
+        45,
+        49
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "integer",
+      "multipleOf": 1.5
+    }
+  },
+  {
+    "id": "number-oneof-divisibility",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        48
+      ],
+      [
+        45,
+        48
+      ],
+      [
+        48,
+        46,
+        48
+      ],
+      [
+        48,
+        46,
+        49
+      ],
+      [
+        48,
+        46,
+        51,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        52
+      ],
+      [
+        116,
+        114,
+        117,
+        101
+      ],
+      [
+        102,
+        97,
+        108,
+        115,
+        101
+      ],
+      [
+        110,
+        117,
+        108,
+        108
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        91,
+        93
+      ],
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        48,
+        46,
+        54
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "number",
+      "oneOf": [
+        {
+          "multipleOf": 0.2
+        },
+        {
+          "multipleOf": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "id": "array-unique-finite",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        93
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "array",
+      "items": {
+        "enum": [
+          true,
+          1,
+          1.0,
+          false
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  {
+    "id": "array-unique-finite",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        91,
+        116,
+        114,
+        117,
+        101,
+        44,
+        116,
+        114,
+        117,
+        101,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        91,
+        49,
+        44,
+        49,
+        93
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "array",
+      "items": {
+        "enum": [
+          true,
+          1,
+          1.0,
+          false
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  {
+    "id": "array-unique-impossible",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        91,
+        48,
+        44,
+        49,
+        44,
+        48,
+        93
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "array",
+      "items": {
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "minItems": 3,
+      "uniqueItems": true
+    }
+  },
+  {
+    "id": "array-unique-impossible",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "outlines",
+    "empty_language": true,
+    "semantic_false_acceptances": [
+      [
+        91,
+        48,
+        44,
+        49,
+        44,
+        48,
+        93
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "array",
+      "items": {
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "minItems": 3,
+      "uniqueItems": true
+    }
+  },
+  {
+    "id": "array-rational-items",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "xgrammar",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        91,
+        48,
+        46,
+        51,
+        44,
+        48,
+        46,
+        51,
+        93
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.3,
+        "multipleOf": 0.1
+      },
+      "maxItems": 2,
+      "uniqueItems": true
+    }
+  },
+  {
+    "id": "array-rational-items",
+    "scope": "new-controls",
+    "newly_eligible": true,
+    "engine": "outlines",
+    "empty_language": false,
+    "semantic_false_acceptances": [
+      [
+        91,
+        49,
+        44,
+        49,
+        46,
+        48,
+        93
+      ],
+      [
+        91,
+        48,
+        46,
+        51,
+        44,
+        48,
+        46,
+        51,
+        93
+      ],
+      [
+        91,
+        48,
+        46,
+        51,
+        49,
+        93
+      ]
+    ],
+    "malformed_acceptances": [],
+    "schema": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.3,
+        "multipleOf": 0.1
+      },
+      "maxItems": 2,
+      "uniqueItems": true
+    }
+  }
+]

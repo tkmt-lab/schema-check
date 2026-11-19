@@ -1,0 +1,1008 @@
+{
+  "status": "PASS",
+  "schemas": 83,
+  "complete": 83,
+  "unknown": [],
+  "root_nonempty": 71,
+  "byte_live_token_dead_schema_count": 0,
+  "mismatch_schema_ids": [],
+  "original_byte_states_checked": 56522,
+  "original_byte_live_states_checked": 56182,
+  "quotient_token_states_checked": 1253,
+  "prefixes_checked": 1834,
+  "byte_live_prefixes_checked": 320,
+  "max_retained_states_and_arcs": 152950,
+  "max_lexical_pair_visits": 658848,
+  "total_case_cpu_seconds": 57.92232499999999,
+  "max_case_cpu_seconds": 2.7889289999999987,
+  "max_case_wall_seconds": 2.686412208015099,
+  "max_monitored_rss_bytes": 147128320,
+  "native": {
+    "llguidance": {
+      "probe_rows": 27,
+      "byte_and_token_live_probe_rows": 19,
+      "live_prefix_rejections": 0,
+      "empty_masks_nonterminal": 0,
+      "ff_token_allowed_rows": 0,
+      "our_byte_dead_but_backend_admitted": 0
+    },
+    "xgrammar": {
+      "probe_rows": 27,
+      "byte_and_token_live_probe_rows": 19,
+      "live_prefix_rejections": 0,
+      "empty_masks_nonterminal": 0,
+      "ff_token_allowed_rows": 0,
+      "our_byte_dead_but_backend_admitted": 6
+    },
+    "outlines": {
+      "probe_rows": 27,
+      "byte_and_token_live_probe_rows": 19,
+      "live_prefix_rejections": 0,
+      "empty_masks_nonterminal": 0,
+      "ff_token_allowed_rows": 0,
+      "our_byte_dead_but_backend_admitted": 4
+    }
+  },
+  "root_results": [
+    {
+      "id": "pattern-length",
+      "byte_distance": 3,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        64,
+        1
+      ],
+      "completion_utf8": "\"a\""
+    },
+    {
+      "id": "pattern-empty",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "unicode-length",
+      "byte_distance": 4,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        2634,
+        1
+      ],
+      "completion_utf8": "\"é\""
+    },
+    {
+      "id": "oneof-overlap",
+      "byte_distance": 5,
+      "token_distance": 1,
+      "completion_token_ids": [
+        9562
+      ],
+      "completion_utf8": "false"
+    },
+    {
+      "id": "oneof-identical",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "oneof-not",
+      "byte_distance": 4,
+      "token_distance": 1,
+      "completion_token_ids": [
+        7942
+      ],
+      "completion_utf8": "true"
+    },
+    {
+      "id": "not-global",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "lift-pattern-0",
+      "byte_distance": 3,
+      "token_distance": 1,
+      "completion_token_ids": [
+        7942
+      ],
+      "completion_utf8": "true"
+    },
+    {
+      "id": "lift-minLength-0",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        16
+      ],
+      "completion_utf8": "1"
+    },
+    {
+      "id": "lift-minLength-1",
+      "byte_distance": 5,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        21943,
+        1
+      ],
+      "completion_utf8": "\"foo\""
+    },
+    {
+      "id": "lift-maxLength-0",
+      "byte_distance": 3,
+      "token_distance": 1,
+      "completion_token_ids": [
+        3064
+      ],
+      "completion_utf8": "100"
+    },
+    {
+      "id": "lift-maxLength-1",
+      "byte_distance": 3,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        69,
+        1
+      ],
+      "completion_utf8": "\"f\""
+    },
+    {
+      "id": "suite-oneOf-1",
+      "byte_distance": 2,
+      "token_distance": 1,
+      "completion_token_ids": [
+        2404
+      ],
+      "completion_utf8": "\":\""
+    },
+    {
+      "id": "suite-oneOf-2",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "suite-oneOf-4",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "suite-oneOf-5",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "suite-oneOf-10",
+      "byte_distance": 4,
+      "token_distance": 1,
+      "completion_token_ids": [
+        8423
+      ],
+      "completion_utf8": "null"
+    },
+    {
+      "id": "suite-not-4",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "suite-not-5",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "infinite-star",
+      "byte_distance": 4,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        397,
+        1
+      ],
+      "completion_utf8": "\"ab\""
+    },
+    {
+      "id": "infinite-plus",
+      "byte_distance": 3,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        64,
+        1
+      ],
+      "completion_utf8": "\"a\""
+    },
+    {
+      "id": "infinite-open-repeat",
+      "byte_distance": 5,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        6485,
+        1
+      ],
+      "completion_utf8": "\"abb\""
+    },
+    {
+      "id": "unicode-unbounded",
+      "byte_distance": 6,
+      "token_distance": 4,
+      "completion_token_ids": [
+        1,
+        2634,
+        2634,
+        1
+      ],
+      "completion_utf8": "\"éé\""
+    },
+    {
+      "id": "generic-unicode-length",
+      "byte_distance": 4,
+      "token_distance": 1,
+      "completion_token_ids": [
+        8351
+      ],
+      "completion_utf8": "\":{\""
+    },
+    {
+      "id": "length-pattern-cap",
+      "byte_distance": 2,
+      "token_distance": 1,
+      "completion_token_ids": [
+        15931
+      ],
+      "completion_utf8": "\"\""
+    },
+    {
+      "id": "length-repeat-empty",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "infinite-overlapping-oneof",
+      "byte_distance": 2,
+      "token_distance": 1,
+      "completion_token_ids": [
+        2404
+      ],
+      "completion_utf8": "\":\""
+    },
+    {
+      "id": "infinite-not",
+      "byte_distance": 5,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        6485,
+        1
+      ],
+      "completion_utf8": "\"abb\""
+    },
+    {
+      "id": "lift3-properties-0",
+      "byte_distance": 2,
+      "token_distance": 1,
+      "completion_token_ids": [
+        1065
+      ],
+      "completion_utf8": "12"
+    },
+    {
+      "id": "lift3-properties-2",
+      "byte_distance": 2,
+      "token_distance": 2,
+      "completion_token_ids": [
+        90,
+        92
+      ],
+      "completion_utf8": "{}"
+    },
+    {
+      "id": "lift3-properties-3",
+      "byte_distance": 79,
+      "token_distance": 41,
+      "completion_token_ids": [
+        4895,
+        21943,
+        59,
+        83,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        59,
+        77,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        59,
+        69,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        59,
+        81,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        7879,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        6852,
+        5657,
+        1298,
+        16,
+        92
+      ],
+      "completion_utf8": "{\"foo\\tbar\":1,\"foo\\nbar\":1,\"foo\\fbar\":1,\"foo\\rbar\":1,\"foo\\\"bar\":1,\"foo\\\\bar\":1}"
+    },
+    {
+      "id": "lift3-properties-4",
+      "byte_distance": 12,
+      "token_distance": 5,
+      "completion_token_ids": [
+        4895,
+        21943,
+        1298,
+        8423,
+        92
+      ],
+      "completion_utf8": "{\"foo\":null}"
+    },
+    {
+      "id": "lift3-properties-5",
+      "byte_distance": 2,
+      "token_distance": 1,
+      "completion_token_ids": [
+        1065
+      ],
+      "completion_utf8": "12"
+    },
+    {
+      "id": "lift3-required-0",
+      "byte_distance": 2,
+      "token_distance": 1,
+      "completion_token_ids": [
+        1065
+      ],
+      "completion_utf8": "12"
+    },
+    {
+      "id": "lift3-required-1",
+      "byte_distance": 2,
+      "token_distance": 2,
+      "completion_token_ids": [
+        90,
+        92
+      ],
+      "completion_utf8": "{}"
+    },
+    {
+      "id": "lift3-required-2",
+      "byte_distance": 2,
+      "token_distance": 2,
+      "completion_token_ids": [
+        90,
+        92
+      ],
+      "completion_utf8": "{}"
+    },
+    {
+      "id": "lift3-required-3",
+      "byte_distance": 79,
+      "token_distance": 41,
+      "completion_token_ids": [
+        4895,
+        21943,
+        59,
+        83,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        59,
+        77,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        59,
+        69,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        59,
+        81,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        7879,
+        5657,
+        1298,
+        16,
+        553,
+        21943,
+        6852,
+        5657,
+        1298,
+        16,
+        92
+      ],
+      "completion_utf8": "{\"foo\\tbar\":1,\"foo\\nbar\":1,\"foo\\fbar\":1,\"foo\\rbar\":1,\"foo\\\"bar\":1,\"foo\\\\bar\":1}"
+    },
+    {
+      "id": "lift3-required-4",
+      "byte_distance": 2,
+      "token_distance": 1,
+      "completion_token_ids": [
+        1065
+      ],
+      "completion_utf8": "12"
+    },
+    {
+      "id": "lift3-additionalProperties-2",
+      "byte_distance": 9,
+      "token_distance": 5,
+      "completion_token_ids": [
+        4895,
+        21943,
+        1298,
+        16,
+        92
+      ],
+      "completion_utf8": "{\"foo\":1}"
+    },
+    {
+      "id": "lift3-additionalProperties-3",
+      "byte_distance": 12,
+      "token_distance": 5,
+      "completion_token_ids": [
+        4895,
+        21943,
+        1298,
+        7942,
+        92
+      ],
+      "completion_utf8": "{\"foo\":true}"
+    },
+    {
+      "id": "lift3-additionalProperties-4",
+      "byte_distance": 29,
+      "token_distance": 14,
+      "completion_token_ids": [
+        4895,
+        5657,
+        1298,
+        17,
+        553,
+        21943,
+        1298,
+        16,
+        553,
+        421,
+        2821,
+        1298,
+        7942,
+        92
+      ],
+      "completion_utf8": "{\"bar\":2,\"foo\":1,\"quux\":true}"
+    },
+    {
+      "id": "lift3-additionalProperties-5",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "lift3-additionalProperties-6",
+      "byte_distance": 12,
+      "token_distance": 5,
+      "completion_token_ids": [
+        4895,
+        21943,
+        1298,
+        8423,
+        92
+      ],
+      "completion_utf8": "{\"foo\":null}"
+    },
+    {
+      "id": "suite3-enum-0",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        16
+      ],
+      "completion_utf8": "1"
+    },
+    {
+      "id": "suite3-enum-1",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        21
+      ],
+      "completion_utf8": "6"
+    },
+    {
+      "id": "suite3-enum-2",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        21
+      ],
+      "completion_utf8": "6"
+    },
+    {
+      "id": "suite3-enum-4",
+      "byte_distance": 10,
+      "token_distance": 6,
+      "completion_token_ids": [
+        1,
+        21943,
+        59,
+        77,
+        5657,
+        1
+      ],
+      "completion_utf8": "\"foo\\nbar\""
+    },
+    {
+      "id": "suite3-enum-5",
+      "byte_distance": 5,
+      "token_distance": 1,
+      "completion_token_ids": [
+        9562
+      ],
+      "completion_utf8": "false"
+    },
+    {
+      "id": "suite3-enum-6",
+      "byte_distance": 7,
+      "token_distance": 3,
+      "completion_token_ids": [
+        58,
+        9562,
+        60
+      ],
+      "completion_utf8": "[false]"
+    },
+    {
+      "id": "suite3-enum-7",
+      "byte_distance": 4,
+      "token_distance": 1,
+      "completion_token_ids": [
+        7942
+      ],
+      "completion_utf8": "true"
+    },
+    {
+      "id": "suite3-enum-8",
+      "byte_distance": 6,
+      "token_distance": 3,
+      "completion_token_ids": [
+        58,
+        7942,
+        60
+      ],
+      "completion_utf8": "[true]"
+    },
+    {
+      "id": "suite3-enum-9",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        15
+      ],
+      "completion_utf8": "0"
+    },
+    {
+      "id": "suite3-enum-10",
+      "byte_distance": 3,
+      "token_distance": 3,
+      "completion_token_ids": [
+        58,
+        15,
+        60
+      ],
+      "completion_utf8": "[0]"
+    },
+    {
+      "id": "suite3-enum-11",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        16
+      ],
+      "completion_utf8": "1"
+    },
+    {
+      "id": "suite3-enum-12",
+      "byte_distance": 3,
+      "token_distance": 3,
+      "completion_token_ids": [
+        58,
+        16,
+        60
+      ],
+      "completion_utf8": "[1]"
+    },
+    {
+      "id": "suite3-enum-13",
+      "byte_distance": 18,
+      "token_distance": 7,
+      "completion_token_ids": [
+        1,
+        31373,
+        59,
+        84,
+        2388,
+        8117,
+        1
+      ],
+      "completion_utf8": "\"hello\\u0000there\""
+    },
+    {
+      "id": "suite3-enum-14",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "suite3-enum-15",
+      "byte_distance": 4,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        11033,
+        1
+      ],
+      "completion_utf8": "\"ä\""
+    },
+    {
+      "id": "suite3-const-0",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        17
+      ],
+      "completion_utf8": "2"
+    },
+    {
+      "id": "suite3-const-1",
+      "byte_distance": 25,
+      "token_distance": 11,
+      "completion_token_ids": [
+        4895,
+        65,
+        1031,
+        2404,
+        65,
+        897,
+        2430,
+        21943,
+        2404,
+        5657,
+        20662
+      ],
+      "completion_utf8": "{\"baz\":\"bax\",\"foo\":\"bar\"}"
+    },
+    {
+      "id": "suite3-const-2",
+      "byte_distance": 15,
+      "token_distance": 7,
+      "completion_token_ids": [
+        58,
+        4895,
+        21943,
+        2404,
+        5657,
+        20662,
+        60
+      ],
+      "completion_utf8": "[{\"foo\":\"bar\"}]"
+    },
+    {
+      "id": "suite3-const-3",
+      "byte_distance": 4,
+      "token_distance": 1,
+      "completion_token_ids": [
+        8423
+      ],
+      "completion_utf8": "null"
+    },
+    {
+      "id": "suite3-const-4",
+      "byte_distance": 5,
+      "token_distance": 1,
+      "completion_token_ids": [
+        9562
+      ],
+      "completion_utf8": "false"
+    },
+    {
+      "id": "suite3-const-5",
+      "byte_distance": 4,
+      "token_distance": 1,
+      "completion_token_ids": [
+        7942
+      ],
+      "completion_utf8": "true"
+    },
+    {
+      "id": "suite3-const-6",
+      "byte_distance": 7,
+      "token_distance": 3,
+      "completion_token_ids": [
+        58,
+        9562,
+        60
+      ],
+      "completion_utf8": "[false]"
+    },
+    {
+      "id": "suite3-const-7",
+      "byte_distance": 6,
+      "token_distance": 3,
+      "completion_token_ids": [
+        58,
+        7942,
+        60
+      ],
+      "completion_utf8": "[true]"
+    },
+    {
+      "id": "suite3-const-8",
+      "byte_distance": 11,
+      "token_distance": 5,
+      "completion_token_ids": [
+        4895,
+        64,
+        1298,
+        9562,
+        92
+      ],
+      "completion_utf8": "{\"a\":false}"
+    },
+    {
+      "id": "suite3-const-9",
+      "byte_distance": 10,
+      "token_distance": 5,
+      "completion_token_ids": [
+        4895,
+        64,
+        1298,
+        7942,
+        92
+      ],
+      "completion_utf8": "{\"a\":true}"
+    },
+    {
+      "id": "suite3-const-10",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        15
+      ],
+      "completion_utf8": "0"
+    },
+    {
+      "id": "suite3-const-11",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        16
+      ],
+      "completion_utf8": "1"
+    },
+    {
+      "id": "suite3-const-12",
+      "byte_distance": 2,
+      "token_distance": 2,
+      "completion_token_ids": [
+        12,
+        17
+      ],
+      "completion_utf8": "-2"
+    },
+    {
+      "id": "suite3-const-13",
+      "byte_distance": 16,
+      "token_distance": 6,
+      "completion_token_ids": [
+        24,
+        25816,
+        19104,
+        24970,
+        45598,
+        41561
+      ],
+      "completion_utf8": "9007199254740992"
+    },
+    {
+      "id": "suite3-const-14",
+      "byte_distance": 18,
+      "token_distance": 7,
+      "completion_token_ids": [
+        1,
+        31373,
+        59,
+        84,
+        2388,
+        8117,
+        1
+      ],
+      "completion_utf8": "\"hello\\u0000there\""
+    },
+    {
+      "id": "suite3-const-15",
+      "byte_distance": 4,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        34703,
+        1
+      ],
+      "completion_utf8": "\"μ\""
+    },
+    {
+      "id": "suite3-const-16",
+      "byte_distance": 4,
+      "token_distance": 3,
+      "completion_token_ids": [
+        1,
+        11033,
+        1
+      ],
+      "completion_utf8": "\"ä\""
+    },
+    {
+      "id": "object-required-optional",
+      "byte_distance": 9,
+      "token_distance": 5,
+      "completion_token_ids": [
+        4895,
+        64,
+        2404,
+        87,
+        20662
+      ],
+      "completion_utf8": "{\"a\":\"x\"}"
+    },
+    {
+      "id": "object-required-impossible",
+      "byte_distance": null,
+      "token_distance": null,
+      "completion_token_ids": null,
+      "completion_utf8": null
+    },
+    {
+      "id": "object-nested-const",
+      "byte_distance": 42,
+      "token_distance": 14,
+      "completion_token_ids": [
+        4895,
+        17440,
+        8351,
+        5275,
+        1298,
+        7942,
+        553,
+        33152,
+        20598,
+        9562,
+        11,
+        16,
+        60,
+        11709
+      ],
+      "completion_utf8": "{\"node\":{\"active\":true,\"flags\":[false,1]}}"
+    },
+    {
+      "id": "enum-type-equality",
+      "byte_distance": 1,
+      "token_distance": 1,
+      "completion_token_ids": [
+        16
+      ],
+      "completion_utf8": "1"
+    },
+    {
+      "id": "issue-xg858-original",
+      "byte_distance": 15,
+      "token_distance": 5,
+      "completion_token_ids": [
+        4895,
+        4666,
+        7483,
+        2404,
+        20662
+      ],
+      "completion_utf8": "{\"modifier\":\"\"}"
+    },
+    {
+      "id": "issue-xg895-original",
+      "byte_distance": 9,
+      "token_distance": 5,
+      "completion_token_ids": [
+        4895,
+        74,
+        2404,
+        64,
+        20662
+      ],
+      "completion_utf8": "{\"k\":\"a\"}"
+    },
+    {
+      "id": "issue-vllm56556-finite-derived",
+      "byte_distance": 17,
+      "token_distance": 9,
+      "completion_token_ids": [
+        4895,
+        87,
+        1298,
+        940,
+        553,
+        88,
+        2404,
+        482,
+        20662
+      ],
+      "completion_utf8": "{\"x\":10,\"y\":\"ok\"}"
+    },
+    {
+      "id": "issue-outlines612-finite-derived",
+      "byte_distance": 27,
+      "token_distance": 9,
+      "completion_token_ids": [
+        4895,
+        41484,
+        1298,
+        15,
+        553,
+        41181,
+        278,
+        2404,
+        20662
+      ],
+      "completion_utf8": "{\"answer\":0,\"reasoning\":\"\"}"
+    }
+  ]
+}

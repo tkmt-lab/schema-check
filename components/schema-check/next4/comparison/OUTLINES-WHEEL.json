@@ -1,0 +1,25 @@
+[
+  {
+    "file": "outlines_core-0.2.14-cp314-cp314-macosx_15_0_arm64.whl",
+    "url": "https://files.pythonhosted.org/packages/53/13/bd2ff9e90b28fa0dcc345c9196731ed9126e366733c8ccbc559149e34893/outlines_core-0.2.14-cp314-cp314-macosx_15_0_arm64.whl",
+    "sha256": "b02bb0fc21c5e23e2ff9b2d1459db2c1c3e813a7646c9d5db091c6931edb9c85",
+    "verified_cache_paths": [
+      "venvs/schema-check/cache/http-v2/8/b/3/4/1/8b34156b59e4156de9d9407b2d8096a1363b38757b3ad00829a87d15.body"
+    ]
+  },
+  {
+    "source_path": "venvs/schema-check/outlines-source/src/json_schema/parsing.rs",
+    "commit": "8466141a4d882572876d39563c9e6be372d918d3",
+    "sha256": "35e234421f231fa6b51611f71d9ed85a3be510be4309b71be2a84ef909bc6c9a"
+  },
+  {
+    "source_path": "venvs/schema-check/outlines-source/src/python_bindings/mod.rs",
+    "commit": "8466141a4d882572876d39563c9e6be372d918d3",
+    "sha256": "ad6a2e9d6222820b4b612212681cfe9d143c4bec9301bb85863ea41398391fe3"
+  },
+  {
+    "source_path": "venvs/schema-check/outlines-source/LICENSE",
+    "commit": "8466141a4d882572876d39563c9e6be372d918d3",
+    "sha256": "f71078ee8aaa3d5670488756f1993b9de3ae64c9546a0232ebbbdd595c5375d7"
+  }
+]

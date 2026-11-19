@@ -1,0 +1,75 @@
+{
+  "commit": "3f05891cac5d51ffa068d7076d1372130e00c829",
+  "sources": [
+    {
+      "name": "type",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/type.json",
+      "sha256": "4c5cbe6cbcd28af73761091367b20e07d0403847e236c06c31fc27061bd81192",
+      "bytes": 14365,
+      "groups": 11
+    },
+    {
+      "name": "minimum",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/minimum.json",
+      "sha256": "f6a29cb574b76621da23636a636cf12cb31b01646b89543e6ce1a813376439a3",
+      "bytes": 2116,
+      "groups": 2
+    },
+    {
+      "name": "maximum",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/maximum.json",
+      "sha256": "dfbc88ef4ede2966250fb2ad44076856d51481ea01ce679cca70efe47606ee90",
+      "bytes": 1660,
+      "groups": 2
+    },
+    {
+      "name": "exclusiveMinimum",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/exclusiveMinimum.json",
+      "sha256": "0395a2423606d07943d3d355d1c9c4a474cc7cb544d3c8f266ceab801c5f0a6d",
+      "bytes": 846,
+      "groups": 1
+    },
+    {
+      "name": "exclusiveMaximum",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/exclusiveMaximum.json",
+      "sha256": "e37fc110c48e2a9de564579ceba3e8ab098a36f904dcc1ef02f8cf7b59dc0473",
+      "bytes": 846,
+      "groups": 1
+    },
+    {
+      "name": "multipleOf",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/multipleOf.json",
+      "sha256": "ada35b586efe55186d35d8888a4e4954724c313253b59bd47ec03637a44cb4ad",
+      "bytes": 2808,
+      "groups": 5
+    },
+    {
+      "name": "items",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/items.json",
+      "sha256": "d924a8171f1f1d04ff026a4e3491d1376297145563158543005b7073b69ab913",
+      "bytes": 9209,
+      "groups": 10
+    },
+    {
+      "name": "minItems",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/minItems.json",
+      "sha256": "9792cedc446be654836b42d0312eca12051e9e2f24cd5d95dcd3f3fc9adccd0a",
+      "bytes": 1302,
+      "groups": 2
+    },
+    {
+      "name": "maxItems",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/maxItems.json",
+      "sha256": "59fa6236c0766aaac5fb7c9ef82e205c230efa94271485f614218291be7cbc5c",
+      "bytes": 1319,
+      "groups": 2
+    },
+    {
+      "name": "uniqueItems",
+      "url": "https://raw.githubusercontent.com/json-schema-org/JSON-Schema-Test-Suite/3f05891cac5d51ffa068d7076d1372130e00c829/tests/draft2020-12/uniqueItems.json",
+      "sha256": "20f7c3decb4ff491a722253181ffef351acd23e39ecbbfeea40941f3623cc27a",
+      "bytes": 13886,
+      "groups": 6
+    }
+  ]
+}

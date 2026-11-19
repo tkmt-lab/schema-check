@@ -1,0 +1,88 @@
+{
+  "key": "albert-base-v2",
+  "id": "lift3-required-1",
+  "schema": {
+    "const": {}
+  },
+  "equivalent_simple_object_control": true,
+  "errors": {
+    "llguidance": "can't determine decoder type: Some(Metaspace(Metaspace { replacement: '▁', prepend_scheme: Always, split: true, str_rep: \"▁\" }))",
+    "outlines-continuation": "The vocabulary provided is incompatible with the regex '\\{[ ]?[ ]?\\}'. Found no transitions from state 32, missing tokens corresponding to at least one of the following characters: [\"{\"]. This may be due to an encoding issue in your vocabulary."
+  },
+  "rows": [
+    {
+      "token_ids": [],
+      "prefix_hex": "",
+      "phase": 0,
+      "byte_live": true,
+      "token_live": false,
+      "tools": {
+        "xgrammar-auto": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "allowed_ids": [],
+          "empty_mask_nonterminal": true,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        },
+        "xgrammar-explicit-metaspace": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "allowed_ids": [],
+          "empty_mask_nonterminal": true,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": true
+        },
+        "outlines-first": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "525ec3b5ad9afc0f09a5f7e0eb865e97f5b4b614a85cf93f3ae644f8e5f874f0",
+          "allowed_ids": [
+            13
+          ],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "adapter_replay_token_ids": []
+        }
+      }
+    },
+    {
+      "token_ids": [
+        7
+      ],
+      "prefix_hex": "22",
+      "phase": 1,
+      "byte_live": false,
+      "token_live": false,
+      "tools": {
+        "xgrammar-auto": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "allowed_ids": [],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": false
+        },
+        "xgrammar-explicit-metaspace": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "allowed_ids": [],
+          "empty_mask_nonterminal": false,
+          "stop_allowed": false,
+          "prefix_every_step_mask_allowed": false
+        }
+      }
+    }
+  ],
+  "cpu_seconds": 1.132317,
+  "rss_bytes": 363331584
+}

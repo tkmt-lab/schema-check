@@ -1,0 +1,13 @@
+{
+  "package": "xgrammar",
+  "version": "0.2.8",
+  "url": "https://files.pythonhosted.org/packages/9a/65/76adc7a5436a996abde62d09d3148ea15be893618bb4eecbc9a76516c465/xgrammar-0.2.8-cp314-cp314-macosx_11_0_arm64.whl",
+  "filename": "xgrammar-0.2.8-cp314-cp314-macosx_11_0_arm64.whl",
+  "sha256": "6236c482f9f34f1ce709cc67eff07363e0514b0bcc841210d4cc3b18b26e30f2",
+  "bytes": 1339888,
+  "matched_cache_files": [
+    "venvs/schema-check/cache/http-v2/c/a/9/3/1/ca9315b3f4aba1275762e9b5224e6d80d97a77ebcfc27c645d041ead.body"
+  ],
+  "source_commit": "97787376faee5ed8466cfad57c99855e4ce2f6aa",
+  "source_build_reproduced": false
+}

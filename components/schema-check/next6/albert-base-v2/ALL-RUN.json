@@ -1,0 +1,3304 @@
+[
+  {
+    "index": 0,
+    "id": "pattern-length",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9228506250074133,
+    "cpu_seconds_with_monitor": 0.910779,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131563520,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.193858,
+        "rss_bytes": 135741440
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145915904,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 15,
+          "values": 6,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 309097,
+          "boundary_closure_steps": 33,
+          "reachable_states": 15,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 25,
+        "cpu_seconds": 0.267503,
+        "rss_bytes": 145899520
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "id": "pattern-empty",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.907253458048217,
+    "cpu_seconds_with_monitor": 0.9369309999999998,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136364032,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.201152,
+        "rss_bytes": 136347648
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145932288,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.239938,
+        "rss_bytes": 145915904
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "id": "unicode-length",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.0267541670473292,
+    "cpu_seconds_with_monitor": 1.0373940000000001,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135741440,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.220028,
+        "rss_bytes": 135725056
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145981440,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 27,
+          "values": 6,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 779857,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 3
+        },
+        "queries_checked": 23,
+        "cpu_seconds": 0.34685699999999997,
+        "rss_bytes": 145965056
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "id": "oneof-overlap",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9511046250117943,
+    "cpu_seconds_with_monitor": 0.941622,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135626752,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.183701,
+        "rss_bytes": 135610368
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146063360,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 7,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 370950,
+          "boundary_closure_steps": 23,
+          "reachable_states": 7,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.27404,
+        "rss_bytes": 146046976
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "id": "oneof-identical",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.079354124958627,
+    "cpu_seconds_with_monitor": 1.0856140000000003,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135725056,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.29167,
+        "rss_bytes": 135708672
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145014784,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.29296999999999995,
+        "rss_bytes": 144998400
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "id": "oneof-not",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9997998750768602,
+    "cpu_seconds_with_monitor": 1.0167509999999995,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136134656,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17784799999999998,
+        "rss_bytes": 136118272
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145915904,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 6,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 306420,
+          "boundary_closure_steps": 19,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.34905200000000003,
+        "rss_bytes": 145899520
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "id": "not-global",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.050729624927044,
+    "cpu_seconds_with_monitor": 1.0948369999999996,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135741440,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.251624,
+        "rss_bytes": 135725056
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145997824,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.31069800000000003,
+        "rss_bytes": 145981440
+      }
+    ]
+  },
+  {
+    "index": 7,
+    "id": "lift-pattern-0",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.184798292000778,
+    "cpu_seconds_with_monitor": 1.2155679999999993,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135839744,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.214781,
+        "rss_bytes": 135823360
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146128896,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 18,
+          "values": 4,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 859810,
+          "boundary_closure_steps": 59,
+          "reachable_states": 18,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 24,
+        "cpu_seconds": 0.473754,
+        "rss_bytes": 146112512
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "id": "lift-minLength-0",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9738620000425726,
+    "cpu_seconds_with_monitor": 0.9911100000000003,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135774208,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.19264499999999998,
+        "rss_bytes": 135757824
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145948672,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 9,
+          "values": 3,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 364677,
+          "boundary_closure_steps": 21,
+          "reachable_states": 9,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 24,
+        "cpu_seconds": 0.316691,
+        "rss_bytes": 145932288
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "id": "lift-minLength-1",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9442454170202836,
+    "cpu_seconds_with_monitor": 0.9456009999999994,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 130318336,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.193491,
+        "rss_bytes": 135806976
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145981440,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 7,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 363664,
+          "boundary_closure_steps": 16,
+          "reachable_states": 7,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.267236,
+        "rss_bytes": 145965056
+      }
+    ]
+  },
+  {
+    "index": 10,
+    "id": "lift-maxLength-0",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.113544165971689,
+    "cpu_seconds_with_monitor": 1.1365460000000007,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135725056,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.220365,
+        "rss_bytes": 135708672
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 144654336,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 19,
+          "values": 4,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 843635,
+          "boundary_closure_steps": 26,
+          "reachable_states": 10,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 24,
+        "cpu_seconds": 0.412862,
+        "rss_bytes": 144637952
+      }
+    ]
+  },
+  {
+    "index": 11,
+    "id": "lift-maxLength-1",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9418730830075219,
+    "cpu_seconds_with_monitor": 0.9809710000000003,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135725056,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.195303,
+        "rss_bytes": 135708672
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146046976,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 5,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 241335,
+          "boundary_closure_steps": 9,
+          "reachable_states": 5,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.284169,
+        "rss_bytes": 146030592
+      }
+    ]
+  },
+  {
+    "index": 12,
+    "id": "suite-oneOf-1",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 14.228558082948439,
+    "cpu_seconds_with_monitor": 14.670051999999998,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 138969088,
+        "status": "COMPLETE",
+        "cpu_seconds": 1.46714,
+        "rss_bytes": 138952704
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 117669888,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 84,
+          "shared_trusted_reference": true,
+          "closure_distances_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 7091147,
+          "boundary_closure_steps": 408704,
+          "reachable_states": 9,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 11.75089,
+        "rss_bytes": 117653504
+      }
+    ]
+  },
+  {
+    "index": 13,
+    "id": "suite-oneOf-2",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8750886250054464,
+    "cpu_seconds_with_monitor": 0.871256000000002,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135725056,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.18437499999999998,
+        "rss_bytes": 135708672
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146063360,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 20,
+        "cpu_seconds": 0.229039,
+        "rss_bytes": 146046976
+      }
+    ]
+  },
+  {
+    "index": 14,
+    "id": "suite-oneOf-4",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8620315829757601,
+    "cpu_seconds_with_monitor": 0.889692999999999,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135839744,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.201241,
+        "rss_bytes": 135823360
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146128896,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 20,
+        "cpu_seconds": 0.222044,
+        "rss_bytes": 146112512
+      }
+    ]
+  },
+  {
+    "index": 15,
+    "id": "suite-oneOf-5",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9057940419297665,
+    "cpu_seconds_with_monitor": 0.9415680000000011,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 133316608,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.22806200000000001,
+        "rss_bytes": 135790592
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146096128,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 20,
+        "cpu_seconds": 0.23185500000000003,
+        "rss_bytes": 146079744
+      }
+    ]
+  },
+  {
+    "index": 16,
+    "id": "suite-oneOf-10",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8824088749242947,
+    "cpu_seconds_with_monitor": 0.9126329999999987,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135643136,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.188968,
+        "rss_bytes": 135626752
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146014208,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 6,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 304480,
+          "boundary_closure_steps": 18,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.265009,
+        "rss_bytes": 145997824
+      }
+    ]
+  },
+  {
+    "index": 17,
+    "id": "suite-not-4",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9090761670377105,
+    "cpu_seconds_with_monitor": 0.9296970000000004,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135839744,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.183306,
+        "rss_bytes": 135839744
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146046976,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 28,
+        "cpu_seconds": 0.259166,
+        "rss_bytes": 146030592
+      }
+    ]
+  },
+  {
+    "index": 18,
+    "id": "suite-not-5",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9622842089738697,
+    "cpu_seconds_with_monitor": 0.985354000000001,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 134725632,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.23021599999999998,
+        "rss_bytes": 134709248
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146014208,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 28,
+        "cpu_seconds": 0.25466500000000003,
+        "rss_bytes": 145997824
+      }
+    ]
+  },
+  {
+    "index": 19,
+    "id": "infinite-star",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 7.02173712500371,
+    "cpu_seconds_with_monitor": 7.138391999999998,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 137101312,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.348546,
+        "rss_bytes": 137084928
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 141164544,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 55,
+          "shared_trusted_reference": true,
+          "closure_distances_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 314534,
+          "boundary_closure_steps": 272471,
+          "reachable_states": 7,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 23,
+        "cpu_seconds": 5.961435000000001,
+        "rss_bytes": 141148160
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "id": "infinite-plus",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 5.939212583005428,
+    "cpu_seconds_with_monitor": 6.189306999999998,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 137461760,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.33659,
+        "rss_bytes": 137445376
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 140296192,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 38,
+          "shared_trusted_reference": true,
+          "closure_distances_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 249682,
+          "boundary_closure_steps": 204355,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 5.021127,
+        "rss_bytes": 140279808
+      }
+    ]
+  },
+  {
+    "index": 21,
+    "id": "infinite-open-repeat",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 7.819963542046025,
+    "cpu_seconds_with_monitor": 8.136992,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 137543680,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.374891,
+        "rss_bytes": 137756672
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 107036672,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 72,
+          "shared_trusted_reference": true,
+          "closure_distances_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 379386,
+          "boundary_closure_steps": 340587,
+          "reachable_states": 8,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 6.930498,
+        "rss_bytes": 106496000
+      }
+    ]
+  },
+  {
+    "index": 22,
+    "id": "unicode-unbounded",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 2.2235144999576733,
+    "cpu_seconds_with_monitor": 2.280245,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 137363456,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.205521,
+        "rss_bytes": 137347072
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 147750912,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 72,
+          "shared_trusted_reference": true,
+          "closure_distances_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 779857,
+          "boundary_closure_steps": 68120,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 3
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 1.583019,
+        "rss_bytes": 147734528
+      }
+    ]
+  },
+  {
+    "index": 23,
+    "id": "generic-unicode-length",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 6.558586625033058,
+    "cpu_seconds_with_monitor": 6.869947000000002,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 137723904,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.5625,
+        "rss_bytes": 137707520
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 116883456,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 52,
+          "shared_trusted_reference": true,
+          "closure_distances_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 3144392,
+          "boundary_closure_steps": 272471,
+          "reachable_states": 7,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 23,
+        "cpu_seconds": 5.582698,
+        "rss_bytes": 116867072
+      }
+    ]
+  },
+  {
+    "index": 24,
+    "id": "length-pattern-cap",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8439248340437189,
+    "cpu_seconds_with_monitor": 0.8274180000000007,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 133873664,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.183163,
+        "rss_bytes": 135741440
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145997824,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 16,
+          "values": 7,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 309097,
+          "boundary_closure_steps": 35,
+          "reachable_states": 16,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.24131799999999998,
+        "rss_bytes": 145981440
+      }
+    ]
+  },
+  {
+    "index": 25,
+    "id": "length-repeat-empty",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7709435840370134,
+    "cpu_seconds_with_monitor": 0.7797630000000044,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135741440,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.167269,
+        "rss_bytes": 135725056
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145948672,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.203332,
+        "rss_bytes": 145932288
+      }
+    ]
+  },
+  {
+    "index": 26,
+    "id": "infinite-overlapping-oneof",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 9.729636666015722,
+    "cpu_seconds_with_monitor": 10.144204999999992,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 138313728,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.8865700000000001,
+        "rss_bytes": 138313728
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 117604352,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 84,
+          "shared_trusted_reference": true,
+          "closure_distances_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 7091147,
+          "boundary_closure_steps": 408704,
+          "reachable_states": 9,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 24,
+        "cpu_seconds": 8.384375,
+        "rss_bytes": 117587968
+      }
+    ]
+  },
+  {
+    "index": 27,
+    "id": "infinite-not",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 5.909977208008058,
+    "cpu_seconds_with_monitor": 6.146598000000005,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136855552,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.30741,
+        "rss_bytes": 137117696
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 116293632,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 55,
+          "shared_trusted_reference": true,
+          "closure_distances_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 379386,
+          "boundary_closure_steps": 272470,
+          "reachable_states": 7,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 5.181336999999999,
+        "rss_bytes": 116277248
+      }
+    ]
+  },
+  {
+    "index": 28,
+    "id": "lift3-properties-0",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.0078759170137346,
+    "cpu_seconds_with_monitor": 1.0159749999999983,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131760128,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.167317,
+        "rss_bytes": 135938048
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146178048,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 36,
+          "values": 4,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1879762,
+          "boundary_closure_steps": 15,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 25,
+        "cpu_seconds": 0.42730999999999997,
+        "rss_bytes": 146161664
+      }
+    ]
+  },
+  {
+    "index": 29,
+    "id": "lift3-properties-2",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8478773329406977,
+    "cpu_seconds_with_monitor": 0.8595959999999936,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131661824,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.16750800000000002,
+        "rss_bytes": 135839744
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146046976,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 12,
+          "values": 2,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 604719,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 23,
+        "cpu_seconds": 0.274299,
+        "rss_bytes": 146030592
+      }
+    ]
+  },
+  {
+    "index": 30,
+    "id": "lift3-properties-3",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.4521384999388829,
+    "cpu_seconds_with_monitor": 1.5074670000000054,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136101888,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.194034,
+        "rss_bytes": 136085504
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146423808,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 81,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 4876406,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.8480559999999999,
+        "rss_bytes": 146407424
+      }
+    ]
+  },
+  {
+    "index": 31,
+    "id": "lift3-properties-4",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8820867089089006,
+    "cpu_seconds_with_monitor": 0.8976419999999861,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131629056,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.176701,
+        "rss_bytes": 135806976
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145997824,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 14,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 788206,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 20,
+        "cpu_seconds": 0.3051,
+        "rss_bytes": 145981440
+      }
+    ]
+  },
+  {
+    "index": 32,
+    "id": "lift3-properties-5",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.2712414169218391,
+    "cpu_seconds_with_monitor": 1.285873000000005,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136036352,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.184974,
+        "rss_bytes": 136019968
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146178048,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 68,
+          "values": 4,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 3900873,
+          "boundary_closure_steps": 15,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 26,
+        "cpu_seconds": 0.6736620000000001,
+        "rss_bytes": 146161664
+      }
+    ]
+  },
+  {
+    "index": 33,
+    "id": "lift3-required-0",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9559203749522567,
+    "cpu_seconds_with_monitor": 0.9292210000000063,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135954432,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.162723,
+        "rss_bytes": 135938048
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146128896,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 25,
+          "values": 6,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1157061,
+          "boundary_closure_steps": 53,
+          "reachable_states": 16,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 26,
+        "cpu_seconds": 0.3351,
+        "rss_bytes": 146112512
+      }
+    ]
+  },
+  {
+    "index": 34,
+    "id": "lift3-required-1",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7904379579704255,
+    "cpu_seconds_with_monitor": 0.7924290000000056,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 134791168,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.166841,
+        "rss_bytes": 136036352
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145932288,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 4,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 179967,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 20,
+        "cpu_seconds": 0.219532,
+        "rss_bytes": 145915904
+      }
+    ]
+  },
+  {
+    "index": 35,
+    "id": "lift3-required-2",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7989681670442224,
+    "cpu_seconds_with_monitor": 0.7993629999999898,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 127156224,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17203500000000002,
+        "rss_bytes": 135757824
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145932288,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 4,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 179967,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 20,
+        "cpu_seconds": 0.234915,
+        "rss_bytes": 145915904
+      }
+    ]
+  },
+  {
+    "index": 36,
+    "id": "lift3-required-3",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.3393717911094427,
+    "cpu_seconds_with_monitor": 1.3651910000000074,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136167424,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.174739,
+        "rss_bytes": 136151040
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146702336,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 81,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 4876406,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.7757580000000001,
+        "rss_bytes": 146685952
+      }
+    ]
+  },
+  {
+    "index": 37,
+    "id": "lift3-required-4",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.2581262500025332,
+    "cpu_seconds_with_monitor": 1.262403000000008,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131842048,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.174262,
+        "rss_bytes": 136019968
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146161664,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 67,
+          "values": 3,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 3900873,
+          "boundary_closure_steps": 15,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 26,
+        "cpu_seconds": 0.652373,
+        "rss_bytes": 146145280
+      }
+    ]
+  },
+  {
+    "index": 38,
+    "id": "lift3-additionalProperties-2",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.1043992079794407,
+    "cpu_seconds_with_monitor": 1.093242999999993,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136462336,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.185751,
+        "rss_bytes": 136445952
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146178048,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 38,
+          "values": 2,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 2125095,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.478527,
+        "rss_bytes": 146161664
+      }
+    ]
+  },
+  {
+    "index": 39,
+    "id": "lift3-additionalProperties-3",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8820917500415817,
+    "cpu_seconds_with_monitor": 0.8797770000000051,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136151040,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.176669,
+        "rss_bytes": 136134656
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145981440,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 14,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 790146,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.28797,
+        "rss_bytes": 145965056
+      }
+    ]
+  },
+  {
+    "index": 40,
+    "id": "lift3-additionalProperties-4",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.0663847499527037,
+    "cpu_seconds_with_monitor": 1.0798159999999983,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135495680,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.174172,
+        "rss_bytes": 135479296
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146227200,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 31,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1820321,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 20,
+        "cpu_seconds": 0.437336,
+        "rss_bytes": 146210816
+      }
+    ]
+  },
+  {
+    "index": 41,
+    "id": "lift3-additionalProperties-5",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8624477089615539,
+    "cpu_seconds_with_monitor": 0.8512359999999966,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135856128,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.18603000000000003,
+        "rss_bytes": 135839744
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145948672,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 20,
+        "cpu_seconds": 0.216522,
+        "rss_bytes": 145932288
+      }
+    ]
+  },
+  {
+    "index": 42,
+    "id": "lift3-additionalProperties-6",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9254417499760166,
+    "cpu_seconds_with_monitor": 0.930754000000003,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135806976,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.173224,
+        "rss_bytes": 135790592
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146046976,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 14,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 788206,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 20,
+        "cpu_seconds": 0.30634300000000003,
+        "rss_bytes": 146030592
+      }
+    ]
+  },
+  {
+    "index": 43,
+    "id": "suite3-enum-0",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8502626669360325,
+    "cpu_seconds_with_monitor": 0.8378929999999958,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131612672,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17375800000000002,
+        "rss_bytes": 135790592
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145997824,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 5,
+          "values": 3,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 121625,
+          "boundary_closure_steps": 11,
+          "reachable_states": 5,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.217795,
+        "rss_bytes": 145981440
+      }
+    ]
+  },
+  {
+    "index": 44,
+    "id": "suite3-enum-1",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9488869170891121,
+    "cpu_seconds_with_monitor": 0.9589389999999947,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135806976,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.176474,
+        "rss_bytes": 135790592
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145997824,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 24,
+          "values": 5,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1155334,
+          "boundary_closure_steps": 42,
+          "reachable_states": 14,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 24,
+        "cpu_seconds": 0.337978,
+        "rss_bytes": 145981440
+      }
+    ]
+  },
+  {
+    "index": 45,
+    "id": "suite3-enum-2",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8487846250645816,
+    "cpu_seconds_with_monitor": 0.8608000000000038,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136118272,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17987399999999998,
+        "rss_bytes": 136101888
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146112512,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 7,
+          "values": 2,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 304571,
+          "boundary_closure_steps": 21,
+          "reachable_states": 7,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.24697800000000003,
+        "rss_bytes": 146096128
+      }
+    ]
+  },
+  {
+    "index": 46,
+    "id": "suite3-enum-4",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9418374159140512,
+    "cpu_seconds_with_monitor": 0.9609350000000099,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135856128,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17858300000000002,
+        "rss_bytes": 135839744
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146030592,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 17,
+          "values": 2,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 673538,
+          "boundary_closure_steps": 14,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 6
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.313587,
+        "rss_bytes": 146014208
+      }
+    ]
+  },
+  {
+    "index": 47,
+    "id": "suite3-enum-5",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.903491957928054,
+    "cpu_seconds_with_monitor": 0.9280720000000064,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135774208,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.180509,
+        "rss_bytes": 135757824
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145702912,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 7,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 370950,
+          "boundary_closure_steps": 23,
+          "reachable_states": 7,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.280926,
+        "rss_bytes": 145686528
+      }
+    ]
+  },
+  {
+    "index": 48,
+    "id": "suite3-enum-6",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9003575840033591,
+    "cpu_seconds_with_monitor": 0.9017570000000017,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 134676480,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.19117699999999999,
+        "rss_bytes": 135774208
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146046976,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 9,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 490931,
+          "boundary_closure_steps": 23,
+          "reachable_states": 9,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.274243,
+        "rss_bytes": 146030592
+      }
+    ]
+  },
+  {
+    "index": 49,
+    "id": "suite3-enum-7",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9834287080448121,
+    "cpu_seconds_with_monitor": 0.9678349999999973,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135954432,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.20293,
+        "rss_bytes": 135938048
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 144670720,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 6,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 306420,
+          "boundary_closure_steps": 19,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.281003,
+        "rss_bytes": 144654336
+      }
+    ]
+  },
+  {
+    "index": 50,
+    "id": "suite3-enum-8",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9455573749728501,
+    "cpu_seconds_with_monitor": 0.9032199999999948,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135806976,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.20516700000000002,
+        "rss_bytes": 135790592
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145965056,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 8,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 426401,
+          "boundary_closure_steps": 20,
+          "reachable_states": 8,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.26764899999999997,
+        "rss_bytes": 145948672
+      }
+    ]
+  },
+  {
+    "index": 51,
+    "id": "suite3-enum-9",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9394415420247242,
+    "cpu_seconds_with_monitor": 0.9628130000000095,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136511488,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.23026099999999997,
+        "rss_bytes": 136495104
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146620416,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 3,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 120012,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.26010300000000003,
+        "rss_bytes": 146604032
+      }
+    ]
+  },
+  {
+    "index": 52,
+    "id": "suite3-enum-10",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8794929999858141,
+    "cpu_seconds_with_monitor": 0.8710660000000026,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135659520,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.18571100000000001,
+        "rss_bytes": 135643136
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145965056,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 5,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 239993,
+          "boundary_closure_steps": 9,
+          "reachable_states": 5,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.24395200000000003,
+        "rss_bytes": 145948672
+      }
+    ]
+  },
+  {
+    "index": 53,
+    "id": "suite3-enum-11",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9098747499519959,
+    "cpu_seconds_with_monitor": 0.9038949999999906,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135790592,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.18573,
+        "rss_bytes": 135774208
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146161664,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 3,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 120991,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.248939,
+        "rss_bytes": 146145280
+      }
+    ]
+  },
+  {
+    "index": 54,
+    "id": "suite3-enum-12",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8546210000058636,
+    "cpu_seconds_with_monitor": 0.8537850000000144,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135725056,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17087,
+        "rss_bytes": 135708672
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145981440,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 5,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 240972,
+          "boundary_closure_steps": 9,
+          "reachable_states": 5,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.25177700000000003,
+        "rss_bytes": 145965056
+      }
+    ]
+  },
+  {
+    "index": 55,
+    "id": "suite3-enum-13",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9958162499824539,
+    "cpu_seconds_with_monitor": 0.9856409999999922,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 104906752,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17926699999999998,
+        "rss_bytes": 104890368
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146145280,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 20,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1158001,
+          "boundary_closure_steps": 25,
+          "reachable_states": 8,
+          "byte_live_token_dead_states": 8
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.367978,
+        "rss_bytes": 146128896
+      }
+    ]
+  },
+  {
+    "index": 56,
+    "id": "suite3-enum-14",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7905835000565276,
+    "cpu_seconds_with_monitor": 0.821815999999993,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135774208,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.180426,
+        "rss_bytes": 135757824
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146472960,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 25,
+        "cpu_seconds": 0.215635,
+        "rss_bytes": 146456576
+      }
+    ]
+  },
+  {
+    "index": 57,
+    "id": "suite3-enum-15",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8799681660020724,
+    "cpu_seconds_with_monitor": 0.8532989999999865,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 133857280,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.184793,
+        "rss_bytes": 136085504
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146456576,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 6,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 299945,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 3
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.257459,
+        "rss_bytes": 146440192
+      }
+    ]
+  },
+  {
+    "index": 58,
+    "id": "suite3-const-0",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8047585000749677,
+    "cpu_seconds_with_monitor": 0.826445999999998,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135872512,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.186372,
+        "rss_bytes": 135856128
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146178048,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 3,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 120373,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.225984,
+        "rss_bytes": 146161664
+      }
+    ]
+  },
+  {
+    "index": 59,
+    "id": "suite3-const-1",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.0039290830027312,
+    "cpu_seconds_with_monitor": 1.0004190000000026,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131661824,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17283800000000002,
+        "rss_bytes": 135839744
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146145280,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 27,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1580364,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.406012,
+        "rss_bytes": 146128896
+      }
+    ]
+  },
+  {
+    "index": 60,
+    "id": "suite3-const-2",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8984953330364078,
+    "cpu_seconds_with_monitor": 0.9046370000000143,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131776512,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.176118,
+        "rss_bytes": 135954432
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145997824,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 17,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 970678,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 3
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.319904,
+        "rss_bytes": 145981440
+      }
+    ]
+  },
+  {
+    "index": 61,
+    "id": "suite3-const-3",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8840201249113306,
+    "cpu_seconds_with_monitor": 0.9034749999999896,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135774208,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.18281,
+        "rss_bytes": 135757824
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146407424,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 6,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 304480,
+          "boundary_closure_steps": 18,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.261854,
+        "rss_bytes": 146391040
+      }
+    ]
+  },
+  {
+    "index": 62,
+    "id": "suite3-const-4",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8476676669670269,
+    "cpu_seconds_with_monitor": 0.8458650000000176,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135872512,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.18315700000000001,
+        "rss_bytes": 135856128
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146046976,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 7,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 370950,
+          "boundary_closure_steps": 23,
+          "reachable_states": 7,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.24018199999999998,
+        "rss_bytes": 146030592
+      }
+    ]
+  },
+  {
+    "index": 63,
+    "id": "suite3-const-5",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7959735000040382,
+    "cpu_seconds_with_monitor": 0.8163399999999879,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135872512,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.166241,
+        "rss_bytes": 135856128
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146341888,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 6,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 306420,
+          "boundary_closure_steps": 19,
+          "reachable_states": 6,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.236918,
+        "rss_bytes": 146325504
+      }
+    ]
+  },
+  {
+    "index": 64,
+    "id": "suite3-const-6",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8431103340117261,
+    "cpu_seconds_with_monitor": 0.8304610000000086,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131596288,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.16705799999999998,
+        "rss_bytes": 135774208
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146112512,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 9,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 490931,
+          "boundary_closure_steps": 23,
+          "reachable_states": 9,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.253877,
+        "rss_bytes": 146096128
+      }
+    ]
+  },
+  {
+    "index": 65,
+    "id": "suite3-const-7",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8497757500736043,
+    "cpu_seconds_with_monitor": 0.8248780000000044,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 134938624,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.16795200000000002,
+        "rss_bytes": 135823360
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145932288,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 8,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 426401,
+          "boundary_closure_steps": 20,
+          "reachable_states": 8,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.25491,
+        "rss_bytes": 145915904
+      }
+    ]
+  },
+  {
+    "index": 66,
+    "id": "suite3-const-8",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8106695420574397,
+    "cpu_seconds_with_monitor": 0.8277099999999988,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135692288,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.16811399999999999,
+        "rss_bytes": 135675904
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146030592,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 13,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 733384,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.280242,
+        "rss_bytes": 146014208
+      }
+    ]
+  },
+  {
+    "index": 67,
+    "id": "suite3-const-9",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7955003330716863,
+    "cpu_seconds_with_monitor": 0.8087399999999922,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 134594560,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.159906,
+        "rss_bytes": 135692288
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146030592,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 12,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 668854,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.268475,
+        "rss_bytes": 146014208
+      }
+    ]
+  },
+  {
+    "index": 68,
+    "id": "suite3-const-10",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7644996249582618,
+    "cpu_seconds_with_monitor": 0.7499759999999984,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 129236992,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.158807,
+        "rss_bytes": 135774208
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 145965056,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 3,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 120012,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 24,
+        "cpu_seconds": 0.21420299999999998,
+        "rss_bytes": 145948672
+      }
+    ]
+  },
+  {
+    "index": 69,
+    "id": "suite3-const-11",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7627843749942258,
+    "cpu_seconds_with_monitor": 0.7394689999999979,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131596288,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.16036,
+        "rss_bytes": 135774208
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146341888,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 3,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 120991,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.205597,
+        "rss_bytes": 146325504
+      }
+    ]
+  },
+  {
+    "index": 70,
+    "id": "suite3-const-12",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7648024579975754,
+    "cpu_seconds_with_monitor": 0.7452479999999984,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 131743744,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.161856,
+        "rss_bytes": 135823360
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146063360,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 4,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 180362,
+          "boundary_closure_steps": 7,
+          "reachable_states": 4,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.21521800000000002,
+        "rss_bytes": 146046976
+      }
+    ]
+  },
+  {
+    "index": 71,
+    "id": "suite3-const-13",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8159491670085117,
+    "cpu_seconds_with_monitor": 0.8233780000000195,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135921664,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.159139,
+        "rss_bytes": 135905280
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146407424,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 18,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1023303,
+          "boundary_closure_steps": 57,
+          "reachable_states": 18,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.310032,
+        "rss_bytes": 146391040
+      }
+    ]
+  },
+  {
+    "index": 72,
+    "id": "suite3-const-14",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9184783329255879,
+    "cpu_seconds_with_monitor": 0.9108389999999886,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135987200,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.157438,
+        "rss_bytes": 135970816
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146128896,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 20,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1158001,
+          "boundary_closure_steps": 25,
+          "reachable_states": 8,
+          "byte_live_token_dead_states": 8
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.328149,
+        "rss_bytes": 146112512
+      }
+    ]
+  },
+  {
+    "index": 73,
+    "id": "suite3-const-15",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8424100000411272,
+    "cpu_seconds_with_monitor": 0.8339869999999916,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136003584,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.176534,
+        "rss_bytes": 136019968
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146030592,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 6,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 299945,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 3
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.232923,
+        "rss_bytes": 146014208
+      }
+    ]
+  },
+  {
+    "index": 74,
+    "id": "suite3-const-16",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.8391216250602156,
+    "cpu_seconds_with_monitor": 0.8385320000000096,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 134725632,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17189300000000002,
+        "rss_bytes": 135757824
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146063360,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 6,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 299945,
+          "boundary_closure_steps": 5,
+          "reachable_states": 3,
+          "byte_live_token_dead_states": 3
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.241203,
+        "rss_bytes": 146046976
+      }
+    ]
+  },
+  {
+    "index": 75,
+    "id": "object-required-optional",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9312841659411788,
+    "cpu_seconds_with_monitor": 0.9632389999999997,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136265728,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.18053000000000002,
+        "rss_bytes": 136249344
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146112512,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 46,
+          "values": 6,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1340329,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 23,
+        "cpu_seconds": 0.355004,
+        "rss_bytes": 146096128
+      }
+    ]
+  },
+  {
+    "index": 76,
+    "id": "object-required-impossible",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.7788426249753684,
+    "cpu_seconds_with_monitor": 0.7768219999999815,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 130236416,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.16557300000000003,
+        "rss_bytes": 135757824
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146046976,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 2,
+          "values": 0,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 0,
+          "boundary_closure_steps": 0,
+          "reachable_states": 0,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.200462,
+        "rss_bytes": 146030592
+      }
+    ]
+  },
+  {
+    "index": 77,
+    "id": "object-nested-const",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.1101875000167638,
+    "cpu_seconds_with_monitor": 1.07579600000002,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136151040,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.16844099999999998,
+        "rss_bytes": 136134656
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146604032,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 44,
+          "values": 1,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 2626550,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 21,
+        "cpu_seconds": 0.531373,
+        "rss_bytes": 146587648
+      }
+    ]
+  },
+  {
+    "index": 78,
+    "id": "enum-type-equality",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.0964833330363035,
+    "cpu_seconds_with_monitor": 1.0671129999999849,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136511488,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.21908100000000003,
+        "rss_bytes": 136495104
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146292736,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 24,
+          "values": 4,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1227262,
+          "boundary_closure_steps": 40,
+          "reachable_states": 13,
+          "byte_live_token_dead_states": 0
+        },
+        "queries_checked": 24,
+        "cpu_seconds": 0.348217,
+        "rss_bytes": 146276352
+      }
+    ]
+  },
+  {
+    "index": 79,
+    "id": "issue-xg858-original",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.9598006249871105,
+    "cpu_seconds_with_monitor": 0.9344980000000085,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 135938048,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.181079,
+        "rss_bytes": 135921664
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146046976,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 23,
+          "values": 2,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1221135,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 25,
+        "cpu_seconds": 0.334237,
+        "rss_bytes": 146030592
+      }
+    ]
+  },
+  {
+    "index": 80,
+    "id": "issue-xg895-original",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 3.1091657920042053,
+    "cpu_seconds_with_monitor": 3.2168779999999924,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 162103296,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.460108,
+        "rss_bytes": 162824192
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 173522944,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 54842,
+          "values": 18278,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 922805,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 23,
+        "cpu_seconds": 2.052391,
+        "rss_bytes": 173506560
+      }
+    ]
+  },
+  {
+    "index": 81,
+    "id": "issue-vllm56556-finite-derived",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 0.936675832956098,
+    "cpu_seconds_with_monitor": 0.9341710000000152,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 128892928,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.170304,
+        "rss_bytes": 136216576
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146210816,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 30,
+          "values": 2,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 1083250,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 23,
+        "cpu_seconds": 0.33058800000000005,
+        "rss_bytes": 146194432
+      }
+    ]
+  },
+  {
+    "index": 82,
+    "id": "issue-outlines612-finite-derived",
+    "status": "PASS",
+    "reason": null,
+    "wall_seconds": 1.0863217919832096,
+    "cpu_seconds_with_monitor": 1.0774390000000071,
+    "phases": [
+      {
+        "phase": "produce",
+        "rss_monitored_bytes": 136101888,
+        "status": "COMPLETE",
+        "cpu_seconds": 0.17191700000000001,
+        "rss_bytes": 136085504
+      },
+      {
+        "phase": "verify",
+        "rss_monitored_bytes": 146243584,
+        "status": "PASS",
+        "byte_check": {
+          "status": "PASS",
+          "states": 60,
+          "values": 4,
+          "shared_finite_semantics": true,
+          "all_byte_language_equivalence": true,
+          "distances_and_completions": true
+        },
+        "token_check": {
+          "status": "PASS",
+          "direct_token_byte_steps": 2018901,
+          "boundary_closure_steps": 2,
+          "reachable_states": 2,
+          "byte_live_token_dead_states": 2
+        },
+        "queries_checked": 22,
+        "cpu_seconds": 0.47047,
+        "rss_bytes": 146227200
+      }
+    ]
+  }
+]

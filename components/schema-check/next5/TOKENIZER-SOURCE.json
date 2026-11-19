@@ -1,0 +1,14 @@
+{
+  "model": "openai-community/gpt2",
+  "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "url": "https://huggingface.co/openai-community/gpt2/resolve/607a30d783dfa663caf39e06633721c8d4cfcd7e/tokenizer.json",
+  "path": "data/tokenizers/gpt2.json",
+  "bytes": 1355256,
+  "sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6",
+  "etag": "\"4b988bccc9dc5adacd403c00b4704976196548f8\"",
+  "license": "mit",
+  "models_or_weights_downloaded": false,
+  "acquired": "2026-11-02 JST",
+  "venvs_before_bytes": 1013731861,
+  "venvs_after_bytes": 1015087117
+}

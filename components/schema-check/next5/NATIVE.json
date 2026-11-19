@@ -1,0 +1,1178 @@
+{
+  "status": "PASS",
+  "versions": {
+    "llguidance": "1.9.1",
+    "xgrammar": "0.2.8",
+    "outlines-core": "0.2.14",
+    "tokenizers": "0.23.3",
+    "torch": "2.15.0"
+  },
+  "tokenizer_sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6",
+  "metadata": {
+    "ordinary_tokens": 50256,
+    "eos": 50256,
+    "single_byte_coverage": 256,
+    "llguidance_native_matching_pieces": 50255,
+    "llguidance_reserved_ff_id": 187,
+    "llguidance_non_special_byte_coverage": 255,
+    "ff_live_edges_in_all_byte_certificates": 0,
+    "xgrammar_native_byte_level_decoding_all_pieces_match": true,
+    "hf_256_latin1_characters_roundtrip": true,
+    "outlines_receives_explicit_raw_piece_map": true
+  },
+  "rows": [
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "",
+      "token_ids": [],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 971,
+          "allowed_ids_sha256": "febb8bb2812d5e426d69febd9d82e6ca22999ef236b353d04514f3d41ba9d64c",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "",
+      "token_ids": [],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 971,
+          "allowed_ids_sha256": "febb8bb2812d5e426d69febd9d82e6ca22999ef236b353d04514f3d41ba9d64c",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "7b",
+      "token_ids": [
+        90
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 7,
+          "allowed_ids_sha256": "18a3d55ceb5405f019c5b4b9f4e9f8e2c8d6824fcb575e03af801884d3206132",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 69,
+          "allowed_ids_sha256": "d7a5318fbc890fe533f30f3a288c4813b051e5c535086d6ca39d862ed81c2d60",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 5,
+          "allowed_ids_sha256": "66d257dd040c7e24dda2348197ebd184d3d1959250e36d8956c8e874718eab56",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "7b",
+      "token_ids": [
+        90
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 7,
+          "allowed_ids_sha256": "18a3d55ceb5405f019c5b4b9f4e9f8e2c8d6824fcb575e03af801884d3206132",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 69,
+          "allowed_ids_sha256": "d7a5318fbc890fe533f30f3a288c4813b051e5c535086d6ca39d862ed81c2d60",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 5,
+          "allowed_ids_sha256": "66d257dd040c7e24dda2348197ebd184d3d1959250e36d8956c8e874718eab56",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "7b226d6f646966696572223a",
+      "token_ids": [
+        90,
+        1,
+        76,
+        78,
+        67,
+        72,
+        69,
+        72,
+        68,
+        81,
+        1,
+        25
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 9,
+          "allowed_ids_sha256": "08462d5db41c9941f64522a2047d611a60ead85982a5c9a6bb2cfe17d239aa12",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1700,
+          "allowed_ids_sha256": "eb5a20858221d0a34c95a8a19e99094a157ace3e8a10dc8e3ae8e6dbdf00b1ff",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 5,
+          "allowed_ids_sha256": "c3c5952be183fab03879fe74742fdcaaf47d8b886218b6c29e2cda9c92eef36b",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "7b226d6f646966696572223a",
+      "token_ids": [
+        4895,
+        4666,
+        7483,
+        1298
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 9,
+          "allowed_ids_sha256": "08462d5db41c9941f64522a2047d611a60ead85982a5c9a6bb2cfe17d239aa12",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1700,
+          "allowed_ids_sha256": "eb5a20858221d0a34c95a8a19e99094a157ace3e8a10dc8e3ae8e6dbdf00b1ff",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 5,
+          "allowed_ids_sha256": "c3c5952be183fab03879fe74742fdcaaf47d8b886218b6c29e2cda9c92eef36b",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "7b226d6f646966696572223a22227d",
+      "token_ids": [
+        90,
+        1,
+        76,
+        78,
+        67,
+        72,
+        69,
+        72,
+        68,
+        81,
+        1,
+        25,
+        1,
+        1,
+        92
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "7b226d6f646966696572223a22227d",
+      "token_ids": [
+        4895,
+        4666,
+        7483,
+        2404,
+        20662
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "7b7d",
+      "token_ids": [
+        90,
+        92
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": false,
+      "tools": {
+        "llguidance": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "prefix_hex": "7b7d",
+      "token_ids": [
+        90,
+        92
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": false,
+      "tools": {
+        "llguidance": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg858-original",
+      "case_cpu_seconds": 0.03474299999999997
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "",
+      "token_ids": [],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "",
+      "token_ids": [],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "edf66d2ad82ffd51942a35b9d28081e4ced6ec82c54d9cceebc8d3fc788d4f90",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "7b226b223a22616263",
+      "token_ids": [
+        90,
+        1,
+        74,
+        1,
+        25,
+        1,
+        64,
+        65,
+        66
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "fe6ce0899fb29e9aab10936eef7c31a0e72710d2863f067f6ab26379c185a8d9",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 10383,
+          "allowed_ids_sha256": "4537b77e2702184086f12e2a752c4a763d5dd51e94dd7b6ea4e20e65a78a0104",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": true,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "fe6ce0899fb29e9aab10936eef7c31a0e72710d2863f067f6ab26379c185a8d9",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "7b226b223a22616263",
+      "token_ids": [
+        4895,
+        74,
+        2404,
+        39305
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "fe6ce0899fb29e9aab10936eef7c31a0e72710d2863f067f6ab26379c185a8d9",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 10383,
+          "allowed_ids_sha256": "4537b77e2702184086f12e2a752c4a763d5dd51e94dd7b6ea4e20e65a78a0104",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": true,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 2,
+          "allowed_ids_sha256": "fe6ce0899fb29e9aab10936eef7c31a0e72710d2863f067f6ab26379c185a8d9",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "7b226b223a2261626364",
+      "token_ids": [
+        90,
+        1,
+        74,
+        1,
+        25,
+        1,
+        64,
+        65,
+        66,
+        67
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": false,
+      "tools": {
+        "llguidance": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 10383,
+          "allowed_ids_sha256": "4537b77e2702184086f12e2a752c4a763d5dd51e94dd7b6ea4e20e65a78a0104",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": true,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "7b226b223a2261626364",
+      "token_ids": [
+        4895,
+        74,
+        2404,
+        397,
+        10210
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": false,
+      "tools": {
+        "llguidance": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 10383,
+          "allowed_ids_sha256": "4537b77e2702184086f12e2a752c4a763d5dd51e94dd7b6ea4e20e65a78a0104",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": true,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "7b226b223a2261626364227d",
+      "token_ids": [
+        90,
+        1,
+        74,
+        1,
+        25,
+        1,
+        64,
+        65,
+        66,
+        67,
+        1,
+        92
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": false,
+      "tools": {
+        "llguidance": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "7b226b223a2261626364227d",
+      "token_ids": [
+        4895,
+        74,
+        2404,
+        397,
+        10210,
+        20662
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": false,
+      "tools": {
+        "llguidance": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "7b226b223a22414243227d",
+      "token_ids": [
+        90,
+        1,
+        74,
+        1,
+        25,
+        1,
+        32,
+        33,
+        34,
+        1,
+        92
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": false,
+      "tools": {
+        "llguidance": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "prefix_hex": "7b226b223a22414243227d",
+      "token_ids": [
+        4895,
+        74,
+        2404,
+        24694,
+        20662
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": false,
+      "tools": {
+        "llguidance": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": false,
+          "accepting": false,
+          "allowed_count": 0,
+          "allowed_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "issue-xg895-original",
+      "case_cpu_seconds": 0.03056100000000006
+    },
+    {
+      "id": "unicode-piece-control",
+      "prefix_hex": "",
+      "token_ids": [],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "unicode-piece-control",
+      "prefix_hex": "",
+      "token_ids": [],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "unicode-piece-control",
+      "prefix_hex": "22",
+      "token_ids": [
+        1
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "af4ef95521568e5c234171d60695ac191633fd92d4c354c9de4a83332bd7b20c",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 3,
+          "allowed_ids_sha256": "299cf98d8d4855d3b1a99709bc2903604cbe6dc6d606d439613ec13d56fa9fc0",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 3,
+          "allowed_ids_sha256": "299cf98d8d4855d3b1a99709bc2903604cbe6dc6d606d439613ec13d56fa9fc0",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "unicode-piece-control",
+      "prefix_hex": "22",
+      "token_ids": [
+        1
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "af4ef95521568e5c234171d60695ac191633fd92d4c354c9de4a83332bd7b20c",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 3,
+          "allowed_ids_sha256": "299cf98d8d4855d3b1a99709bc2903604cbe6dc6d606d439613ec13d56fa9fc0",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 3,
+          "allowed_ids_sha256": "299cf98d8d4855d3b1a99709bc2903604cbe6dc6d606d439613ec13d56fa9fc0",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "unicode-piece-control",
+      "prefix_hex": "22f09f",
+      "token_ids": [
+        1,
+        172,
+        253
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "3457f214d04506db74b8dd929e2303f98ad0a8c62c63aee2c1368baf881383d2",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "3457f214d04506db74b8dd929e2303f98ad0a8c62c63aee2c1368baf881383d2",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": false,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "3457f214d04506db74b8dd929e2303f98ad0a8c62c63aee2c1368baf881383d2",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "unicode-piece-control",
+      "prefix_hex": "22f09f988022",
+      "token_ids": [
+        1,
+        172,
+        253,
+        246,
+        222,
+        1
+      ],
+      "segmentation": "byte-fallback",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "unicode-piece-control",
+      "prefix_hex": "22f09f988022",
+      "token_ids": [
+        1,
+        47249,
+        222,
+        1
+      ],
+      "segmentation": "hf-bpe",
+      "our_byte_and_token_live": true,
+      "tools": {
+        "llguidance": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "xgrammar": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        },
+        "outlines": {
+          "admitted": true,
+          "accepting": true,
+          "allowed_count": 1,
+          "allowed_ids_sha256": "1265be5e1e27c3b7d95532456fc4ba4f6e0e7d16989b33b4c2c06c75963aba22",
+          "empty_mask_nonterminal": false,
+          "d_fallback_allowed": false,
+          "ff_fallback_allowed": false
+        }
+      },
+      "compile_errors": {}
+    },
+    {
+      "id": "unicode-piece-control",
+      "case_cpu_seconds": 0.018383000000000038
+    }
+  ],
+  "cpu_seconds": 1.484518,
+  "rss_bytes": 414138368
+}

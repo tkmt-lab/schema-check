@@ -1,0 +1,9 @@
+{
+  "llguidance": "1.9.1",
+  "outlines-core": "0.2.14",
+  "xgrammar": "0.2.8",
+  "torch": "2.15.0",
+  "tokenizers": "0.23.3",
+  "transformers": "5.22.1",
+  "jsonschema": "4.26.0"
+}

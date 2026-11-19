@@ -1,0 +1,17 @@
+Copyright 2026 Tatsuhiko Takimoto.
+
+Project-owned source code, including Python programs and command launchers,
+is licensed under Apache License 2.0; see Apache-2.0.txt.
+
+Original documentation and generated certificate, observation, table and
+verification data are licensed under Creative Commons Attribution 4.0
+International; see CC-BY-4.0.txt.
+
+Third-party material is excluded from those project grants. JSON Schema
+Test Suite fixtures retain their MIT notice. Bundled tokenizer snapshots,
+model cards and copied upstream license texts retain their upstream terms.
+Mixed datasets may contain MIT Suite fixtures or issue-derived schema inputs;
+our grant covers original additions and generated evidence, not exclusive
+ownership of those inputs. See THIRD-PARTY-NOTICES.md and PROVENANCE.json.
+
+External comparison dependencies are not bundled or relicensed. Release 0.1.0 is dated 2026-11-20.
